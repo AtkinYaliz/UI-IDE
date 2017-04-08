@@ -1,0 +1,136 @@
+{
+	// Fundamental 
+	"D3 Selection": {
+		"prefix": "sel",
+		"body": [
+			"d3.select('$1')$2"
+		],
+		"description": "d3.select"
+	},
+	"D3 Select All": {
+		"prefix": "sela",
+		"body": [
+			"d3.selectAll('$1')$2"
+		],
+		"description": "d3.selectAll"
+	},
+	"D3 Attribut": {
+		"prefix": "attr",
+		"body": [
+			".attr('$1', $2)$3"
+		],
+		"description": ".attr(' ', )"
+	},
+	"D3 Translate": {
+		"prefix": "translate",
+		"body": [
+			".attr('transform', 'translate(' + $1 + ',' + $2 + ')$3"
+		],
+		"description": ".attr('transform', 'translate(' + 0 + ',' + 0 + ')')"
+	},
+	"D3 Style": {
+		"prefix": "style",
+		"body": [
+			".style('$1', $2)$3"
+		],
+		"description": ".style(' ', )"
+	},
+	"D3 Scale": {
+		"prefix": "scale",
+		"body": [
+			"d3.scale\n  .${1:linear}()\n  .domain([$2])\n  .range([$3]);$4"
+		],
+		"description": "D3 scale"
+	},
+	"D3 Nest": {
+		"prefix": "nest",
+		"body": [
+			"d3.nest()\n  .key($1)\n  .entries([$2]);$3"
+		],
+		"description": "D3 nest"
+	},
+	
+	// Data
+	"D3 CSV": {
+		"prefix": "csv",
+		"body": [
+			"d3.csv('$1.csv', function($2){$3});$4"
+		],
+		"description": "d3.csv"
+	},
+	"D3 DSV": {
+		"prefix": "dsv",
+		"body": [
+			"d3.dsv('${1:;}', 'text/plain');$2"
+		],
+		"description": "d3.dsv"
+	},
+	"D3 JSON": {
+		"prefix": "json",
+		"body": [
+			"d3.json('$1.json', function(${2:err},${3:data}){$4});$5"
+		],
+		"description": "d3.json"
+	},
+	
+	// SVG
+	"D3 SVG": {
+		"prefix": "circle",
+		"body": [
+			".enter()",
+			".append('circle')",
+			".attr('cx', $1)",
+			".attr('cy', $2)",
+			".attr('r', $3)$4;"
+		],
+		"description": "svg:circle"
+	},
+	"D3 Ellipse": {
+		"prefix": "ellipse",
+		"body": [
+			".enter()",
+			".append('ellipse')",
+			".attr('cx', $1)",
+			".attr('cy', $2)",
+			".attr('rx', $3)",
+			".attr('ry', $4)$5;"
+		],
+		"description": "svg:ellipse"
+	},
+	"D3 Line": {
+		"prefix": "D3 Line",
+		"body": [
+			".enter()",
+			".append('line')",
+			".attr('x1', $1)",
+			".attr('y1', $2)",
+			".attr('x2', $3)",
+			".attr('y2', $4)$5;"
+		],
+		"description": "svg:line"	
+	},
+	"D3 Rect": {
+		"prefix": "rect",
+		"body": [
+			".enter()",
+			".append('rect')",
+			".attr('x', $1)",
+			".attr('y', $2)",
+			".attr('width', $3)",
+			".attr('height', $4)",
+			".attr('rx', $5)",
+			".attr('ry', $6)$7;"
+		],
+		"description": "svg:rect"
+	},
+	
+	// Function
+	"Anonymous Function": {
+		"prefix": "af",
+		"body": [
+			"function($1){\n\t$2\n}$3"
+		],
+		"description": "Anonymous Function"
+	}
+	
+}

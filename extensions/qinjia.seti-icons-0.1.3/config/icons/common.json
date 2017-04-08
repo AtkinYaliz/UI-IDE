@@ -1,0 +1,19 @@
+{
+    "file": "default",
+    "folder": "folder",
+    "folderExpanded": "folder_open",
+    "folderNames": {
+        ".vscode": "vscode_folder",
+        "typings": "typings_folder",
+        "node_modules": "node_modules_folder",
+        ".git": "git_folder",
+        "src": "src_folder"
+    },
+    "folderNamesExpanded": {
+        ".vscode": "vscode_folder_open",
+        "typings": "typings_folder_open",
+        "node_modules": "node_modules_folder_open",
+        ".git": "git_folder_open",
+        "src": "src_folder_open"
+    }
+}

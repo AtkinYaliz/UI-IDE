@@ -1,0 +1,130 @@
+{
+    "d3LinearScale": {
+        "prefix": "d3LinScale",
+        "body": [
+            "let ${scale} = d3.scaleLinear()",
+            "    .domain([0, 1])",
+            "    .range([${0,width}]);"
+        ]
+    },
+    "d3LinearAxis": {
+        "prefix": "d3LinAxis",
+        "body": [
+            "let ${scale} = d3.scaleLinear()",
+            "    .domain([0, 1])",
+            "    .range([${0,width}]);",
+            "let ${axis} = d3.${axisBottom}(${scale});",
+            "let ${axis}Group = ${container}.append('g')",
+            "    .classed('axis', true)",
+            "    .call(${axis});"
+        ]
+    },
+    "d3v3LinearScale": {
+        "prefix": "d3LinearScale",
+        "body": [
+            "var ${scale} = d3.scale.linear()",
+            "  .domain([0, 1])",
+            "  .range([${0,width}])"
+        ],
+        "description": "Creates a linear scale"
+    },
+    "d3v3LinearAxis": {
+        "prefix": "d3LinearAxis",
+        "body": [
+            "var ${scale} = d3.scale.linear()",
+            "  .domain([0, 1])",
+            "  .range([${0,width}])",
+            "var ${axis} = d3.svg.axis()",
+            "  .orient('${bottom}')",
+            "  .scale(${scale});",
+            "var ${axis}Group = ${container}.append('g')",
+            "  .classed('axis', true)",
+            "  .call(${axis});"
+        ],
+        "description": "Create a linear axis in a selection"
+    },
+    "d3Transform": {
+        "prefix": "d3Transform",
+        "body": [
+            "  .attr('transform', (d, i) => `translate(${$1\\},${$2\\})`)"
+        ],
+        "description": "d3 translate attribute"
+    },
+    "d3Rect": {
+        "prefix": "d3Rect",
+        "body": [
+            "var ${rect} = ${container}.append('rect')",
+            "  .attr('x', ${1})",
+            "  .attr('y', ${2})",
+            "  .attr('width', ${3})",
+            "  .attr('height', ${4})",
+            "  .style('stroke','${none}')",
+            "  .style('fill','${lightblue}');"
+        ],
+        "description": "Appends a rectangle to a selection"
+    },
+    "d3Circle": {
+        "prefix": "d3Circle",
+        "body": [
+            "var ${circle} = ${container}.append('circle')",
+            "  .attr('cx', ${1})",
+            "  .attr('cy', ${2})",
+            "  .attr('r', ${3})",
+            "  .style('stroke','${none}')",
+            "  .style('fill','${lightblue}');"
+        ],
+        "description": "Appends a circle to a selection"
+    },
+    "d3Bind": {
+        "prefix": "d3Bind",
+        "body": [
+            "var ${dataBound} = ${container}.selectAll('.${classed}')",
+            "    .data(${data});",
+            "${dataBound}",
+            "  .exit()",
+            "  .remove();",
+            "var ${enterSelection} = ${dataBound}",
+            "  .enter()",
+            "  .append('g')",
+            "  .classed('${classed}', true);"
+        ],
+        "description": "Creates an exit-enter stub"
+    },
+    "d3Csv": {
+        "prefix": "d3Csv",
+        "body": [
+           "d3.csv('${filename}.csv',",
+            "(error, data) => {",
+            "   if (error) {",
+            "       console.error(error);",
+            "   } else {",
+            "       ${console.log(data);}",
+            "   }",
+            "});"
+        ],
+        "description": "Reads a csv file"
+    },
+    "d3Plot": {
+        "prefix": "d3Plot",
+        "body": [
+            "let svg = d3.select('${#chart}')",
+            "    .append('svg')",
+            "    .attr('width', ${width})",
+            "    .attr('height', ${height});",
+            "",
+            "let plotMargins = {",
+            "    top: 30,",
+            "    bottom: 30,",
+            "    left: 150,",
+            "    right: 30",
+            "};",
+            "let plotGroup = svg.append('g')",
+            "    .classed('plot', true)",
+            "    .attr('transform', `translate($\\{plotMargins.left\\},${plotMargins.top\\})`);",
+            "",
+            "let plotWidth = ${width} - plotMargins.left - plotMargins.right;",
+            "let plotHeight = ${height} - plotMargins.top - plotMargins.bottom;"
+        ],
+        "description": "Creates a basic container for a plot group"
+    }
+}

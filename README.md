@@ -1,10 +1,9 @@
 
 
-| Extensions | 
-| --------------------------------------|
+| Extensions |	 |
+| ------------- | ----------------------|
 | ## VS Code	| Out of box			|
-| ## Sublime	| - TypeScript
-- Babel			|
+| ## Sublime	| - TypeScript - Babel			|
 | ## Atom		| - Atom-Typescript		|
 
 

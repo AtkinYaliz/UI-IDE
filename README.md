@@ -1,9 +1,6 @@
-Markdown Cheatsheet
-===================
-
-- - - - 
 
 # Extensions #
+- - - -
 
 ## VS Code ##
 - Out of box
@@ -21,6 +18,7 @@ Markdown Cheatsheet
 
 
 # Boilerplates #
+- - - -
 
 # Client #
 https://github.com/Microsoft/TypeScript-React-Starter

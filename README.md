@@ -1,8 +1,10 @@
 
 Extensions  | Second Header
-------------- | -------------
-VS Code  | Out of box
-Sublime  | - TypeScript
+----------- | -------------
+VS Code  	| Out of box
+Sublime  	| - TypeScript
+Atom		| Atom-Typescript
+		
 
 | Extensions |	.. |
 | ------------- | ----------------------|

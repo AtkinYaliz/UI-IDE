@@ -8,6 +8,7 @@
 ## Sublime ##
 - TypeScript
 - Babel
+- JsFormat
 
 ## Atom ##
 - Atom-Typescript

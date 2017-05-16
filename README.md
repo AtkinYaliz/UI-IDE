@@ -1,8 +1,8 @@
 
-*First Header*  | Second Header
+Extensions  | Second Header
 ------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+VS Code  | Out of box
+Sublime  | - TypeScript
 
 | Extensions |	.. |
 | ------------- | ----------------------|

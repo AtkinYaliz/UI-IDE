@@ -1,6 +1,6 @@
 
 
-| Extensions |	 |
+| Extensions |	.. |
 | ------------- | ----------------------|
 | ## VS Code	| Out of box			|
 | ## Sublime	| - TypeScript - Babel			|

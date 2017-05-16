@@ -1,3 +1,6 @@
+Markdown Cheatsheet
+===================
+
 
 | Extensions	| Second Header		|
 | ------------- | ----------------- |
@@ -12,6 +15,8 @@
 | ## Sublime	| - TypeScript - Babel			|
 | ## Atom		| - Atom-Typescript		|
 
+
+# Extensions #
 
 ## VS Code
 - Out of box

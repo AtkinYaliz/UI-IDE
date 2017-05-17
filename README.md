@@ -1,29 +1,29 @@
 
 
-# Extensions #
+## Extensions ##
 
-## VS Code ##
+### VS Code ###
 - Out of box
 
-## Sublime ##
+### Sublime ###
 - TypeScript
 - Babel
 - JsFormat
 
-## Atom ##
+### Atom ###
 - Atom-Typescript
 
-## Alm-tools ##
+### Alm-tools ###
 - https://github.com/alm-tools/alm
 
 - - - -
 
-## Boilerplates #
+## Boilerplates ##
 
-### Client ##
+### Client ###
 - https://github.com/facebookincubator/create-react-app
 - https://github.com/Microsoft/TypeScript-React-Starter
 
-### Node ##
+### Node ###
 - https://github.com/Microsoft/TypeScript-Node-Starter
 - https://github.com/developit/express-es6-rest-api

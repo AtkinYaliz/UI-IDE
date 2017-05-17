@@ -1,6 +1,5 @@
 
 # Extensions #
-- - - -
 
 ## VS Code ##
 - Out of box
@@ -16,9 +15,9 @@
 ## Alm-tools ##
 - https://github.com/alm-tools/alm
 
+- - - -
 
 # Boilerplates #
-- - - -
 
 ## Client ##
 - https://github.com/Microsoft/TypeScript-React-Starter

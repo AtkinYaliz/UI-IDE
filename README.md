@@ -11,7 +11,13 @@
 - JsFormat
 
 ### Atom ###
-- Atom-Typescript
+- Atom-Typescript: https://github.com/TypeStrong/atom-typescript
+- Stom-React: https://github.com/orktes/atom-react
+- Stylesheet: 
+.tree-view {
+  // background-color: whitesmoke;
+  font-size: 10px;
+}
 
 ### Alm-tools ###
 - https://github.com/alm-tools/alm

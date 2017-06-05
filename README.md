@@ -4,6 +4,8 @@
 
 ### VS Code ###
 - Out of box
+- Mac: ~/.vscode/extensions
+- Ubuntu: 
 
 ### Sublime ###
 - TypeScript
@@ -33,3 +35,16 @@
 ### Node ###
 - https://github.com/Microsoft/TypeScript-Node-Starter
 - https://github.com/developit/express-es6-rest-api
+
+
+- - - -
+
+# UBUNTU
+
+## ~/.profile (~/.bash_profile in mac)
+
+alias ls='ls -GFh'
+alias la='ls -a'
+alias ll='ls -all'
+alias cls='clear && printf "\e[3J"'
+export PS1="\W \$ "

@@ -39,24 +39,24 @@
 
 - - - -
 
-# MAC
+# MAC #
 
-## ~/.bash_profile
-alias ls='ls -GFh'
-alias la='ls -a'
-alias ll='ls -all'
-alias cls='clear && printf "\e[3J"'
-export PS1='\W \$ '
+## ~/.bash_profile ##
+- alias ls='ls -GFh'
+- alias la='ls -a'
+- alias ll='ls -all'
+- alias cls='clear && printf "\e[3J"'
+- export PS1='\W \$ '
 
 
-# UBUNTU
+# UBUNTU #
 
-## ~/.bashrc
-alias cls='clear && reset'
-export PS1='\W \$ '
+## ~/.bashrc ##
+- alias cls='clear && reset'
+- export PS1='\W \$ '
 
-## Sublime Text 3
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
+## Sublime Text 3 ##
+- sudo add-apt-repository ppa:webupd8team/sublime-text-3
+- sudo apt-get update
+- sudo apt-get install sublime-text-installer
 

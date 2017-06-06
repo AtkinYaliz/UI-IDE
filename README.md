@@ -6,6 +6,8 @@
 - Out of box
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
+- "editor.fontSize": 13,
+  "window.zoomLevel": -0.5
 
 ### Sublime ###
 - TypeScript
@@ -14,7 +16,7 @@
 
 ### Atom ###
 - Atom-Typescript: https://github.com/TypeStrong/atom-typescript
-- Stom-React: https://github.com/orktes/atom-react
+- Atom-React: https://github.com/orktes/atom-react
 - Stylesheet: 
 .tree-view {
   // background-color: whitesmoke;

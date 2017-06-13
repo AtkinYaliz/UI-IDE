@@ -62,3 +62,6 @@
 - sudo apt-get update
 - sudo apt-get install sublime-text-installer
 
+- - - -
+
+git config --global credential.helper cache

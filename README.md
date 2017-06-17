@@ -11,7 +11,7 @@
 
 ### Sublime ###
 - TypeScript
-- Babel
+- Babel ES6/ES7
 - JsFormat
 
 ### Atom ###

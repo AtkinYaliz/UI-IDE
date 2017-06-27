@@ -64,7 +64,7 @@
 
 - - - -
 
-$ git config credential.helper store
-$ git push http://example.com/repo.git
-Username: <type your username>
+$ git config credential.helper store__
+$ git push http://example.com/repo.git__
+Username: <type your username>__
 Password: <type your password>

@@ -16,7 +16,7 @@
 
 ### Atom ###
 - Atom-Typescript: https://github.com/TypeStrong/atom-typescript
-- Atom-React: https://github.com/orktes/atom-react
+- Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)
 - Stylesheet: 
 .tree-view {
   // background-color: whitesmoke;

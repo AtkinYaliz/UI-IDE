@@ -6,9 +6,7 @@
 - Out of box
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
-- "workbench.iconTheme": "material-icon-theme",
-  "editor.tabSize": 4, 
-  "editor.fontSize": 13,
+- "editor.fontSize": 13,
   "window.zoomLevel": -0.5
 
 ### Sublime ###

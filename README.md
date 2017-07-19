@@ -6,8 +6,9 @@
 - Out of box
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
-- "editor.fontSize": 13,
-  "window.zoomLevel": -0.5
+- "editor.fontSize": 13,  
+  "window.zoomLevel": -0.5,  
+  "terminal.integrated.fontSize": 12
 
 ### Sublime ###
 - TypeScript

@@ -50,12 +50,11 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/Downloads/mongodb/bin:$PATH  
 alias la='ls -a'  
-alias ll='ls -l’  
 alias ld='ls -all'  
+alias ll='ls -list'  
 alias cls='clear && printf "\e[3J"'  
 export PS1="\W \$ "  
 eval $(/usr/libexec/path_helper -s)  
-
 
 # UBUNTU #
 

@@ -57,26 +57,26 @@ export PS1="\W \$ "
 eval $(/usr/libexec/path_helper -s)  
 
 ## shortcuts ##
-AC2V2zZQ
-F11 		=> Show desktop
-Cmd + Shift + . => show hidden files
-Cmd + Q 	=> close the application without trace
-Cmd + `		=> tab between windows of same application
-ln -s <path>	=> creates a link of <path> in the current folder
+AC2V2zZQ  
+F11 		=> Show desktop  
+Cmd + Shift + . => show hidden files  
+Cmd + Q 	=> close the application without trace  
+Cmd + `		=> tab between windows of same application  
+ln -s <path>	=> creates a link of <path> in the current folder  
 
-// MongoDB
-$ mongod —-dbpath ../data/db
-$ mongo (another cmd)
-$ show dbs
-$ use <db>
-$ db
-$ show collections
-$ db.<collaction>.drop()
-$ db.<collaction>.insert({…})
-$ db.<collection>.find()
+// MongoDB  
+$ mongod —-dbpath ../data/db  
+$ mongo (another cmd)  
+$ show dbs  
+$ use <db>  
+$ db  
+$ show collections  
+$ db.<collaction>.drop()  
+$ db.<collaction>.insert({…})  
+$ db.<collection>.find()  
 
-// NPM
-$ sudo chown -R $(whoami) <path> | $(npm config get prefix)
+// NPM  
+$ sudo chown -R $(whoami) <path> | $(npm config get prefix)  
 
 
 # UBUNTU #

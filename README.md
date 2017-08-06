@@ -62,7 +62,9 @@ F11 		=> Show desktop
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
 Cmd + `		=> tab between windows of same application  
+cp -a /source/. /dest/ => copy the content of the <source> into <dest> recursively including hidden files/folders  
 ln -s <the_path>	=> creates a link of <the_path> in the current folder  
+chown <user> <file> => changes the owner of <file> to <user>  
 
 // MongoDB  
 $ mongod —-dbpath ../data/db  

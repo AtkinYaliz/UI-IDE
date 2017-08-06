@@ -62,7 +62,7 @@ F11 		=> Show desktop
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
 Cmd + `		=> tab between windows of same application  
-ln -s <<path>>	=> creates a link of <path> in the current folder  
+ln -s <pathh>	=> creates a link of <pathh> in the current folder  
 
 // MongoDB  
 $ mongod —-dbpath ../data/db  

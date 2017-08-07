@@ -11,9 +11,13 @@
   "terminal.integrated.fontSize": 12
 
 ### Sublime ###
-- TypeScript
-- Babel ES6/ES7
-- JsFormat
+Git  
+TypeScript  
+Babel ES6/ES7  
+JsFormat  
+BracketHighlighter  
+SideBarEnhancements  
+Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
 
 ### Atom ###
 - Atom-Typescript: https://github.com/TypeStrong/atom-typescript

@@ -12,21 +12,17 @@
 
 ### Sublime ###
 - Git  
-- TypeScript  
-- Babel ES6/ES7  
+TypeScript  
+Babel ES6/ES7  
 JsFormat  
 BracketHighlighter  
 SideBarEnhancements  
 Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
 
 ### Atom ###
-- Atom-Typescript: https://github.com/TypeStrong/atom-typescript
-- Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)
-- Stylesheet: 
-.tree-view {
-  // background-color: whitesmoke;
-  font-size: 10px;
-}
+- Atom-Typescript: https://github.com/TypeStrong/atom-typescript  
+Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
+Stylesheet: .tree-view { /* background-color: whitesmoke; */ font-size: 10px; }  
 
 ### Alm-tools ###
 - https://github.com/alm-tools/alm

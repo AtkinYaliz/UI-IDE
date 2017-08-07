@@ -11,9 +11,9 @@
   "terminal.integrated.fontSize": 12
 
 ### Sublime ###
-Git  
-TypeScript  
-Babel ES6/ES7  
+- Git  
+- TypeScript  
+- Babel ES6/ES7  
 JsFormat  
 BracketHighlighter  
 SideBarEnhancements  

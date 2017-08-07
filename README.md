@@ -17,6 +17,7 @@ Babel ES6/ES7
 JsFormat  
 BracketHighlighter  
 SideBarEnhancements  
+Color Highlighter  
 Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
 
 ### Atom ###

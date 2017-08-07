@@ -62,7 +62,7 @@ F11 		=> Show desktop
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
 Cmd + `		=> tab between windows of same application  
-cp -a /source/. /dest/ => copy the content of the <_source> into <_dest> recursively including hidden files/folders  
+cp -a /source/. /dest/ => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
 ln -s <_path>	=> creates a link of <_path> in the current folder  
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
 

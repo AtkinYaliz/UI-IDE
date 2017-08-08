@@ -18,6 +18,7 @@ JsFormat
 BracketHighlighter  
 SideBarEnhancements  
 Color Highlighter  
+A File Icon  
 Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
 
 ### Atom ###

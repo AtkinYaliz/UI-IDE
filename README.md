@@ -68,7 +68,7 @@ ln -s <_path>	=> creates a link of <_path> in the current folder
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
 
 // MongoDB  
-$ mongod —-dbpath ../data/db  
+$ ./mongod --dbpath ../data/db  
 $ mongo (another cmd)  
 $ show dbs  
 $ use <db>  

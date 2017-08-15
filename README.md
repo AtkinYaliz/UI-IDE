@@ -11,18 +11,20 @@
   "terminal.integrated.fontSize": 12
 
 ### Sublime ###
-- TypeScript
-- Babel ES6/ES7
-- JsFormat
+- Git  
+TypeScript  
+Babel ES6/ES7  
+JsFormat  
+BracketHighlighter  
+SideBarEnhancements  
+Color Highlighter  
+A File Icon  
+Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
 
 ### Atom ###
-- Atom-Typescript: https://github.com/TypeStrong/atom-typescript
-- Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)
-- Stylesheet: 
-.tree-view {
-  // background-color: whitesmoke;
-  font-size: 10px;
-}
+- Atom-Typescript: https://github.com/TypeStrong/atom-typescript  
+Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
+Stylesheet: .tree-view { /* background-color: whitesmoke; */ font-size: 10px; }  
 
 ### Alm-tools ###
 - https://github.com/alm-tools/alm
@@ -62,10 +64,12 @@ F11 		=> Show desktop
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
 Cmd + `		=> tab between windows of same application  
-ln -s <the_path>	=> creates a link of <the_path> in the current folder  
+cp -a /source/. /dest/ => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
+ln -s <_path>	=> creates a link of <_path> in the current folder  
+chown <_user> <_file> => changes the owner of <_file> to <_user>  
 
 // MongoDB  
-$ mongod —-dbpath ../data/db  
+$ ./mongod --dbpath ../data/db  
 $ mongo (another cmd)  
 $ show dbs  
 $ use <db>  

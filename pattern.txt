@@ -79,8 +79,8 @@ bool Promote(Employee emp) {
 }
 IsPromotable isPromotable = new IsPromotable( Promote );
 PromoteEmployee(list, isPromotable);
-||
-\/
+  ||
+  \/
 PromoteEmployee(list, emp => emp.Age > 40);
 
 
@@ -178,8 +178,8 @@ private static void Print(string s) {
 	Console.Write(s);
 }
 list.ForEach( Print );
-||
-\/
+  ||
+  \/
 list.ForEach(delegate(string name) {
 	Console.Write(name);
 });
@@ -223,8 +223,8 @@ class Customer {
 		else return 0;
 	}
 }
-||
-\/
+  ||
+  \/
 class Customer { ... }
 class SilverCustomer {
 	override GetDiscount() { return 15; }
@@ -240,8 +240,8 @@ class Enquiry: Customer {
 	int GetDiscount() { return 12; }
 	void Add() { throw Exception(); }
 }
-||
-\/
+  ||
+  \/
 interface IDiscount {
 	int GetDiscount;
 }

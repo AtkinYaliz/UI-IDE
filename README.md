@@ -8,7 +8,7 @@
 - Ubuntu: Home/.vscode/extensions
 - "editor.fontSize": 13,  
   "window.zoomLevel": -0.5,  
-  "terminal.integrated.fontSize": 12  
+  "terminal.integrated.fontSize": 12,  
   "editor.fontLigatures": true
 
 ### Sublime ###

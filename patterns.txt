@@ -374,3 +374,4 @@ static class Factory {
 		return _customers[type];
 	}
 }
+

@@ -374,3 +374,41 @@ static class Factory {
 		return _customers[type];
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+.inputbase() {          |   // nothing for inputBase
+    // BASE CODE        |
+}                       |
+                        |
+.someInput {            |   .someInput {
+    .inputbase;         |       // BASE CODE
+    // some code        |       // some code
+}                       |   }
+                        |
+.otherInput {           |   .otherInput {
+    .inputbase;         |       // BASE CODE
+    // other code       |       // other code
+}                       |   }
+------------------------------------------------------
+.inputbase {                |   .inputbase,
+    // BASE CODE            |   .someInput,
+}                           |   .otherInput {
+                            |       // BASE CODE
+.someInput {                |   }
+    &:extend(.inputbase);   |
+    // some code            |   .someInput {
+}                           |       // some code
+                            |   }
+.otherInput {               |   .otherInput {
+    &:extend(.inputbase);   |       // other code
+    // other code           |   }
+} 

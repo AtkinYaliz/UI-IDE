@@ -378,6 +378,14 @@ static class Factory {
 
 
 
+// CommonJS -----------------------------------------------------------------
+// testA.js							|	// testB.js
+exports.funcA = () => {				|	module.exports = () => {
+   console.log('--------');			|		console.log('--------');
+};									|	};
+// app.js							|	// app.js
+const testA = require('./testA');	|	const testB = require('./testB');
+testA.funcA();						|	testB();
 
 
 

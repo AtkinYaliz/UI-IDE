@@ -6,7 +6,7 @@
 - Out of box
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
-- "typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",  
+- "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
   "editor.tabSize": 4,  
   "editor.fontSize": 13,  
   "window.zoomLevel": -0.5,  

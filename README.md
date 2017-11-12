@@ -6,7 +6,9 @@
 - Out of box
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
-- "editor.fontSize": 13,  
+- "typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",  
+  "editor.tabSize": 4,  
+  "editor.fontSize": 13,  
   "window.zoomLevel": -0.5,  
   "terminal.integrated.fontSize": 12,  
   "editor.fontLigatures": true

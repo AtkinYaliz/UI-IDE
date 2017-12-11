@@ -7,11 +7,13 @@
 - Mac: ~/.vscode/extensions
 - Ubuntu: Home/.vscode/extensions
 - "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
-  "editor.tabSize": 4,  
+  "editor.detectIndentation": false,  
+  "editor.insertSpaces": true,  
+  "editor.tabSize": 3,  
   "editor.fontSize": 13,  
+  "editor.fontLigatures": true  
   "window.zoomLevel": -0.5,  
   "terminal.integrated.fontSize": 12,  
-  "editor.fontLigatures": true
 
 ### Sublime ###
 - Git  

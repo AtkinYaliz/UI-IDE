@@ -92,7 +92,7 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 ## ~/.bashrc ##
 - alias cls='clear && reset'
-- export PS1='${PWD} $ ' # PS1='\W $ ' didn't work
+- PS1='\[\033[01;32m\]\w \[\033[00m\]\$ '  # if \w doesn't work use ${PWD} instead
 
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3

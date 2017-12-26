@@ -92,7 +92,7 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 ## ~/.bashrc ##
 - alias cls='clear && reset'
-- export PS1='\W \$ '
+- export PS1='${PWD} $ ' # PS1='\W $ ' didn't work
 
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3

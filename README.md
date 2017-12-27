@@ -92,7 +92,14 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 ## ~/.bashrc ##
 - alias cls='clear && reset'
-- PS1='\[\033[01;32m\]\w \[\033[00m\]\$ '  # if \w doesn't work use ${PWD} instead
+PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
+
+## Terminator ##
+- Profiles -> default -> Colours -> Built-in Schemes: Gruvbox dark  
+- First open terminator and set the window size according to your need and comfort.  
+Right click and go to preference and then to layout.  
+Click on the terminal name under window and then save the layout.  
+Thats it, It will open the terminator in the same size, as you have set up, next time you open it.  
 
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3

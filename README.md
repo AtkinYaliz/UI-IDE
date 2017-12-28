@@ -56,11 +56,12 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/Downloads/mongodb/bin:$PATH  
+alias l='ls -CF'  
 alias la='ls -a'  
-alias ld='ls -all'  
-alias ll='ls -list'  
+alias ld='ls -l'  
+alias ll='ls -all'  
 alias cls='clear && printf "\e[3J"'  
-export PS1="\W \$ "  
+export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '  
 eval $(/usr/libexec/path_helper -s)  
 
 ## shortcuts ##
@@ -91,7 +92,11 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 # UBUNTU #
 
 ## ~/.bashrc ##
-- alias cls='clear && reset'
+alias l='ls -CF'  
+alias la='ls -a'  
+alias ld='ls -l'  
+alias ll='ls -all'  
+alias cls='clear && reset'  
 PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
 
 ## Terminator ##

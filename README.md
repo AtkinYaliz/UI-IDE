@@ -100,6 +100,44 @@ PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
 Right click and go to preference and then to layout.  
 Click on the terminal name under window and then save the layout.  
 Thats it, It will open the terminator in the same size, as you have set up, next time you open it.  
+- ~home/.config/terminator/config:  
+[global_config]
+  suppress_multiple_term_dialog = True
+  title_font = Sans 8
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 99a44a5b-9cc5-4c49-bdc8-6cac012dcfb8
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1912, 425
+      title = /bin/bash
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 99a44a5b-9cc5-4c49-bdc8-6cac012dcfb8
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.95
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    cursor_shape = ibeam
+    font = Monospace 9
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    use_system_font = False
+
 
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3

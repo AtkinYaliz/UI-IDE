@@ -11,7 +11,7 @@
   "editor.insertSpaces": true,  
   "editor.tabSize": 3,  
   "editor.fontSize": 13,  
-  "editor.fontLigatures": true  
+  "editor.fontLigatures": true,  
   "window.zoomLevel": -0.5,  
   "terminal.integrated.fontSize": 12,  
 

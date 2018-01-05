@@ -155,6 +155,7 @@ Gnome Tweaks,
 GParted, KDE Partition Manager,  
 UNetbootin,  
 Terminator,  
+K3b,  
 VLC,  
 
 - - - -

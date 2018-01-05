@@ -107,7 +107,8 @@ GParted, KDE Partition Manager, UNetbootin,
 ## Scripts ##
 - NodeJs: sudo apt install nodejs  
 - GIT: sudo apt install git  
-- D: sudo mkdir -p /media/c  
+- D (ntfs):  
+sudo mkdir -p /media/c  
 sudo fdisk -l (ex: sda3 is our D drive)  
 sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda3 /media/c  
 

@@ -92,12 +92,24 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 # UBUNTU #
 
 ## ~/.bashrc ##
-// alias l='ls -CF'  
+'# alias l='ls -CF'  
 '# alias la='ls -a'  
 '# alias ll='ls -all'  
 alias ld='ls -l'  
 alias cls='clear && reset'  
 PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
+
+## Programs ##
+GIMP, VLC, K3b,  
+Gnome Tweaks, Terminator,  
+GParted, KDE Partition Manager, UNetbootin,  
+
+## Scripts ##
+- NodeJs: sudo apt install nodejs  
+- GIT: sudo apt install git  
+- D: sudo mkdir -p /media/c  
+sudo fdisk -l (ex: sda3 is our D drive)  
+sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda3 /media/c  
 
 ## Terminator ##
 - Profiles -> default -> Colours -> Built-in Schemes: Gruvbox dark  
@@ -147,23 +159,6 @@ Thats it, It will open the terminator in the same size, as you have set up, next
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3
 - sudo apt-get update
 - sudo apt-get install sublime-text-installer  
-
-## Programs ##
-GIMP,  
-Gnome Tweaks,  
-GParted, KDE Partition Manager,  
-UNetbootin,  
-Terminator,  
-K3b,  
-VLC,  
-
-## Scripts ##
-- NodeJs: sudo apt install nodejs  
-- GIT: sudo apt install git  
-- D: sudo mkdir -p /media/c  
-sudo fdisk -l (ex: sda3 is our D drive)  
-sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda3 /media/c  
-
 
 - - - -
 

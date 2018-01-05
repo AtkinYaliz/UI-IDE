@@ -147,7 +147,15 @@ Thats it, It will open the terminator in the same size, as you have set up, next
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3
 - sudo apt-get update
-- sudo apt-get install sublime-text-installer
+- sudo apt-get install sublime-text-installer  
+
+## Programs ##
+GIMP,  
+Gnome Tweaks,  
+GParted, KDE Partition Manager,  
+UNetbootin,  
+Terminator,  
+VLC,  
 
 - - - -
 

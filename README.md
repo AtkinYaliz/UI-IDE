@@ -107,7 +107,9 @@ GParted, KDE Partition Manager, UNetbootin,
 
 ## Scripts ##
 - NodeJs: sudo apt install nodejs  
+- NPM: sudo apt install npm  
 - GIT: sudo apt install git  
+- Chrome: sudo apt install google-chrome-stable
 - D (ntfs):  
 sudo mkdir -p /media/c  
 sudo fdisk -l (ex: sda3 is our D drive)  

@@ -165,7 +165,7 @@ Thats it, It will open the terminator in the same size, as you have set up, next
 - sudo apt-get install sublime-text-installer  
 
 ## Docky ##
-Open gconf-editor. Navigate to */apps/docky-2/Docky/Items/DockyItem/*. Change DockyItemCommand to *gksu nautilus /usr/share/applications*. Click on your Docky Anchor. Type in your password. Navigate to the program icon you would like to change.  
+Open gconf-editor. Navigate to */apps/docky-2/Docky/Items/DockyItem/*. Change *Hue* to 1 DockyItemCommand to *gksu nautilus /usr/share/applications*. Click on your Docky Anchor. Type in your password. Navigate to the program icon you would like to change.  
 
 - - - -
 

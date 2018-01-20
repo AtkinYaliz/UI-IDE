@@ -100,7 +100,7 @@ alias cls='clear && reset'
 PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
 
 ## Programs ##
-Unity, Gnome Tweaks, Gnome Global Application Menu, Docky, Dash-to-dock,  
+Gnome Tweaks, Gnome Global Application Menu, Unity or Docky or Latte or Dash-to-dock (oob),  
 GIMP, VLC, K3b,  
 Terminator,  
 GParted, KDE Partition Manager, UNetbootin,  

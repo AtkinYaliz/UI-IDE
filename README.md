@@ -160,6 +160,31 @@ Thats it, It will open the terminator in the same size, as you have set up, next
     show_titlebar = False
     use_system_font = False
 
+## Konsole ##
+~/.config/konsolerc
+[Desktop Entry]
+DefaultProfile=Default.profile
+
+[Favorite Profiles]
+Favorites=
+
+[MainWindow]
+Height 1080=480
+Width 1920=1298
+
+[TabBar]
+ShowQuickButtons=true
+TabBarVisibility=ShowTabBarWhenNeeded
+
+~/.local/share/konsole/Default.profile  
+[Appearance]
+ColorScheme=Breeze
+
+[General]
+Name=Default
+Parent=FALLBACK/
+
+
 ## Sublime Text 3 ##
 - sudo add-apt-repository ppa:webupd8team/sublime-text-3
 - sudo apt-get update

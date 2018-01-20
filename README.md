@@ -104,6 +104,7 @@ Gnome Tweaks, Gnome Global Application Menu, Unity or Docky or Latte or Dash-to-
 GIMP, VLC, K3b,  
 Terminator,  
 GParted, KDE Partition Manager, UNetbootin,  
+https://atom.io, 
 
 ## Scripts ##
 - NodeJs: sudo apt install nodejs  

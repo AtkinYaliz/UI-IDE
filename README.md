@@ -117,7 +117,8 @@ sudo fdisk -l (ex: sda3 is our D drive)
 sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda3 /media/c  
 - if there is a problem w/ icons:  
 /usr/share/pixmaps/ or /usr/share/applications/ and open related files.  
-- Printer: ipp://192.168.1.93/ipp/631  
+- Printer: http://localhost:631/printers for administrations.  
+ipp://192.168.1.93/ipp/631 for the uri of the wifi printer  
 
 ## Terminator ##
 - Profiles -> default -> Colours -> Built-in Schemes: Gruvbox dark  

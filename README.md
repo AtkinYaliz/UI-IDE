@@ -31,9 +31,6 @@ Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray
 Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
 Stylesheet: .tree-view { /* background-color: whitesmoke; */ font-size: 10px; }  
 
-### Alm-tools ###
-- https://github.com/alm-tools/alm
-
 - - - -
 
 ## Boilerplates ##

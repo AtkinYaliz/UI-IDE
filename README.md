@@ -5,7 +5,7 @@
 ### VS Code ###
 - Out of box
 - Mac: ~/.vscode/extensions
-  -Cmd + Shft + P -> Shell: install 'code' in Path
+  - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
   "editor.detectIndentation": false,  

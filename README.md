@@ -5,6 +5,7 @@
 ### VS Code ###
 - Out of box
 - Mac: ~/.vscode/extensions
+  -Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
   "editor.detectIndentation": false,  
@@ -55,12 +56,6 @@ export PATH=~/Downloads/mongodb/bin:$PATH
 alias l='ls -CF'  
 alias la='ls -a'  
 alias ll='ls -all'  
-alias ld='ls -l'  
-
-
-alias ll='ls -alF'  
-alias la='ls -A'  
-alias l='ls -CF'  
 alias ld='ls -l'  
 alias cls='clear && printf "\e[3J"'  
 export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '  

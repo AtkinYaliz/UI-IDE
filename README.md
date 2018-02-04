@@ -5,6 +5,7 @@
 ### VS Code ###
 - Out of box
 - Mac: ~/.vscode/extensions
+  - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
   "editor.detectIndentation": false,  
@@ -56,12 +57,6 @@ alias l='ls -CF'
 alias la='ls -a'  
 alias ll='ls -all'  
 alias ld='ls -l'  
-
-
-alias ll='ls -alF'  
-alias la='ls -A'  
-alias l='ls -CF'  
-alias ld='ls -l'  
 alias cls='clear && printf "\e[3J"'  
 export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '  
 eval $(/usr/libexec/path_helper -s)  
@@ -72,8 +67,8 @@ F11 		=> Show desktop
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
 Cmd + `		=> tab between windows of same application  
-cp -a /source/. /dest/ => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
-ln -s <_path>	=> creates a link of <_path> in the current folder  
+cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
+ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
 
 // MongoDB  

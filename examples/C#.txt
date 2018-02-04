@@ -1,0 +1,377 @@
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ IEnumerator ] -------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+public interface IEnumerator {
+	object Current { get; }
+	bool MoveNext();
+	void Reset();
+}
+public interface IEnumerator<out T>: IEnumerator {
+	T Current { get; }
+}
+
+public interface IEnumarable {
+	IEnumerator GetEnumerator();
+}
+public interface IEnumerable<out T>: IEnumerable {
+	IEnumerator<T> GetEnumerator();
+}
+
+
+public delegate TResult Func<in T, out TResult> (T arg);
+
+public static IEnumerable<TResult> Select<TSource, TResult> (
+	this IEnumerable<TSource> source,
+	Func<TSource, TResult> selector
+);
+
+public static IEnumerable<TSource> Where<TSource> (
+	this IEnumerable<TSource> source,
+	Func<TSource, bool> predicate
+);
+
+public static IEnumerable<TSource> OrderBy<TSource, TKey> (
+	this IEnumerable<TSource> source,
+	Func<TSource, TKey> keySelector
+);
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ Delegate ] ----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+Is a (TYPE SAFE) FUNCTION POINTER.
+
+public string GetSum(int x, int y) {
+	return "Sum=" + (x+y);
+}
+
+public delegate string GetSumDelegate(int x, int y);
+
+var del = new GetSumDelegate(GetSum);
+string result = del (10, 20);
+
+
+
+
+
+public IEnumerable<Employee> PromoeEmployee(List<Employee> list) {
+	foreach(var emp in list) {
+		return yield if(emp.Age > 40);		// -> NOT "Open for Extension Close for Modification"
+	}
+}
+
+delegate bool IsPromotable(Employee employee);
+public IEnumerable<Employee> PromoteEmployee(List<Employee> list, IsPromotable del) {
+	foreach(var emp in list) {
+		if( del(emp) ) {
+			return yield emp;
+		}
+	}
+}
+
+bool Promote(Employee emp) {
+	if(emp.Age > 40)
+		return true;
+	else
+		return false;
+}
+IsPromotable isPromotable = new IsPromotable( Promote );
+PromoteEmployee(list, isPromotable);
+  ||
+  \/
+PromoteEmployee(list, emp => emp.Age > 40);
+
+
+public delegate int Comparison<in T>(T x, Ty);
+
+List<T>.Sort(Comparison<T> comparison);
+
+1)
+private static int CompareCustomer(Customer x, Customer y) {
+	return x.Id.Compare(y.Id);
+}
+var customerComparer = new Comparison<Customer>(CompareCustomer);
+listCustomers.Sort(customerComparer);
+
+2)
+listCustomers.Sort( delegate(Customer x, Customer y) {
+	return x.Id.Compare(y.Id);
+});
+
+3)
+listCustomers.Sort( (x, y) => x.Id.Compare(y.Id) );
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ Predicate ] ---------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+
+A DELEGATE to a METHOD that returns BOOLEAN.
+
+	Predicate<T> = Func<T, bool>
+
+$filter('...')(T, function() { return true; });
+
+ornek:
+
+Predicate<Person> person = (Person p) => { return p.Name === "Ahmet"; };
+Person ahmet = people.Find(person);
+
+Person ahmet = people.Find( (Person p) => { return p.Name === "Ahmet"; } );
+
+Predicate<Person> idOld = x => x.age > 100;
+foreach(Person person in people) {
+	if(isOld(person)) {
+		yield return person;
+	}
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ Func (Delegate) ] ---------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+Func<in T, out TResult>: Just a GENERIC DELEGATE.
+
+Func<Employee, string>: represents a function like: public string FunctionName(Employee e) { ... }
+
+ornek:
+
+var listEmployees = new List<Employee>() { ... };
+Func<Employee, string> selector = (employee) => "Name = " + employee.Name;
+IEnumerable<string> names = listEmployees.Select selector );
+
+IEnumerable<string> names = listEmployees.Select( employee => "Name = " + employee.Name );
+
+
+delegate System.Func<in T, out TResult>;
+delegate System.Func<in T1, in T2, out TResult>;
+delegate System.Func<in T1, in T2, in T3, out TResult>;
+
+ornek:
+
+Func<int, int, string> funcDelegate = (num1, num2) => "Sum=" + (num1 + num2);
+string result = funcDelegate(12, 44);
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ Action (Delegate) ] -------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Encapsulates a method that takes a SINGLE PARAMETER and does not return (VOID).
+
+Action<in T>: represents a function like: Funct<T, void>
+
+public delegate void Action<in T>(T obj);
+
+var list = new List<string>() {
+	"Ahmet", "Ali", "Osman"
+}
+private static void Print(string s) {
+	Console.Write(s);
+}
+list.ForEach( Print );
+  ||
+  \/
+list.ForEach(delegate(string name) {
+	Console.Write(name);
+});
+
+
+ornek:
+int count=0;
+company	.CEO
+	.Board
+	.ForEach( x => x.Directors
+		.ForEach( y => y.Managers
+			.ForEach( z => z.SalesUsers
+				.ForEach( t => count += t.Age > 40 ?1 :0 )
+			)
+		)
+	);
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+---- [ SOLID ] -------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Single Responsibility: CRUD ops in models, error logging in models
+Open-Closed Prinsiple: Open to Extension, Close to Modification
+Liskov Substitution Prin: PArent should easily replace the child object
+Interface Segregation Prin:
+Dependency Inversion Prin: Object creation is delegated to client's consuming
+
+-- Open-Closed Prinsiple: POLYMORPHISM + FACTORY PATTERN
+class Customer {
+	int GetDiscount() {
+		if(type) return 10;
+		else if(type) return 15;
+		else return 0;
+	}
+}
+  ||
+  \/
+class Customer { ... }
+class SilverCustomer {
+	override GetDiscount() { return 15; }
+}
+
+
+-- Liskov Substitution Prinsiple:
+class Customer {
+	int GetDiscount() { ... }
+	void Add() { ... }
+}
+class Enquiry: Customer {
+	int GetDiscount() { return 12; }
+	void Add() { throw Exception(); }
+}
+  ||
+  \/
+interface IDiscount {
+	int GetDiscount;
+}
+interface IDatabase {
+	void Add();
+}
+
+
+-- Interface Segregation Prinsiple:
+If you need a new operation which will not be used by other children, put it into a new interface.
+
+interface IDatabase {
+	void Add();
+}
+class Customer: IDatabase { ... } -> class Customer: IDatabase, IDatabase2 { ... }
+
+
+-- Dependency Inversion Prinsiple:
+class Customer {
+	ILogget _logger;
+	public Customer(ILogger logger) {
+		this._logger = logger;
+	}
+}
+
+
+
+
+
+
+(1)
+
+class Customer {
+	void Validate() { ... }
+}
+
+class Lead {
+	void Validate() { ... }
+}
+
+Customer _customer;
+Lead _lead;
+
+OnSelect() {
+	if(text == "Customer")
+		_customer = new Customer();
+	else
+		_lead = new Lead();
+}
+btnValidate() {
+	if(text == "Customer")
+		_customer.Validate();
+	else
+		_lead.Validate();
+}
+
+
+(2)
+
+interface ICustomer {
+	void Validate();
+}
+class Customer: ICustomer {
+	void Validate() { ... }
+}
+
+class Lead: ICustomer {
+	void Validate() { ... }
+}
+
+ICustomer _customer;
+OnSelect() {
+	if(text == "Customer")			\
+		_customer = new Customer();	- POLYMORPHISM
+	else					-
+		_customer = new Lead();		/
+}
+btnValidate() {
+	_customer.Validate();
+}
+
+
+(3)
+
+static class Factory {					\
+	static ICustomer Create(string type) {		-
+		if(type == "Customer")			-
+			return new Customer();		-
+		else					- FACTORY
+			return new Lead();		-
+	}						-
+}							/
+
+ICustomer _customer;
+OnSelect() {
+	_customer = Factory.Create(type);
+}
+btnValidate() {
+	_customer.Validate();
+}
+
+
+(4)
+
+static class Factory {
+	var static _customers = new Dictionary<string, ICustomer>();
+	static Factory() {
+		_customers.Add("Customer", new Customer());
+		_customers.Add("Lead", new Lead());
+	}
+	static ICustomer Create(type) {
+		return _customers[type];
+	}
+}
+
+
+(5)
+
+static class Factory {
+	// Remove constructor
+	static Dictionary(string, ICustomer) _customer null;
+
+	static ICustomer Create(type) {
+		if(_customer == null) {						\
+			_customers = new Dictionary<string, ICustomer>();	-
+			_customers.Add("Customer", new Customer());		- LAZY LOADING
+			_customers.Add("Lead", new Lead());			-
+		}								/
+		
+		return _customers[type];
+	}
+}
+

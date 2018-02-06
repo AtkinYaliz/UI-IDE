@@ -7,8 +7,8 @@
 - Mac: ~/.vscode/extensions
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
-- USER SETTINGS : {
-  "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
+- USER SETTINGS: {  
+  "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
   "editor.detectIndentation": false,  
   "editor.insertSpaces": true,  
   "editor.tabSize": 3,  
@@ -19,7 +19,7 @@
   "javascript.validate.enable": false, // if not using TS  
   "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow" // or install npm i flow-bin -g  
 }
-- WORKSPACE SETTINGS: {
+- WORKSPACE SETTINGS: {  
   "javascript.validate.enable": false,  
   "flow.useNPMPackagedFlow": true,  
   "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow"  

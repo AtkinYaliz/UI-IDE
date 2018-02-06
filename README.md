@@ -8,7 +8,7 @@
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - USER SETTINGS: {  
-    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
+    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
     "editor.detectIndentation": false,  
     "editor.insertSpaces": true,  
     "editor.tabSize": 3,  

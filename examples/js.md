@@ -299,6 +299,22 @@ if(!Object.create) {
 
 - - - -
 - - - -
+
+```javascript
+// Declerative (WHAT)
+users.map(u => {
+    u.lastModified = new Date();
+    return u;
+});
+
+// Imperative (HOW)
+for(var i=0; i<users.length; i++) {
+    users[i].lastModified = new Date();
+}
+```
+
+- - - -
+- - - -
   
   
 ```javascript

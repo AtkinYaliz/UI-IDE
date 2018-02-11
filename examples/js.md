@@ -301,16 +301,11 @@ if(!Object.create) {
 - - - -
 
 ```javascript
-// Declerative (WHAT)
-users.map(u => {
-   u.lastModified = new Date();
-   return u;
-});
-
-// Imperative (HOW)
-for(var i=0; i<users.length; i++) {
-   users[i].lastModified = new Date();
-}
+// Declerative (WHAT)   |  // Imperative (HOW)
+users.map(u => {        |  for(var i=0; i<users.length; i++) {
+   u.city = 'london';   |     users[i].city = 'london';
+   return u;            |  }
+});                     |
 ```
 ```javascript
 /*

@@ -298,8 +298,9 @@ if(!Object.create) {
 ```
 
 - - - -
-# FUNCTIONAL PROGRAMMING #
 - - - -
+
+# FUNCTIONAL PROGRAMMING #
 
 - *Declerative Paradigm*: WHAT | *Imperative Paradigm*: HOW
 - *Immutable Data*: 

@@ -348,14 +348,19 @@ const sum4 = numbers
 /*
  * Task: find the user by id=2
  * */
+
+// Solution 1
 const user1 = users.find(u => u.id === 2);
 
+// Solution 2
 const byId2 = u => u.id ===2;
 const user2 = users( byId2 );
 
+// Solution 3
 const byId3 = (user, id) => user.id === id;
 const user3 = users.find(u => byId3(u, 2));
 
+// Solution 4: HOF + Currying
 const byId4 = id => user => user.id === id;
 const user4 = users.find( byId4(2) );
 ```

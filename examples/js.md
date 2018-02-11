@@ -298,7 +298,20 @@ if(!Object.create) {
 ```
 
 - - - -
+# FUNCTIONAL PROGRAMMING #
 - - - -
+
+- *Declerative Paradigm*: WHAT | *Imperative Paradigm*: HOW
+- *Immutable Data*: 
+   - Data cannot be changed after it's created (return a new copy: .map(), .filter())
+- *First Class Function*:
+   - User functions as arguments.
+   - Functions can be assigned as variables.
+- *Pure Function*:
+   - With same inputs you always get same outputs.
+   - Doesn't depend on any data other than what is passed.
+   - Doesn't modify any data other than what they return.
+- *Side Effect*:
 
 ```javascript
 // Declerative (WHAT)   |  // Imperative (HOW)

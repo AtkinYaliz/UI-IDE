@@ -45,7 +45,7 @@ logGreeting( greetMe );
 
 // use a function expression on the fly
 logGreeting(function() {
-    console.log('hello tony');
+   console.log('hello tony');
 });
 ```
 
@@ -98,10 +98,10 @@ In JS, declerations (variable and function) are hoisted but assignment are not.
 - If a function leaves the scope in which it was created, it stays connected to the variables of that scope (and of the surrounding scopes). For example:
 ```javascript
 function createInc(startValue) {
-    return function (step) {
-        startValue += step;
-        return startValue;
-    };
+   return function (step) {
+      startValue += step;
+      return startValue;
+   };
 }
 ```
 - The function returned by createInc() does not loose its connection to startValue—the variable provides the function with state that persists across function calls:
@@ -117,25 +117,25 @@ A closure is a function plus the connection to the scope in which the function w
 ```javascript
 var result = [];
 for (var i=0; i < 5; i++) {
-    result.push( function () { return i } );  // (1)
+   result.push( function () { return i } );  // (1)
 }
 console.log(result[1]());  // 5 (not 1)
 console.log(result[3]());  // 5 (not 3)
 
 for (var i=0; i < 5; i++) {
-    (function () {
-        var i2 = i;
-        result.push( function () { return i2 } );
-    }());
+   (function () {
+      var i2 = i;
+      result.push( function () { return i2 } );
+   }());
 }
 ```
 
 ```javascript
 function sayHiLater() {
-    var greeting = 'Hi';
-    setTimeout(function() {
-        console.log( greeting );
-    }, 2000);
+   var greeting = 'Hi';
+   setTimeout(function() {
+      console.log( greeting );
+   }, 2000);
 }
 sayHiLater();
 ```
@@ -180,11 +180,11 @@ One function call has exactly one EC associated with it.
 
 ```javascript
 function pow(x, n) {
-    if (n == 1) {
-        return x;
-    } else {
-        return x * pow(x, n - 1);
-    }
+   if (n == 1) {
+      return x;
+   } else {
+      return x * pow(x, n - 1);
+   }
 }
 
 alert( pow(2, 3) );
@@ -211,11 +211,11 @@ Objects created using an object literal, or with new Object(), inherit from a pr
 
 ```javascript
 function Person(fname, lname) {
-    this.fname = fname;
-    this.lname = lnamae;
+   this.fname = fname;
+   this.lname = lnamae;
 }
 Person.prototype.getFullname = function() {
-    return this.fname + ' ' + this.lname;
+   return this.fname + ' ' + this.lname;
 }
 var john = new Person('John', 'Doe');
 console.log( john.getFullname() );
@@ -258,9 +258,9 @@ It changes what the 'this' variable points to. 'this' variable points to that ne
 
 ```javascript
 function Person() {
-    console.log( this );
-    this.fname = 'fname';
-    this.lname = 'lname';
+   console.log( this );
+   this.fname = 'fname';
+   this.lname = 'lname';
 }
 
 var glob = Person();        //-> window object
@@ -268,10 +268,10 @@ var ali = new Person();     //-> {}
 ```
 ```javascript
 function Shape() {
-    this.name = 'Shape 1';
+   this.name = 'Shape 1';
 }
 Shape.prototype.getName = function() {
-    return this.name;
+   return this.name;
 }
 var o = new Shape();
 var o2 = Object.create( o );
@@ -289,11 +289,11 @@ person.city = 'london';                 //-> john.city === 'london'
 
 // polyfill for Obj.create
 if(!Object.create) {
-    Object.create = function(o) {
-        function F() {}
-        F.prototype = o;
-        return new F();
-    }
+   Object.create = function(o) {
+      function F() {}
+      F.prototype = o;
+      return new F();
+   }
 }
 ```
 
@@ -303,13 +303,13 @@ if(!Object.create) {
 ```javascript
 // Declerative (WHAT)
 users.map(u => {
-    u.lastModified = new Date();
-    return u;
+   u.lastModified = new Date();
+   return u;
 });
 
 // Imperative (HOW)
 for(var i=0; i<users.length; i++) {
-    users[i].lastModified = new Date();
+   users[i].lastModified = new Date();
 }
 ```
 ```javascript
@@ -322,10 +322,10 @@ const numbers = [2, 4, 6, 10, 16];
 // Solution #1 (AML)
 var sum1=0, numbers2=JSON.parse(JSON.stringify(numbers));
 for(let i=0; i<numbers2.length; i++) {
-    numbers2[i] = numbers2[i]-1;
-    if(numbers2[i] % 3 === 0) {
-        sum1 += numbers2[i];
-    }
+   numbers2[i] = numbers2[i]-1;
+   if(numbers2[i] % 3 === 0) {
+      sum1 += numbers2[i];
+   }
 }
 
 // Solution #2
@@ -335,18 +335,34 @@ const sum2 = divisible.reduce((acc, n) => acc+n, 0);
 
 // Solution #3
 const sum3 = numbers
-    .map(n => n-1)
-    .filter(n => n%3 === 0)
-    .reduce((acc, n) => acc+n, 0);
+   .map(n => n-1)
+   .filter(n => n%3 === 0)
+   .reduce((acc, n) => acc+n, 0);
 
 // Solution #4
 const subtractOne = n => n-1;
 const isDivisibleBy3 = n => n%3 === 0;
 const add = (acc, n) => acc+n;
 const sum4 = numbers
-    .map(subtractOne)
-    .filter(isDivisibleBy3)
-    .reduce(add, 0);
+   .map(subtractOne)
+   .filter(isDivisibleBy3)
+   .reduce(add, 0);
+```
+
+```javascript
+/*
+ * Task: find the user by id=2
+ * */
+const user1 = users.find(u => u.id === 2);
+
+const byId2 = u => u.id ===2;
+const user2 = users( byId2 );
+
+const byId3 = (user, id) => user.id === id;
+const user3 = users.find(u => byId3(u, 2));
+
+const byId4 = id => user => user.id === id;
+const user4 = users.find( byId4(2) );
 ```
 
 - - - -

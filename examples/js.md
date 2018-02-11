@@ -313,6 +313,7 @@ if(!Object.create) {
    - Doesn't depend on any data other than what is passed.
    - Doesn't modify any data other than what they return.
 - *Side Effect*:
+   - If it modifies any data outside it's scope (api call, file system, )
 
 ```javascript
 // Declerative (WHAT)   |  // Imperative (HOW)

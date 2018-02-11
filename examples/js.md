@@ -312,6 +312,42 @@ for(var i=0; i<users.length; i++) {
     users[i].lastModified = new Date();
 }
 ```
+```javascript
+/*
+ * Task: Reduce every item by 1 and then
+ * sum all the values divisible by 3
+ * */
+const numbers = [2, 4, 6, 10, 16];
+
+// Solution #1 (AML)
+var sum1=0, numbers2=JSON.parse(JSON.stringify(numbers));
+for(let i=0; i<numbers2.length; i++) {
+    numbers2[i] = numbers2[i]-1;
+    if(numbers2[i] % 3 === 0) {
+        sum1 += numbers2[i];
+    }
+}
+
+// Solution #2
+const reduced = numbers.map(n => n-1);
+const divisible = reduced.filter(n => n%3 === 0);
+const sum2 = divisible.reduce((acc, n) => acc+n, 0);
+
+// Solution #3
+const sum3 = numbers
+    .map(n => n-1)
+    .filter(n => n%3 === 0)
+    .reduce((acc, n) => acc+n, 0);
+
+// Solution #4
+const subtractOne = n => n-1;
+const isDivisibleBy3 = n => n%3 === 0;
+const add = (acc, n) => acc+n;
+const sum4 = numbers
+    .map(subtractOne)
+    .filter(isDivisibleBy3)
+    .reduce(add, 0);
+```
 
 - - - -
 - - - -

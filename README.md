@@ -77,6 +77,7 @@ Cmd + `		=> tab between windows of same application
 cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
 ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
+defaults write -g com.apple.mouse.scaling -float 10  
 
 // MongoDB  
 $ ./mongod --dbpath ../data/db  

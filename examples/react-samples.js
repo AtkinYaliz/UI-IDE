@@ -150,8 +150,7 @@ type DispatchProps = {
 type OwnProps = {
    onClick: (val: String) => void;
 };
-
-class LogoutPage extends React.Component<StateProps & DispatchProps & OwnProps, {}> {
+class LogoutPage extends React.Component<OwnProps & StateProps & DispatchProps, {}> {
    // private query: { cityId: string, cityName: string } = this.props.match.params;
    static contextTypes = {
       router: PropTypes.object

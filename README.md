@@ -41,10 +41,11 @@ Install: file-icons, atom-json-color, atom-bracket-highlight,
 Stylesheet:  
   .tree-view { /* background-color: whitesmoke; */ font-size: 10px; }  
   .bracket-matcher {
+    position: absolute;
+    top: -1px;
     border-bottom: 1px solid lime;
-    position: absolute; 
     border: 1px solid rgba(0, 255, 0, 0.7);
-    background-color: rgba(0, 255, 0, 0.3);
+    // background-color: rgba(150, 255, 150, 0.3);
   }  
 
 - - - -

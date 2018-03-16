@@ -68,8 +68,7 @@ Stylesheet:
 ## ~/.bash_profile ##
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
-export PATH=~/Downloads/mongodb/bin:$PATH  
-#export PATH=/Users/aytekin/Documents/mongodb/bin:$PATH  
+#export PATH=~/Downloads/mongodb/bin:$PATH  
 alias l='ls -CF'  
 alias la='ls -a'  
 alias ll='ls -all'  

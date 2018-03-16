@@ -69,6 +69,7 @@ Stylesheet:
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/Downloads/mongodb/bin:$PATH  
+#export PATH=<mongodb-install-directory>/bin:$PATH  
 alias l='ls -CF'  
 alias la='ls -a'  
 alias ll='ls -all'  

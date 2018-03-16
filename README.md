@@ -121,8 +121,12 @@ GParted, KDE Partition Manager, UNetbootin,
 https://atom.io, 
 
 ## Scripts ##
-- NodeJs: sudo apt install nodejs  
-- NPM: sudo apt install npm  
+- sudo apt-get update  
+- NodeJs: sudo apt install nodejs (may noy install the latest version)  
+  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -  
+  sudo apt-get install -y nodejs  
+  sudo apt install nodejs-legacy  
+- NPM: sudo apt install npm  
 - GIT: sudo apt install git  
 - Chrome: sudo apt install google-chrome-stable
 - D (ntfs):  

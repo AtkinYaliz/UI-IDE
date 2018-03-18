@@ -302,16 +302,28 @@ panel.addWidget("org.kde.plasma.digitalclock")
 - - - -
 - - - -
 
-$ git config credential.helper store  
-$ git push http://example.com/repo.git  
-Username: <type your username>  
-Password: <type your password>
+# AWS #
+
+sudo apt-get update  
+sudo apt-get git  
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs  
+sudo apt-get install -y nodejs-legacy  
+sudo apt-get install build-essential  
+sudo apt-get npm  
 
 
 - - - -
 - - - -
 
 # COMMON #
+
+## Git ##
+$ git config credential.helper store  
+$ git push http://example.com/repo.git  
+Username: <type your username>  
+Password: <type your password>  
+
 
 ## Terminal ##
 - RGB(0, 43, 54): Turkuaz

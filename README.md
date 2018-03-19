@@ -17,10 +17,11 @@
     "editor.fontLigatures": true,  
     "git.autofetch": true,  
     "javascript.validate.enable": false,  
-    "window.zoomLevel": -0.5,  
-    "workbench.colorTheme": "Atom One Dark",  
-    "workbench.iconTheme": "material-icon-theme",  
     "terminal.integrated.fontSize": 12,  
+    "terminal.integrated.fontFamily": "Monaco",  
+    "window.zoomLevel": -0.5,  
+    "workbench.colorTheme": "Default Dark+",  
+    "workbench.iconTheme": "material-icon-theme",  
   }
 - WORKSPACE SETTINGS: {  
     "javascript.validate.enable": false, // if not using TS  

@@ -12,9 +12,14 @@
     "editor.detectIndentation": false,  
     "editor.insertSpaces": true,  
     "editor.tabSize": 3,  
+    "editor.fontFamily": "'Andale Mono', 'Lucida Console'",  
     "editor.fontSize": 13,  
     "editor.fontLigatures": true,  
+    "git.autofetch": true,  
+    "javascript.validate.enable": false,  
     "window.zoomLevel": -0.5,  
+    "workbench.colorTheme": "Atom One Dark",  
+    "workbench.iconTheme": "material-icon-theme",  
     "terminal.integrated.fontSize": 12,  
   }
 - WORKSPACE SETTINGS: {  

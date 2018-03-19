@@ -25,8 +25,9 @@
   }
 - WORKSPACE SETTINGS: {  
     "javascript.validate.enable": false, // if not using TS  
+    "flow.enabled": true,  
+    "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow" // or install npm i flow-bin -g  
     "flow.useNPMPackagedFlow": true,  
-    "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow" // or install npm i flow-bin -g  
   }
 
 ### Sublime ###

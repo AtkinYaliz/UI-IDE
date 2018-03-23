@@ -16,18 +16,21 @@
     "editor.fontSize": 13,  
     "editor.fontLigatures": true,  
     "git.autofetch": true,  
-    "javascript.validate.enable": false,  
     "terminal.integrated.fontSize": 12,  
     "terminal.integrated.fontFamily": "Monaco",  
     "window.zoomLevel": -0.5,  
     "workbench.colorTheme": "Default Dark+",  
     "workbench.iconTheme": "material-icon-theme",  
+    "javascript.validate.enable": false, // if not using TS  
+    "flow.enabled": true,  
+    "flow.useNPMPackagedFlow": true,  
+    "flow.pathToFlow": "../node_modules/.bin/flow" // or install npm i flow-bin -g  
   }
 - WORKSPACE SETTINGS: {  
     "javascript.validate.enable": false, // if not using TS  
     "flow.enabled": true,  
-    "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow" // or install npm i flow-bin -g  
     "flow.useNPMPackagedFlow": true,  
+    "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow" // or install npm i flow-bin -g  
   }
 
 ### Sublime ###

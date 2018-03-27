@@ -90,10 +90,10 @@ eval $(/usr/libexec/path_helper -s)
 
 ## shortcuts ##
 AC2V2zZQ  
-F11 		=> Show desktop  
+F11	=> Show desktop  
 Cmd + Shift + . => show hidden files  
 Cmd + Q 	=> close the application without trace  
-Cmd + `		=> tab between windows of same application  
+Cmd + \`		=> tab between windows of same application  
 cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
 ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
@@ -106,8 +106,8 @@ $ show dbs
 $ use <db>  
 $ db  
 $ show collections  
-$ db.<collaction>.drop()  
-$ db.<collaction>.insert({…})  
+$ db.<collection>.drop()  
+$ db.<collection>.insert({…})  
 $ db.<collection>.find()  
 
 // NPM  
@@ -133,13 +133,13 @@ https://atom.io,
 
 ## Scripts ##
 - sudo apt-get update  
-- NodeJs: sudo apt install nodejs (may noy install the latest version)  
+- NodeJs: sudo apt-get install nodejs (may noy install the latest version)  
   curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -  
   sudo apt-get install -y nodejs  
-  sudo apt install nodejs-legacy  
-- NPM: sudo apt install npm  
-- GIT: sudo apt install git  
-- Chrome: sudo apt install google-chrome-stable
+  sudo apt-get install nodejs-legacy  
+- NPM: sudo apt-get install npm  
+- GIT: sudo apt-get install git  
+- Chrome: sudo apt-get install google-chrome-stable
 - D (ntfs):  
 sudo mkdir -p /media/c  
 sudo fdisk -l (ex: sda3 is our D drive)  

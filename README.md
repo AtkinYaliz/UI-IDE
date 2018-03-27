@@ -325,9 +325,9 @@ sudo apt-get install build-essential
 sudo apt-get npm  
 
 ## Deployment ##
-$ ssh -i ~/.ssh/lh-accountancy-dev.pem ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com  
+$ ssh -i \~/.ssh/lh-accountancy-dev.pem ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com  
 $ tar -cvzf lh-accountancy.tar.gz lh-accountancy  
-$ scp -i ~/.ssh/lh-accountancy-dev.pem lh-accountancy.tar.gz ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com:~  
+$ scp -i \~/.ssh/lh-accountancy-dev.pem lh-accountancy.tar.gz ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com:\~  
 $ sudo tar -xzvf lh-accountancy.tar.gz
 $ npm run build-dev (export NODE_ENV=dev)
 $ npm run publish-dev > lh-accountancy.log 2>&1 &

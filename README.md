@@ -330,7 +330,8 @@ $ tar -cvzf lh-accountancy.tar.gz lh-accountancy
 $ scp -i \~/.ssh/lh-accountancy-dev.pem lh-accountancy.tar.gz ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com:\~  
 $ sudo tar -xzvf lh-accountancy.tar.gz  
 $ npm run build-dev (export NODE_ENV=dev)  
-$ npm run publish-dev > lh-accountancy.log 2>&1 &  
+$ npm run publish-dev > ../lh-accountancy.log 2>&1 &  
+$ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &  
   
   
 - - - -

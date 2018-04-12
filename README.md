@@ -85,6 +85,7 @@ alias la='ls -a'
 alias ll='ls -all'  
 alias ld='ls -l'  
 alias cls='clear && printf "\e[3J"'  
+alias pss='ps aux | grep'  
 alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'  
 eval $(/usr/libexec/path_helper -s)  
 

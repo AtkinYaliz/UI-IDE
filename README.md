@@ -78,7 +78,7 @@ Stylesheet:
 ## ~/.bash_profile ##
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
-export PATH=~/Downloads/mongodb/bin:$PATH  
+export PATH=~/...../mongodb/bin:$PATH  
 export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '  
 alias l='ls -CF'  
 alias la='ls -a'  
@@ -86,7 +86,7 @@ alias ll='ls -all'
 alias ld='ls -l'  
 alias cls='clear && printf "\e[3J"'  
 alias pss='ps aux | grep'  
-alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'  
+alias mongod='mongod --dbpath ~/...../mongodb/data/db'  
 eval $(/usr/libexec/path_helper -s)  
 
 ## shortcuts ##

@@ -49,8 +49,14 @@ Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray
 Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
 Install: file-icons, atom-json-color, atom-bracket-highlight,  
 Stylesheet:  
-  .tree-view { /* background-color: whitesmoke; */ font-size: 10px; }  
-  .bracket-matcher {
+  .tree-view {  
+    /* background-color: whitesmoke; */  
+    font-size: 10px; 
+  }  
+  atom-text-editor {
+    font-size: 14px;  
+  }  
+  .bracket-matcher {
     position: absolute;
     top: -1px;
     border-bottom: 1px solid lime;

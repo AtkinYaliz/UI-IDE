@@ -48,12 +48,14 @@ Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray
 - Atom-Typescript: https://github.com/TypeStrong/atom-typescript  
 Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
 Install: file-icons, atom-json-color, atom-bracket-highlight,  
+Use: UITheme='One Dark', SyntaxTheme='One Light'  
 Stylesheet:  
   .tree-view {  
     /* background-color: whitesmoke; */  
     font-size: 10px; 
   }  
-  atom-text-editor {
+  atom-text-editor {  
+    background-color: #fdf4de;  
     font-size: 14px;  
   }  
   .bracket-matcher {

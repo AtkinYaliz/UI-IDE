@@ -55,7 +55,7 @@ Stylesheet:
     font-size: 10px; 
   }  
   atom-text-editor {  
-    background-color: #fdf4de;  
+    background-color: #f7f3ea;  
     font-size: 14px;  
   }  
   .bracket-matcher {

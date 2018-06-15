@@ -51,19 +51,19 @@ Install: file-icons, atom-json-color, atom-bracket-highlight,
 Use: UITheme='One Dark', SyntaxTheme='One Light'  
 Stylesheet:  
   .tree-view {  
-    /* background-color: whitesmoke; */  
     font-size: 10px; 
   }  
   atom-text-editor {  
     background-color: #f7f3ea;  
-    font-size: 14px;  
+    font-family: Monaco;  
+    font-size: 13px;  
   }  
-  .bracket-matcher {
-    position: absolute;
-    top: -1px;
-    border-bottom: 1px solid lime;
-    border: 1px solid rgba(0, 255, 0, 0.7);
-    // background-color: rgba(150, 255, 150, 0.3);
+  .bracket-matcher {  
+    position: absolute;  
+    top: -1px;  
+    border-bottom: 1px solid lime;  
+    border: 1px solid rgba(0, 255, 0, 0.7);  
+    // background-color: rgba(150, 255, 150, 0.3);  
   }  
 
 - - - -

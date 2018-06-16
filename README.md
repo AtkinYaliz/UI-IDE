@@ -709,9 +709,11 @@ Password: <type your password>
 
   ],
   "Ansi 12 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 0.3333333432674408,
-    "Blue Component" : 1
+    "Red Component" : 0.13017468620091677,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.90362548828125,
+    "Alpha Component" : 1,
+    "Green Component" : 0.17663782469840464
   },
   "Ansi 8 Color" : {
     "Green Component" : 0.3333333432674408,
@@ -1050,11 +1052,11 @@ Password: <type your password>
 
   ],
   "Ansi 12 Color" : {
-    "Red Component" : 0.11039715446531773,
+    "Red Component" : 0.15824025264009833,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.6827392578125,
+    "Blue Component" : 0.773162841796875,
     "Alpha Component" : 1,
-    "Green Component" : 0.14477918670865803
+    "Green Component" : 0.1951802078231008
   },
   "Ansi 8 Color" : {
     "Green Component" : 0.3333333432674408,
@@ -1151,11 +1153,11 @@ Password: <type your password>
     "Blue Component" : 0
   },
   "Background Color" : {
-    "Red Component" : 0.25161571567878127,
+    "Red Component" : 0.25098039215686274,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.25161571567878127,
+    "Blue Component" : 0.25098039215686274,
     "Alpha Component" : 1,
-    "Green Component" : 0.476104736328125
+    "Green Component" : 0.47450980392156861
   },
   "Character Encoding" : 4,
   "Ansi 11 Color" : {
@@ -1381,11 +1383,11 @@ Password: <type your password>
   "Horizontal Spacing" : 1,
   "Normal Font" : "Monaco 12",
   "Ansi 4 Color" : {
-    "Red Component" : 0.0078431372549019607,
+    "Red Component" : 0.027833297848701477,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.7803921568627451,
+    "Blue Component" : 0.8212890625,
     "Alpha Component" : 1,
-    "Green Component" : 0.14509803921568629
+    "Green Component" : 0.16880259977859974
   },
   "Ansi 5 Color" : {
     "Red Component" : 0.8687744140625,
@@ -1398,4 +1400,3 @@ Password: <type your password>
 }
 ]
 }
-

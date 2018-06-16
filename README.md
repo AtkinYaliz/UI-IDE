@@ -356,17 +356,8 @@ $ git config credential.helper store
 $ git push http://example.com/repo.git  
 Username: <type your username>  
 Password: <type your password>  
-
-
-## Terminal ##
-- RGB(0, 43, 54): Turkuaz
-- RGB(0, 43, 0): Green
-- RGB(26, 26, 26): Grey
-
-
-- - - -
-- - - - 
-
+  
+  
 ## iTerm2 ##
 {
 "Profiles": [

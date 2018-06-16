@@ -87,7 +87,7 @@ Stylesheet:
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/...../mongodb/bin:$PATH  
-export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '  
+export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]λ '  
 alias l='ls -CF'  
 alias la='ls -a'  
 alias ll='ls -all'  

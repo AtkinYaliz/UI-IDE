@@ -1,4 +1,5 @@
 const arr = [1, 2, 3];
+const add = (x, y) => x + y;
 const
     clone = arr => [ ...arr ],
     push = arr => x => [ ...arr, x ],
@@ -17,11 +18,10 @@ const
  * the other will be specified later, you can use closure to remember the first one.
  */
 (() => {
-  const sum = (x, y) => x + y;
-  const makeAdder = x => y => sum(x, y);
+  const makeAdder = x => y => add(x, y);
   const addTo10 = makeAdder(10);
 
-  addTo10(4) === makeAdder(10)(4) === sum(10, 4);
+  addTo10(4) === makeAdder(10)(4) === add(10, 4);
 })();
 
 /**
@@ -45,7 +45,7 @@ const
 })();
 
 /**
- * One on one
+ * One on One
  * When you need a function that receives a single argument and returns it.
  */
 (() => {
@@ -69,15 +69,23 @@ const
     };
   }
 
-  function getPerson(data,cb) {
+  function ajax(url, data, callback) { /* ... */ }
+  function getPerson(data, cb) {
     ajax( "http://some.api/person", data, cb );
   }
-  function getOrder(data,cb) {
+  function getOrder(data, cb) {
     ajax( "http://some.api/order", data, cb );
+  }
+  function getCurrentUser(cb) {
+    getPerson( { user: CURRENT_USER_ID }, cb );
   }
 
   var getPerson = partial( ajax, "http://some.api/person" );
   var getOrder = partial( ajax, "http://some.api/order" );
+  var getCurrentUser = partial( getPerson, { user: CURRENT_USER_ID } );
+
+  [1,2,3,4,5].map( x => add(x, 3) );
+  [1,2,3,4,5].map( partial( add, 3 ) );
 })();
 
 /**
@@ -122,4 +130,17 @@ const
     }
   }
   var isEven = negate(isOdd);
+
+  const pluck = key => obj => obj[key];
+  const multiply = x => y => x * y;
+  const discount = multiply(0.95);
+  const tax = multiply(1.1);
+
+  const prices = arr
+  	.map( pluck('price') )
+  	.map( discount )
+  	.map( tax )
+  	.map( isOdd );
+
+  console.log( prices );
 })();

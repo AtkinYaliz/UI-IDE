@@ -13,7 +13,7 @@
     "editor.insertSpaces": true,  
     "editor.tabSize": 3,  
     "editor.fontFamily": "'Andale Mono', 'Lucida Console'",  
-    "editor.fontSize": 13,  
+    "editor.fontSize": 14,  
     "editor.fontLigatures": true,  
     "git.autofetch": true,  
     "terminal.integrated.fontSize": 12,  
@@ -24,7 +24,15 @@
     "javascript.validate.enable": false, // if not using TS  
     "flow.enabled": true,  
     "flow.useNPMPackagedFlow": true,  
-    "flow.pathToFlow": "../node_modules/.bin/flow" // or install npm i flow-bin -g  
+    "flow.pathToFlow": "../node_modules/.bin/flow", // or install npm i flow-bin -g  
+    "gitlens.advanced.messages": {  
+      "suppressShowKeyBindingsNotice": true  
+   },  
+   "files.watcherExclude": {  
+      "**/tmp/**": true,  
+      "**/node_modules/**": true,  
+      "**/bower_components/**": true  
+   }  
   }
 - WORKSPACE SETTINGS: {  
     "javascript.validate.enable": false, // if not using TS  

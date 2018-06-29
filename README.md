@@ -361,6 +361,7 @@ $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
 
 ## Git ##
 $ git config credential.helper store  
+$ git config --global credential.helper cache  
 $ git push http://example.com/repo.git  
 Username: <type your username>  
 Password: <type your password>  

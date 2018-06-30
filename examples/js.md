@@ -94,6 +94,10 @@ In JS, declerations (variable and function) are hoisted but assignment are not.
 
 ### CLOSURE ###
 
+- A *closure* is the combination of a `function` and the `lexical (location) environment` within that function was **created**.  
+- The name comes from the fact that a closure `closes over` the free variables of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
+
+
 - A *closure* is a function that remembers its outer variables and can access them.
 - If a function leaves the scope in which it was created, it stays connected to the variables of that scope (and of the surrounding scopes). For example:
 ```javascript
@@ -128,16 +132,6 @@ for (var i=0; i < 5; i++) {
       result.push( function () { return i2 } );
    }());
 }
-```
-
-```javascript
-function sayHiLater() {
-   var greeting = 'Hi';
-   setTimeout(function() {
-      console.log( greeting );
-   }, 2000);
-}
-sayHiLater();
 ```
 
 ### JS ENGINE ###

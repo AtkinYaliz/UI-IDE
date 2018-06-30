@@ -89,56 +89,36 @@ function f() {
 ```
 
 ### HOISTING ###
+
 JS engine sets up memory space for variable and function declerations (it moves the declerations to the beginning of their direct scopes).  
 In JS, declerations (variable and function) are hoisted but assignment are not.  
 
 ### CLOSURE ###
 
-- A *closure* is the combination of a `function` and the `lexical (location) environment` within that function was **created**.  
+- A *closure* is the combination of a `function` and the `lexical environment` within that function was **created**.  
 - The name comes from the fact that a closure `closes over` the free variables of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
 
-
-- A *closure* is a function that remembers its outer variables and can access them.
-- If a function leaves the scope in which it was created, it stays connected to the variables of that scope (and of the surrounding scopes). For example:
 ```javascript
-function createInc(startValue) {
-   return function (step) {
-      startValue += step;
-      return startValue;
-   };
-}
-```
-- The function returned by createInc() does not loose its connection to startValue—the variable provides the function with state that persists across function calls:
-```
-> var inc = createInc(5);
-> inc(1)
-  6
-> inc(2)
-  8
-```
-A closure is a function plus the connection to the scope in which the function was **created**. The name stems from the fact that a closure “closes over” the free variables of a function. A variable is free if it is not declared within the function—that is, if it comes “from outside.”
-
-```javascript
-var result = [];
-for (var i=0; i < 5; i++) {
-   result.push( function () { return i } );  // (1)
-}
-console.log(result[1]());  // 5 (not 1)
-console.log(result[3]());  // 5 (not 3)
-
-for (var i=0; i < 5; i++) {
-   (function () {
-      var i2 = i;
-      result.push( function () { return i2 } );
-   }());
-}
+//Module pattern
+var testModule = (function () {
+  var counter = 0;
+  return {
+    incrementCounter: function () {
+      return counter++;
+    },
+    resetCounter: function () {
+      console.log( "counter value prior to reset: " + counter );
+      counter = 0;
+    }
+  };
+})();
 ```
 
 ### JS ENGINE ###
 
 - Google's V8 engine is used in Chrome and Node.js.  The engine consists of two main components:
-    - *Memory Heap*: this is where memory allocation happens.
-    - *Call Stack*: this is where your stack frames are, as your code executes.  
+  - *Memory Heap*: this is where memory allocation happens.
+  - *Call Stack*: this is where your stack frames are, as your code executes.  
 
 DOM_________\  
 AJAX_________- Web APIs which are provided by browsers, not by the Engine.  

@@ -206,8 +206,8 @@ Prototype property of the function is not the prototype of the function. It is t
 - *__proto__*: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
 *Why prototype*: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.   
 
-Objects created using an object literal, or with new Object(), inherit from a prototype called *Object.prototype*. The Object.prototype is on the top of the prototype chain. All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.  
-*Prototype chain*: If a property or method is not in an object JS engine looks at its prototype.  
+*Prototype chain*: This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain, *Object.prototype*.
+All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.  
 
 ```javascript
 function Person(fname, lname) {

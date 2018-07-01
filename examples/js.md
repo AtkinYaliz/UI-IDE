@@ -17,9 +17,9 @@
 - The function has full access to the outer variable. It can modify it as well.  
 If a same-named variable is declared inside the function then it *shadows* the outer one.  
 - Values passed to a function as parameters are copied to its local variables (pass-by-value). If the parameter is an object, you can update its properties.  
-    * *.bind(thisArg, param1, param2 ...)*: creates a new function that, when called, has its *this* keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
-    * *.call(thisArg, param1, param2 ...)*: calls a function with a given *this* value and arguments provided individually.
-    * *.apply(thisArg, [param1, param2 ...])*: calls a function with a given *this* value, and arguments provided as an array (or an array-like object).
+    - `.bind(thisArg, p1, p2, p3 ...)`: creates a new function that, when called, has its *this* keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+    - `.call(thisArg, p1, p2, p3 ...)`: calls a function with a given *this* value and arguments provided individually.
+    - `.apply(thisArg, [p1, p2, p3 ...])`: calls a function with a given *this* value, and arguments provided as an array (or an array-like object).
 
 ```javascript
 // function statement
@@ -99,7 +99,7 @@ In JS, declerations (variable and function) are hoisted but assignment are not.
 - The name comes from the fact that a closure `closes over` the free variables of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
 
 ```javascript
-//Module pattern
+// Module pattern
 var testModule = (function () {
   var counter = 0;
   return {

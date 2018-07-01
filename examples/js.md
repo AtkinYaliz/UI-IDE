@@ -179,7 +179,7 @@ Execution Stack will be like:
 All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.  
 - ***.prototype***: Is an object property that is automatically created for to only *functions*. It is used to build *\_\_proto\_\_* when the function happens to be used as a function constructor with the *new* keyword. There will be only one prototype for each object that is created from same function.  
 Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.  
-- ***.\_\_proto\_\_***: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
+- *__.\_\_proto\_\___*: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
 *Why prototype*: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.   
 
  

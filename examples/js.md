@@ -131,15 +131,15 @@ setTimeout__/
 - *Event Loop*: It pushes the first item in the queue into the stack if the stack is empty.
 
 ```javascript
- _HEAP__       _STACK_      _WebAPIs_
-|       |     |       |    |         |
-|       |     |       |    |         |
-|       |     |       |    |         |
- -------       -------      ---------
+ _HEAP__      _STACK_        _WebAPIs_
+|       |    |       |      |         |
+|       |    |       |      |         |
+|       |    |       |      |         |
+ -------      -------        ---------
  
-              -> -- 
- Event Loop  |     |
-              -----
+                   -> -- 
+      Event Loop  |     |
+                   -----
 
  Task    ----------
  Queue  |          |
@@ -277,11 +277,11 @@ if(!Object.create) {
 
 # FUNCTIONAL PROGRAMMING #
 
-- *Declerative Paradigm*: WHAT | *Imperative Paradigm*: HOW
+- *Imperative Paradigm* (HOW) -> *Declerative Paradigm* (WHAT)  
 - *Immutable Data*: 
    - Data cannot be changed after it's created (return a new copy: .map(), .filter())
 - *First Class Function*:
-   - User functions as arguments.
+   - Use functions as arguments.
    - Functions can be assigned as variables.
 - *Pure Function*:
    - With same inputs you always get same outputs.
@@ -291,12 +291,13 @@ if(!Object.create) {
    - If it modifies any data outside it's scope (api call, file system, )
 
 ```javascript
-// Declerative (WHAT)   |  // Imperative (HOW)
-users.map(u => {        |  for(var i=0; i<users.length; i++) {
-   u.city = 'london';   |     users[i].city = 'london';
-   return u;            |  }
-});                     |
+// Imperative (HOW)                  |  // Declerative (WHAT)
+for(var i=0; i<users.length; i++) {  |  users.map(u => {  
+  users[i].city = 'london';          |    u.city = 'london';  
+}                                    |    return u;
+                                     |  });
 ```
+
 ```javascript
 /*
  * Task: Reduce every item by 1 and then

@@ -137,9 +137,10 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 </details>
   
+  
 # UBUNTU #
 
-<details><summary>CLICK ME</summary>
+<details><summary># UBUNTU #</summary>
 
 ## ~/.bashrc ##
 '# alias l='ls -CF'  

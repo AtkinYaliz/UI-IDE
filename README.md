@@ -136,6 +136,8 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 # UBUNTU #
 
+<details><summary>CLICK ME</summary>
+
 ## ~/.bashrc ##
 '# alias l='ls -CF'  
 '# alias la='ls -a'  
@@ -328,7 +330,8 @@ if (langIds.indexOf(languageId) != -1) {
 
 panel.addWidget("org.kde.plasma.systemtray")
 panel.addWidget("org.kde.plasma.digitalclock")
-  
+
+</details>
   
 - - - -
 - - - -

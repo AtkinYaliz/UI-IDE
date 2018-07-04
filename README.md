@@ -91,6 +91,8 @@ Stylesheet:
 
 # MAC #
 
+<details><summary>CLICK ME</summary>
+  
 ## ~/.bash_profile ##
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
@@ -133,7 +135,8 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 // HomeBrew . 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 
-
+</details>
+  
 # UBUNTU #
 
 <details><summary>CLICK ME</summary>

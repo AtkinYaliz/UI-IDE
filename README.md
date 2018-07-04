@@ -89,9 +89,9 @@ Stylesheet:
 
 - - - -
 
-# MAC #
+<details><summary># MAC #</summary>
 
-<details><summary>CLICK ME</summary>
+# MAC #
   
 ## ~/.bash_profile ##
 export CLICOLOR=1  
@@ -138,9 +138,9 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 </details>
   
   
-# UBUNTU #
-
 <details><summary># UBUNTU #</summary>
+
+# UBUNTU #
 
 ## ~/.bashrc ##
 '# alias l='ls -CF'  

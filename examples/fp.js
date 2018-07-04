@@ -1,4 +1,4 @@
-const arr = [1, 2, 3];
+const arr = [1, 2, 3], users = [];
 const add = (x, y) => x + y;
 const
     clone = arr => [ ...arr ],
@@ -11,6 +11,36 @@ const
     splice = arr => (s, c, ...x) => [ ...arr.slice(0, s), ...x, ...x.slice(s + c) ]
 ;
 
+/**
+ *
+ */
+(() => {
+  const has = prop => obj => obj.hasOwnProperty(prop);
+  const sortBy = prop => (x, y) => x[prop] > y[prop];
+  const is = prop => val => obj => obj.hasOwnProperty(prop) && obj[prop] === val;
+
+  const results1 = users
+    .filter( x => x.hasOwnProperty('pets') )
+    .sort( (x, y) => x.age > y.age );
+
+  const results2 = users
+    .filter( has('cars') )
+    .filter( has('pets') )
+    .sort( sortBy('age') )
+    .sort( negate(sortBy('age')) );
+
+  const hasCars = has('cars');
+  const hasPets = has('pets');
+  const isStudent = is('title')('student');
+  const sortByAge = sortBy('age');
+
+  const results3 = users
+    .filter( hasCars )
+    .filter( hasPets )
+    .filter( isStudent )
+    .sort( sortByAge )
+    .sort( negate(sortByAge) );
+})();
 
 /**
  * Closure (Currying example)
@@ -112,11 +142,6 @@ const
  * Point Free
  */
 (() => {
-  foo(function(v) {
-    return bar(v);
-  });
-  foo(bar);
-
   function isOdd(v) {
     return v % 2 === 1;
   }
@@ -143,4 +168,26 @@ const
   	.map( isOdd );
 
   console.log( prices );
+})();
+
+/**
+ * Compose
+ * Code order: Left -> Right
+ * Execution order: Right -> Left
+ */
+(() => {
+  function compose(...fns) {
+    return function composed(result) {
+      var list = [...fns];
+
+      while(list.length > 0) {
+        result = list.pop()( result );
+      }
+
+      return result;
+    }
+  }
+
+  const result = fn3(fn2(fn1( val )));
+  const result = compose(fn3, fn2, fn1)( val );
 })();

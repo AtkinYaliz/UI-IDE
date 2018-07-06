@@ -296,7 +296,7 @@ Execution Stack will be like:
 - *EcmaScript*: The standard that JS is based on. If you want to write your own JS engine you have to make js code to match these specifications.
 - *JS Engine*: A program that converts JS code into something the computer processor can understand.
 
-## V8 JavaScript ENGINE ##
+## V8 JavaScript Engine ##
 - Written in C++ and used in Google Chrome.
 - Converts JS into machine code.
 - Implements ES5.
@@ -305,7 +305,7 @@ Execution Stack will be like:
 - Has files like: 
 
 
-## NODE.JS ##
+## Node.Js ##
 - A C++ program with V8 embedded that is added extra features that make it suitable to be a great server technology.
 
 - - - -

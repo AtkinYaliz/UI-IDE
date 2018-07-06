@@ -288,6 +288,29 @@ Execution Stack will be like:
 - - - -
 - - - -
 
+# NODE #
+
+- *Microprocessor*: A tiny machine that takes instructions (in its own language ie: IA-32, x86-64, ARM, MIPS).
+- *Machine Code (language)*: Programming languages spoken by computer  processors.
+	Every program you run on your computer is converted (compiled) into a machine code.
+- *EcmaScript*: The standard that JS is based on. If you want to write your own JS engine you have to make js code to match these specifications.
+- *JS Engine*: A program that converts JS code into something the computer processor can understand.
+
+## V8 JavaScript ENGINE ##
+- Written in C++ and used in Google Chrome.
+- Converts JS into machine code.
+- Implements ES5.
+- Can run standalone or can be embedded into any C++ application  (ie: NodeJs).
+- Has folders for different type of compilation languages. ie: ia32, mips, x64
+- Has files like: 
+
+
+## NODE.JS ##
+- A C++ program with V8 embedded that is added extra features that make it suitable to be a great server technology.
+
+- - - -
+- - - -
+
 # FUNCTIONAL PROGRAMMING #
 
 - *Imperative Paradigm* (HOW) -> *Declerative Paradigm* (WHAT)  

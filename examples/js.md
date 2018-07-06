@@ -1,6 +1,6 @@
 *Prototype-based Language*: There are no classes. Objects are created using a cloning process.  
 *Dynamic Language*: properties can be added or removed from an object after instantiation.  
-*Coercion* is converting a value from one type to another (ex: console.log(1 + 'ankara')).  
+*Coercion* is converting a value from one type to another (ex: console.log(1 + 'london')).  
 *Expression*: A unit of code that results a value.  
 *Decleration*: When it is executed it doesn't do anything.  
 

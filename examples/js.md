@@ -303,6 +303,23 @@ Execution Stack will be like:
 - Can run standalone or can be embedded into **any** C++ application  (ie: NodeJs).
 - Has folders for different type of compilation languages. ie: ia32/, mips/, x64/
 - Has files like: date.js, date.cc, dateparser.cc. These files read js text and convert into machine code.
+- Write your own C++ application (like Node.Js): 
+```
+#include <include/v8.h>
+
+global -> Set(
+  v8::String::NewFromUtf8(isolate, "print",
+    v8::NewStringType::kNormal)
+      .ToLocalChecked(),
+  v8::FunctionTemplate::New(isolate, Print));
+
+void Print(const v8::FunctionCallbackInfo<v8::Value>& args) {
+  bool first = true;
+  for(int i =0; i < args.Length(); i++) {
+    // ...
+  }
+}
+```
 
 
 ## Node.Js ##

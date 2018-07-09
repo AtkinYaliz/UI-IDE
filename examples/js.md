@@ -300,9 +300,9 @@ Execution Stack will be like:
 - Written in C++ and used in Google Chrome.
 - Converts JS into machine code.
 - Implements ES5.
-- Can run standalone or can be embedded into any C++ application  (ie: NodeJs).
-- Has folders for different type of compilation languages. ie: ia32, mips, x64
-- Has files like: 
+- Can run standalone or can be embedded into **any** C++ application  (ie: NodeJs).
+- Has folders for different type of compilation languages. ie: ia32/, mips/, x64/
+- Has files like: date.js, date.cc, dateparser.cc. These files read js text and convert into machine code.
 
 
 ## Node.Js ##

@@ -302,7 +302,7 @@ Execution Stack will be like:
 - Implements ES5.
 - Can run standalone or can be embedded into **any** C++ application  (ie: NodeJs).
 - Has folders for different type of compilation languages. ie: ia32/, mips/, x64/
-- Has files like: date.js, date.cc, dateparser.cc. These files read js text and convert into machine code.
+- Has files like: date.cc, dateparser.cc. These files read js text and convert into machine code.
 - Write your own C++ application (like Node.Js): 
 ```
 #include <include/v8.h>

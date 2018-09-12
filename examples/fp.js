@@ -11,9 +11,6 @@ const
     splice = arr => (s, c, ...x) => [ ...arr.slice(0, s), ...x, ...x.slice(s + c) ]
 ;
 
-/**
- *
- */
 (() => {
   const has = prop => obj => obj.hasOwnProperty(prop);
   const sortBy = prop => (x, y) => x[prop] > y[prop];
@@ -43,7 +40,7 @@ const
 })();
 
 /**
- * Closure (Currying example)
+ * CURRYING - Closure
  * When you have a function that needs 2 inputs which you know one of them now but
  * the other will be specified later, you can use closure to remember the first one.
  */
@@ -55,23 +52,26 @@ const
 })();
 
 /**
- * All for one
+ * All for one (Unary, Binary, N-ary)
  * When you need a function that receives a single argument
  */
 (() => {
-  function unary(fn) {
-    return function singleArg(arg) {
-      return fn(arg);
-    }
+  const unary = fn => arg => fn(arg);
+  const binary = fn => (arg1, arg2) => fn(arg1, arg2);
+  const reverseArgs = fn => (...args) => fn( args.reverse() );
+
+  function f(...args) {
+    console.log( args );
   }
+  var g = unary(f);
+  var h = binary(f);
+  var i = reverseArgs(f);
 
-  const func = unary( parseInt );
-
-  arr.map( parseInt ); // [1, NaN, NaN]
-  arr.map( unary(parseInt) );
-  arr.map( func );
-
-  func(1, 4) === unary(parseInt)(1, 7);
+  g(1,2,3,4); // [1]
+  h(1,2,3,4); // [1,2]
+  i(1,2,3,4); // [4,3,2,1]
+  Math.max(...arr); //=> 3
+  binary(Math.max)(...arr);  //=> 2
 })();
 
 /**
@@ -88,7 +88,7 @@ const
 })();
 
 /**
- * Some Now, Some Later (Partial)
+ * PARTIAL - Some Now, Some Later
  * When you need a function that receives multiple arguments,
  * you may want to specify some of those up front and leave the rest to be specified later.
  */
@@ -118,25 +118,6 @@ const
   [1,2,3,4,5].map( partial( add, 3 ) );
 })();
 
-/**
- * Unary, Binary, N-ary
- */
-(() => {
-  const unary = fn => arg => fn(arg);
-  const binary = fn => (arg1, arg2) => fn(arg1, arg2);
-  const reverseArgs = fn => (...args) => fn( args.reverse() );
-
-  function f(...args) {
-    console.log( args );
-  }
-  var g = unary(f);
-  var h = binary(f);
-  var i = reverseArgs(f);
-
-  g(1,2,3,4); // [1]
-  h(1,2,3,4); // [1,2]
-  i(1,2,3,4); // [4,3,2,1]
-})();
 
 /**
  * Point Free
@@ -157,6 +138,11 @@ const
   var isEven = negate(isOdd);
 
   const pluck = key => obj => obj[key];
+  const plucks = keys => obj => {
+    const res = {};
+    keys.forEach(k => { res[k] = obj[k] });
+    return res;
+};
   const multiply = x => y => x * y;
   const discount = multiply(0.95);
   const tax = multiply(1.1);
@@ -171,14 +157,17 @@ const
 })();
 
 /**
- * Compose
- * Code order: Left -> Right
- * Execution order: Right -> Left
+ * COMPOSE & PIPE
+ * Result of the first function will be input for the second function.
+ * Execution order: Compose: Right -> Left, Pipe: Left -> Right
  */
 (() => {
+  // first params can be more than 1.
+  // The rest will be 1 input -> 1 output.
   function compose(...fns) {
-    return function composed(result) {
+    return function composed(...params) {
       var list = [...fns];
+      var result = list.pop()( ...params );
 
       while(list.length > 0) {
         result = list.pop()( result );
@@ -187,7 +176,77 @@ const
       return result;
     }
   }
+  function pipe(...fns) {
+    return function piped(...params) {
+      var list = [...fns];
+      var result = list.shift()( ...params );
 
-  const result = fn3(fn2(fn1( val )));
-  const result = compose(fn3, fn2, fn1)( val );
+      while(list.length > 0) {
+        result = list.shift()( result );
+      }
+
+      return result;
+    }
+}
+
+  const result = fn3(fn2(fn1( val1, val2 )));
+  const result = compose(fn3, fn2, fn1)( val1, val2 );
 })();
+
+=========================================================
+
+/*
+ * OO vs FP
+ *
+ * */
+
+class Invoice {
+   constructor(id) {
+      this.id = id;
+      this.items = [];
+   }
+   addItem(id, quantity, price) {
+      this.items.push({
+         id,
+         quantity,
+         price
+      });
+   }
+   calculateSum() {
+      return this.items.reduce((acc, item) => {
+         return acc + (item.quantity * item.price);
+      }, 0);
+   }
+}
+
+const invoice1 = new Invoice(1);
+invoice1.addItem(23, 1, 34);
+invoice1.addItem(88, 2, 10);
+invoice1.calculateSum();
+
+
+
+function createInvoice(id) {
+   return {
+      id,
+      items: []
+   };
+}
+function addItem(invoice, id, quantity, price) {
+   const newInvoice = clone(invoice);
+   return newInvoice.items.push({
+      id,
+      quantity,
+      price
+   });
+}
+function calculateSum(invoice) {
+   return invoice.items.reduce((acc, item) => {
+      return acc + (item.quantity * item.price);
+   }, 0);
+}
+
+const invoice2 = createInvoice(1);
+const invoice2a = addItem(invoice2, 23, 1, 34);
+const invoice2b = addItem(invoice2a, 88, 2, 10);
+calculateSum(invoice2b);

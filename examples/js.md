@@ -65,10 +65,17 @@ func.apply( obj, ['aa', 123] );
 - There is only *functional scope*. The only block-scope is catch(e) {...}
 
 ```javascript
-if (true) {
-    var test = true; // use "var" instead of "let"
+function f() {
+    var test = '111';
 }
-alert(test);   // true
+clog(test); // test is not defined
+```
+```javascript
+if (true) {
+    test1 = 123,
+    var test2 = true; // use "let" instead of "var"
+}
+clog(test1, test2);   // 123, true
 ```
 ```javascript
 for (var i = 0; i < 10; i++) {

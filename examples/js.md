@@ -66,7 +66,7 @@ func.apply( obj, ['aa', 123] );
 
 ```javascript
 function f() {
-    test1 = 111;
+    test1 = 111;  // creates in global
     var test2 = '222';
     
 }

@@ -66,16 +66,13 @@ func.apply( obj, ['aa', 123] );
 
 ```javascript
 function f() {
-    var test = '111';
+    test1 = 111;
+    var test2 = '222';
+    
 }
-clog(test); // test is not defined
-```
-```javascript
-if (true) {
-    test1 = 123,
-    var test2 = true; // use "let" instead of "var"
-}
-clog(test1, test2);   // 123, true
+f();
+clog(test1);	// 111
+clog(test2);	// test2 is not defined
 ```
 ```javascript
 for (var i = 0; i < 10; i++) {
@@ -87,12 +84,10 @@ alert(i);   // 10
 IIFE:
 An IIFE enables you to attach private data to a function
 ```javascript
-function f() {
-    if (condition) {
-        var tmp = "...";
-    }
-    // tmp still exists here
-}
+(function f() {
+    var tmp = "...";
+})();
+clog( tmp ); // tmp is not defined
 ```
 
 ### HOISTING ###
@@ -103,7 +98,7 @@ In JS, declerations (variable and function) are hoisted but assignment are not.
 ### CLOSURE ###
 
 - A *closure* is the combination of a `function` and the `lexical environment` within that function was **created**.  
-- The name comes from the fact that a closure `closes over` the free variables of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
+- The name comes from the fact that a closure `closes over` the *free variables* of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
 
 ```javascript
 // Module pattern

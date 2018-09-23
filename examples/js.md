@@ -1,8 +1,8 @@
 *Prototype-based Language*: There are no classes. Objects are created using a cloning process.  
 *Dynamic Language*: properties can be added or removed from an object after instantiation.  
 *Coercion* is converting a value from one type to another (ex: console.log(1 + 'london')).  
-*Expression*: A unit of code that results a value.  
 *Decleration*: When it is executed it doesn't do anything.  
+*Expression*: A unit of code that results a value.  
 
 ### FUNCTIONS ###
 - Functions are objects {name, code, call(), apply(), bind(), prototype}. Name is optional (anonymous functions). Bind returns a function. Protototype is used only by the *new* operator.  
@@ -28,19 +28,17 @@ function greet() {
 }
 greet();
 
-// functions are first-class
-function logGreeting(fn) {
-   fn();
-}
-logGreeting( greet );
-
 // function expression
 var greetMe = function() {
     console.log( 'hi tony' );
 };
 greetMe();
 
-// it's first-class.
+// functions are first-class
+function logGreeting(fn) {
+   fn();
+}
+logGreeting( greet );
 logGreeting( greetMe );
 
 // use a function expression on the fly
@@ -50,11 +48,11 @@ logGreeting(function() {
 ```
 
 ```javascript
-function func(val1, val2) { console.log(this.name); }
+function func(p1, p2) { console.log(this.name); }
 var obj = { name: 'abc' };
 
 var funcDel = func.bind( obj );
-funcDel('aa', 123);
+funcDel('aa', 123);	// "abc"
 func.call( obj, 'aa', 123 );
 func.apply( obj, ['aa', 123] );
 ```

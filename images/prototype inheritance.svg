@@ -1,0 +1,44 @@
+<svg width="910" height="600" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="602" width="912" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="56" width="120" y="140.4375" x="696.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_2" y="132.4375" x="755.5" stroke-width="0" stroke="#000" fill="#000000">Object</text>
+  <ellipse ry="22.5" rx="25" id="svg_3" cy="159.9375" cx="586.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="152.4375" x2="696.5" y1="152.4375" x1="610.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_8" y="192.4375" x="523" stroke-width="0" stroke="#000" fill="#000000">Object.prototype</text>
+  <rect id="svg_9" height="56" width="120" y="83.4375" x="34.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_10" y="75.4375" x="37.5" stroke-width="0" stroke="#000" fill="#000000">Function</text>
+  <ellipse ry="22.5" rx="25" id="svg_11" cy="101.9375" cx="265.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="95.4375" x2="241.5" y1="95.4375" x1="155.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text style="cursor: move;" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_13" y="74.4375" x="187.5" stroke-width="0" stroke="#000" fill="#000000">Function.prototype</text>
+  <rect id="svg_14" height="56" width="120" y="182.4375" x="34.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_15" y="174.4375" x="37.5" stroke-width="0" stroke="#000" fill="#000000">Array</text>
+  <ellipse ry="22.5" rx="25" id="svg_16" cy="200.9375" cx="265.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="194.4375" x2="241.5" y1="194.4375" x1="155.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text style="cursor: move;" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_18" y="173.4375" x="204.5" stroke-width="0" stroke="#000" fill="#000000">Array.prototype</text>
+  <rect id="svg_19" height="56" width="120" y="278.4375" x="35.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_20" y="270.4375" x="38.5" stroke-width="0" stroke="#000" fill="#000000">Number</text>
+  <ellipse ry="22.5" rx="25" id="svg_21" cy="296.9375" cx="266.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_22" y2="290.4375" x2="242.5" y1="290.4375" x1="156.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_23" y="269.4375" x="205.5" stroke-width="0" stroke="#000" fill="#000000">Number.prototype</text>
+  <line stroke="#000" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="155.999984" x2="560.50002" y1="103.999979" x1="292.500004" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke="#000" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_26" y2="156.999986" x2="557.500022" y1="198.999989" x1="291.500004" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke="#000" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_27" y2="156.999994" x2="560.500018" y1="293.999964" x1="293.500004" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_29" y2="136.4375" x2="587.5" y1="73.4375" x1="586.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_30" y="67.4375" x="567.5" stroke-width="0" stroke="#000" fill="#000000">null</text>
+  <text font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_31" y="160.4375" x="403.5" stroke-width="0" stroke="#000" fill="#000000">__proto__</text>
+  <rect id="svg_32" height="29" width="37" y="381.4375" x="117.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text style="cursor: move;" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_33" y="427.4375" x="11.5" stroke-width="0" stroke="#000" fill="#000000">var n = 123;</text>
+  <line stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_35" y2="315.4375" x2="252.5" y1="389.4375" x1="155.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_37" y="360.4375" x="177.5" stroke-width="0" stroke="#000" fill="#000000">__proto__</text>
+  <text style="cursor: move;" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="16" id="svg_38" y="450.4375" x="11.5" stroke-width="0" stroke="#000" fill="#000000">var n = new Number(123);</text>
+ </g>
+</svg>

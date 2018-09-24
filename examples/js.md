@@ -173,6 +173,8 @@ console.log( b );   // 4
 Number.prototype will be common for all Number objects.
 ```
 
+![alt text](../images/prototype_inheritance.svg)
+
 ### Explain how `this` works in JavaScript
 
 There's no simple explanation for `this`; it is one of the most confusing concepts in JavaScript. A hand-wavey explanation is that the value of `this` depends on how the function is called. I have read many explanations on `this` online, and I found [Arnav Aggrawal](https://medium.com/@arnav_aggarwal)'s explanation to be the clearest. The following rules are applied:

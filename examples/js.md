@@ -123,7 +123,7 @@ All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prot
 Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.  
 - *__.\_\_proto\_\___*: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
 *Why prototype*: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.   
-- There are pre-defined functions named *Function*, *Object*, *Array*, *String* and *Number*.
+- There are pre-defined functions named *Function*, *Object*, *Array*, *String*, *Number* and *Date*.
 
  
 

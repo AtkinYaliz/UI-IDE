@@ -143,15 +143,18 @@ var a = {};
 var b = function() {};
 var c = [];
 var d = new Date();
+var e = new Person();
 
 a.__proto__ = Object.prototype
 b.__proto__ = Function.prototype
 c.__proto__ = Array.prototype
 d.__proto__ = Date.prototype
+e.__proto__ = Person.prototype
 
 b.__proto__.__proto__ \
 c.__proto__.__proto__ -  === Object.prototype
 d.__proto__.__proto__ /
+e.__proto__.__proto__ /
 ```
 
 ```javascript

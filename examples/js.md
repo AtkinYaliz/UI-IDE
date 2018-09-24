@@ -123,7 +123,7 @@ All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prot
 Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.  
 - *__.\_\_proto\_\___*: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
 *Why prototype*: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.   
-- There are pre-defined functions named *Function*, *Array* and *Object*.
+- There are pre-defined functions named *Function*, *Object*, *Array*, *String* and *Number*.
 
  
 
@@ -140,9 +140,9 @@ console.log( john.getFullname() );
 ```
 
 ```javascript
-var a = []; var a2 = new Array();
-var f = function() {}; var f2 = new Function();
-var o = {}; var o2 = new Object();
+var a = [];             var a2 = new Array();
+var f = function() {};  var f2 = new Function();
+var o = {};             var o2 = new Object();
 var d = new Date();
 var p = new Person();
 
@@ -150,15 +150,14 @@ a.__proto__ = a2.__proto__ = Array.prototype
 f.__proto__ = f2.__proto__ = Function.prototype
 o.__proto__ = o2.__proto__ = Object.prototype
 
-
-
 d.__proto__ = Date.prototype
-e.__proto__ = Person.prototype
+p.__proto__ = Person.prototype
 
-b.__proto__.__proto__ \
-c.__proto__.__proto__ -  === Object.prototype
+a.__proto__.__proto__ \
+f.__proto__.__proto__ \
+o.__proto__.__proto__ - === Object.prototype
 d.__proto__.__proto__ /
-e.__proto__.__proto__ /
+p.__proto__.__proto__ /
 ```
 
 ```javascript

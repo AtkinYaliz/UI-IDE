@@ -6,116 +6,77 @@
    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
    // Placeholders with the same ids are connected.
    // Example:
-   "zz-to enable the rest": {
-      "scope": "javascript,typescript",
-      "prefix": "zz",
-      "body": [ "not-in-use('$1')" ]
+   "z": {
+      "prefix": "z",
+      "description": "'Console log only'",
+      "body": [
+         "console.log($1);"
+      ]
    },
    "console.log": {
+      "prefix": "j-log",
+      "description": "console.log: ( $1 )",
       "scope": "javascript,typescript",
-      "prefix": "clog",
       "body": [
-         "console.log('$1');",
+         "console.log( $1 );",
          "$2"
-      ],
-      "description": "console.log: ('$1')"
+      ]
    },
    "console.log1": {
+      "prefix": "j-log1",
+      "description": "console.log: ( '$1' )",
       "scope": "javascript,typescript",
-      "prefix": "clog1",
       "body": [
          "console.log( '$1' );",
          "$2"
-      ],
-      "description": "console.log: ( '$1' )"
+      ]
    },
    "console.log2": {
+      "prefix": "j-log2",
+      "description": "console.log: ('$1')",
       "scope": "javascript,typescript",
-      "prefix": "clog2",
+      "body": [
+         "console.log('$1');",
+         "$2"
+      ]
+   },
+   "console.log3": {
+      "prefix": "j-log3",
+      "description": "console.log: ( \"$1\" )",
+      "scope": "javascript,typescript",
       "body": [
          "console.log( \"$1\" );",
          "$2"
-      ],
-      "description": "console.log: ( \"$1\" )"
+      ]
    },
-   "div tag": {
+   "test-all-es6": {
+      "prefix": "j-test-all",
+      "description": "console.log: ( \"$1\" )",
       "scope": "javascript,typescript",
-      "prefix": "tag-div",
       "body": [
-         "<div>$1</div>"
-      ],
-      "description": "puts div tag"
-   },
-   "header tag": {
-      "scope": "javascript,typescript",
-      "prefix": "tag-header",
-      "body": [
-         "<header>$1</header>"
-      ],
-      "description": "puts header tag"
-   },
-   "aside tag": {
-      "scope": "javascript,typescript",
-      "prefix": "tag-aside",
-      "body": [
-         "<aside>$1</aside>"
-      ],
-      "description": "puts aside tag"
-   },
-
-   "React Functional Component": {
-      "scope": "javascript,typescript",
-      "prefix": "rfc",
-      "body": [
-         "import React from 'react';",
+         "const assert = require('assert');",
+         "const chai = require('chai');",
+         "const chaiHttp = require('chai-http');",
+         "const supertest = require('supertest');",
          "",
          "",
-         "export function $1() {",
-         "   return (",
-         "      null",
-         "   );",
-         "}",
-         ""
-      ],
-      "description": "React Functional Component"
+         "describe('Test..$1', () => {",
+            "\tit('should..', done => {",
+               "\t\tassert.equal(1, 1);",
+            "\t})",
+         "})"
+      ]
    },
-   "React Class Component": {
+   "test-describe-es6": {
+      "prefix": "j-test-desc",
+      "description": "console.log: ( \"$1\" )",
       "scope": "javascript,typescript",
-      "prefix": "rcc",
       "body": [
-         "import React, { Component } from 'react';",
-         "",
-         "",
-         "export class $1 extends Component {",
-         "   render() {",
-         "      return (",
-         "         null",
-         "      );",
-         "   }",
-         "}",
-         ""
-      ],
-      "description": "React Class Component"
-   },
-   "React Class Component - Flow": {
-      "scope": "javascript,typescript",
-      "prefix": "rfc-f",
-      "body": [
-         "import React, { Component } from 'react';",
-         "",
-         "",
-         "type Props = {",
-         "   p1: string;",
-         "}",
-         "export class $1 extends Component<Props> {",
-         "   render() {",
-         "      return (",
-         "         null",
-         "      );",
-         "   }",
-         "}",
-         ""
-      ],
-      "description": "React Class Component - Flow"
+         "describe('Test..$1', () => {",
+            "\tit('should..', done => {",
+               "\t\tassert.equal(1, 1);",
+            "\t})",
+         "})"
+      ]
    }
 }

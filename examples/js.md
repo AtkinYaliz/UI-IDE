@@ -95,8 +95,8 @@ In JS, declerations (variable and function) are hoisted but assignment are not.
 
 ### CLOSURE ###
 
-- A *closure* is the combination of a `function` and the `lexical environment` within that function was **created**.  
 - The name comes from the fact that a closure `closes over` the *free variables* of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
+- A *closure* is the combination of a `function` and the `lexical environment` within that function was **created**.  
 
 ```javascript
 // Module pattern
@@ -143,19 +143,24 @@ console.log( john.getFullname() );
 var a = [];             var a2 = new Array();
 var f = function() {};  var f2 = new Function();
 var o = {};             var o2 = new Object();
+var s = 'asd';          var s2 = new String();
+var n = 123;            var n2 = new Number();
 var d = new Date();
 var p = new Person();
 
 a.__proto__ = a2.__proto__ = Array.prototype
 f.__proto__ = f2.__proto__ = Function.prototype
 o.__proto__ = o2.__proto__ = Object.prototype
-
+s.__proto__ = s2.__proto__ = String.prototype
+n.__proto__ = n2.__proto__ = Number.prototype
 d.__proto__ = Date.prototype
 p.__proto__ = Person.prototype
 
 a.__proto__.__proto__ \
 f.__proto__.__proto__ \
-o.__proto__.__proto__ - === Object.prototype
+o.__proto__.__proto__ \
+s.__proto__.__proto__ - === Object.prototype
+n.__proto__.__proto__ /
 d.__proto__.__proto__ /
 p.__proto__.__proto__ /
 ```

@@ -1,0 +1,9 @@
+- Prime Factors
+  https://www.youtube.com/watch?v=qvi8iBSmH5A
+- Roman Numerals
+  https://www.youtube.com/watch?v=hRIU7463Ifo
+- FizzBuzz (Jasmine)
+  https://www.youtube.com/watch?v=RQTDMk4WCp4
+  
+- JS Coding Challenge #1: Reverse a String (FreeCodeCamp)
+  https://www.youtube.com/watch?v=miiM5JJgrQo&list=PLkBfv4fGBau-q9tGBUgVoGClRsSBiiZm8

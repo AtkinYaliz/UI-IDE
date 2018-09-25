@@ -63,30 +63,16 @@
       "description": "test.all-es6",
       "scope": "javascript,typescript",
       "body": [
-         "const assert = require('assert');",
-         "const chai = require('chai');",
+         "const {expect} = require('chai');",
          "const chaiHttp = require('chai-http');",
          "const supertest = require('supertest');",
          "",
-         "const { expect } = chai;",
          "",
          "before(() => {",
          "});",
          "beforeEach(() => {",
          "});",
          "",
-         "describe('Test..$1', () => {",
-            "\tit('should..', () => {",
-               "\t\texpect(1).to.equal(1);",
-            "\t})",
-         "})"
-      ]
-   },
-   "test-describe-es6": {
-      "prefix": "j-test-desc-es6",
-      "description": "test.describe",
-      "scope": "javascript,typescript",
-      "body": [
          "describe('Test..$1', () => {",
             "\tit('should..', () => {",
                "\t\texpect(1).to.equal(1);",
@@ -112,6 +98,50 @@
                "\t\texpect(1).to.equal(1);",
             "\t})",
          "})"
+      ]
+   },
+   "test-describe": {
+      "prefix": "j-test-desc",
+      "description": "test.describe",
+      "scope": "javascript,typescript",
+      "body": [
+         "describe('Test..$1', () => {",
+            "\tit('should..', () => {",
+               "\t\texpect(1).to.equal(1);",
+            "\t})",
+         "})"
+      ]
+   },
+   "tsconfig": {
+      "prefix": "j-tsconfig",
+      "description": "tsconfig.json",
+      "body": [
+         "{",
+            "\t\"compilerOptions\": {",
+               "\t\t\"module\": \"commonjs\",",
+               "\t\t\"target\": \"es6\",",
+               "\t\t\"outDir\": \"dist\",",
+               "\t\t\"baseUrl\": \".\",",
+               "\t\t\"sourceMap\": true",
+            "\t},",
+            "\t\"include\": [\"src\"]",
+         "}"
+      ]
+   },
+   "package.json.test-es6": {
+      "prefix": "j-package.json.script.test-es6",
+      "description": "package.json",
+      "body": [
+         "\"test\": \"mocha **/*.test.js\",",
+         "\"test:w\": \"npm run test -- -w\"",
+      ]
+   },
+   "package.json.test-ts": {
+      "prefix": "j-package.json.script.test-ts",
+      "description": "package.json",
+      "body": [
+         "\"test\": \"mocha -r ts-node/register **/*.test.ts\",",
+         "\"test:w\": \"npm run test -- --watch-extensions ts -w\"",
       ]
    }
 }

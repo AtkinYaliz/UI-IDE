@@ -60,13 +60,46 @@
    },
    "test-all-es6": {
       "prefix": "j-test-all-es6",
-      "description": "console.log: ( \"$1\" )",
+      "description": "test.all-es6",
       "scope": "javascript,typescript",
       "body": [
          "const assert = require('assert');",
          "const chai = require('chai');",
          "const chaiHttp = require('chai-http');",
          "const supertest = require('supertest');",
+         "",
+         "const { expect } = chai;",
+         "",
+         "before(() => {",
+         "});",
+         "beforeEach(() => {",
+         "});",
+         "",
+         "describe('Test..$1', () => {",
+            "\tit('should..', () => {",
+               "\t\texpect(1).to.equal(1);",
+            "\t})",
+         "})"
+      ]
+   },
+   "test-describe-es6": {
+      "prefix": "j-test-desc-es6",
+      "description": "test.describe",
+      "scope": "javascript,typescript",
+      "body": [
+         "describe('Test..$1', () => {",
+            "\tit('should..', () => {",
+               "\t\texpect(1).to.equal(1);",
+            "\t})",
+         "})"
+      ]
+   },
+   "test-all-ts": {
+      "prefix": "j-test-all-ts",
+      "description": "test.all-ts",
+      "scope": "javascript,typescript",
+      "body": [
+         "import { expect } from 'chai';",
          "",
          "",
          "before(() => {",
@@ -75,20 +108,8 @@
          "});",
          "",
          "describe('Test..$1', () => {",
-            "\tit('should..', done => {",
-               "\t\tassert.equal(1, 1);",
-            "\t})",
-         "})"
-      ]
-   },
-   "test-describe-es6": {
-      "prefix": "j-test-desc-es6",
-      "description": "console.log: ( \"$1\" )",
-      "scope": "javascript,typescript",
-      "body": [
-         "describe('Test..$1', () => {",
-            "\tit('should..', done => {",
-               "\t\tassert.equal(1, 1);",
+            "\tit('should..', () => {",
+               "\t\texpect(1).to.equal(1);",
             "\t})",
          "})"
       ]

@@ -66,7 +66,6 @@ func.apply( obj, ['aa', 123] );
 function f() {
     test1 = 111;  // creates in global
     var test2 = '222';
-    
 }
 f();
 clog(test1);	// 111

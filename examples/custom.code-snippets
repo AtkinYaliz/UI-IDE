@@ -68,10 +68,8 @@
          "const supertest = require('supertest');",
          "",
          "",
-         "before(() => {",
-         "});",
-         "beforeEach(() => {",
-         "});",
+         "before(() => { });",
+         "beforeEach(() => { });",
          "",
          "describe('Test..$1', () => {",
             "\tit('should..', () => {",
@@ -88,10 +86,8 @@
          "import { expect } from 'chai';",
          "",
          "",
-         "before(() => {",
-         "});",
-         "beforeEach(() => {",
-         "});",
+         "before(() => { });",
+         "beforeEach(() => { });",
          "",
          "describe('Test..$1', () => {",
             "\tit('should..', () => {",
@@ -120,11 +116,17 @@
             "\t\"compilerOptions\": {",
                "\t\t\"module\": \"commonjs\",",
                "\t\t\"target\": \"es6\",",
+               "\t\t\"noImplicitAny\": true,",
+               "\t\t\"moduleResolution\": \"node\",",
                "\t\t\"outDir\": \"dist\",",
-               "\t\t\"baseUrl\": \".\",",
                "\t\t\"sourceMap\": true",
+               "\t\t\"baseUrl\": \".\",",
+               "\t\t\"paths\": {",
+               "\t\t\t\"*\": [",
+               "\t\t\t\t\"src/types/*\"",
+               "\t\t\t]",
             "\t},",
-            "\t\"include\": [\"src\"]",
+            "\t\"include\": [\"src\", \"index.ts\"]",
          "}"
       ]
    },
@@ -142,6 +144,20 @@
       "body": [
          "\"test\": \"mocha -r ts-node/register **/*.test.ts\",",
          "\"test:w\": \"npm run test -- --watch-extensions ts -w\"",
+      ]
+   },
+   "module-pattern-es6": {
+      "prefix": "j-pattern-module-es6",
+      "description": "pattern.module",
+      "scope": "javascript,typescript",
+      "body": [
+         "module.exports = (() => {",
+            "\tconst $1 = () => {",
+               "\t\t$2",
+            "\t}",
+            "",
+            "\treturn { $1 };",
+         "})()"
       ]
    }
 }

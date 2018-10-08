@@ -119,7 +119,7 @@
                "\t\t\"noImplicitAny\": true,",
                "\t\t\"moduleResolution\": \"node\",",
                "\t\t\"outDir\": \"dist\",",
-               "\t\t\"sourceMap\": true",
+               "\t\t\"sourceMap\": true,",
                "\t\t\"baseUrl\": \".\",",
                "\t\t\"paths\": {",
                "\t\t\t\"*\": [",
@@ -130,15 +130,15 @@
          "}"
       ]
    },
-   "package.json.test-es6": {
-      "prefix": "j-package.json.script.test-es6",
+   "package.json.test-mocha-es6": {
+      "prefix": "j-package.json.script.test-mocha-es6",
       "description": "package.json",
       "body": [
          "\"test\": \"mocha **/*.test.js\",",
          "\"test:w\": \"npm run test -- -w\"",
       ]
    },
-   "package.json.test-ts": {
+   "package.json.test-mocha-ts": {
       "prefix": "j-package.json.script.test-ts",
       "description": "package.json",
       "body": [
@@ -146,18 +146,47 @@
          "\"test:w\": \"npm run test -- --watch-extensions ts -w\"",
       ]
    },
-   "module-pattern-es6": {
+   "package.json.test-jest-ts": {
+      "prefix": "j-package.json.script.test-jest-ts",
+      "description": "package.json",
+      "body": [
+         "\"test\": \"jest --forceExit --coverage --verbose\",",
+         "\"test:w\": \"npm run test -- --watchAll\"",
+      ]
+   },
+   "pattern-module-es6": {
       "prefix": "j-pattern-module-es6",
-      "description": "pattern.module",
+      "description": "pattern.module (works w/ require('')",
       "scope": "javascript,typescript",
       "body": [
          "module.exports = (() => {",
             "\tconst $1 = () => {",
                "\t\t$2",
-            "\t}",
+            "\t};",
             "",
             "\treturn { $1 };",
-         "})()"
+         "})();"
+      ]
+   },
+   "pattern-singleton-ts": {
+      "prefix": "j-pattern-singleton-ts",
+      "description": "pattern.singleton",
+      "scope": "javascript,typescript",
+      "body": [
+         "class $1Controller {",
+            "\tpublic static getInstance() {",
+               "\t\tif(!$1Controller.instance) {",
+                  "\t\t\t$1Controller.instance = new $1Controller();",
+               "\t\t}",
+               "",
+               "\t\treturn $1Controller.instance;",
+            "\t}",
+            "\tprivate static instance: $1Controller;",
+            "",
+            "\tprivate constructor() { }",
+         "}",
+         "",
+         "export default $1Controller.getInstance();"
       ]
    }
 }

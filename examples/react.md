@@ -107,9 +107,9 @@ const add = (x, y) => {     |   const multiply = (x, y) => {
   return x + y;             |     return x * y;
 };                          |   };
 
-const withLogging = (wrappedFunction) => {
-  return (x, y) => {
-    let result = wrappedFunction(x, y);
+const withLogging = (func) => {
+  return (...params) => {
+    let result = func(...params);
     console.log('result:', result);
     return result;
   };
@@ -121,8 +121,8 @@ const addAndLog2 = withLogging(add);
 // Equivalent to writing multiplyAndLog by hand:
 const multiplyAndLog2 = withLogging(multiply);
 
-addAndLog2(1,2);
-multiplyAndLog2(4,5);
+addAndLog2(12,34);
+multiplyAndLog2(9,12);
 ```
 ---
 ---

@@ -226,7 +226,7 @@
       "description": "in Objects as well",
       "scope": "javascript,typescript",
       "body": [
-         "$for(const $1 in $2) {",
+         "for(const $1 in $2) {",
          "\t$3",
          "}"
       ]
@@ -236,8 +236,54 @@
       "description": "Iterable",
       "scope": "javascript,typescript",
       "body": [
-         "$for(const $1 of $2) {",
+         "for(const $1 of $2) {",
          "\t$3",
+         "}"
+      ]
+   },
+   "syntax.setInterval": {
+      "prefix": "j-setInt",
+      // "description": "",
+      "scope": "javascript,typescript",
+      "body": [
+         "setInterval(() => {}, 0);"
+      ]
+   },
+   "syntax.setTimeout": {
+      "prefix": "j-setInt",
+      // "description": "",
+      "scope": "javascript,typescript",
+      "body": [
+         "setTimeout(() => {}, 0);"
+      ]
+   },
+   "syntax.promise": {
+      "prefix": "j-prom",
+      // "description": "",
+      "scope": "javascript,typescript",
+      "body": [
+         "return new Promise((res, rej) => {$1});"
+      ]
+   },
+   "syntax.promiseThen": {
+      "prefix": "j-promThen",
+      // "description": "",
+      "scope": "javascript,typescript",
+      "body": [
+         "promise",
+         "\t.then(data => {$1})",
+         "\t.catch(e => {})"
+      ]
+   },
+   "syntax.tryCatch": {
+      "prefix": "j-tryCatch",
+      // "description": "",
+      "scope": "javascript,typescript",
+      "body": [
+         "try {",
+         "\t$1",
+         "} catch(e) {",
+         "\t",
          "}"
       ]
    }

@@ -188,5 +188,57 @@
          "",
          "export default $1Controller.getInstance();"
       ]
+   },
+   "import.module": {
+      "prefix": "j-imp",
+      "description": "import x from 'y';",
+      "scope": "javascript,typescript",
+      "body": [
+         "import $1 from '$2';"
+      ]
+   },
+   "import.named-module": {
+      "prefix": "j-imp-n",
+      "description": "import { x } from 'y';",
+      "scope": "javascript,typescript",
+      "body": [
+         "import { $1 } from '$2';"
+      ]
+   },
+   "import.require": {
+      "prefix": "j-req",
+      "description": "const x = require('y');",
+      "scope": "javascript,typescript",
+      "body": [
+         "const $1 = require('$2');"
+      ]
+   },
+   "syntax.forEach": {
+      "prefix": "j-forEach",
+      // "description": "const x = require('y');",
+      "scope": "javascript,typescript",
+      "body": [
+         "$1.forEach(x => x);"
+      ]
+   },
+   "syntax.forIn": {
+      "prefix": "j-forIn",
+      "description": "in Objects as well",
+      "scope": "javascript,typescript",
+      "body": [
+         "$for(const $1 in $2) {",
+         "\t$3",
+         "}"
+      ]
+   },
+   "syntax.forOf": {
+      "prefix": "j-forOf",
+      "description": "Iterable",
+      "scope": "javascript,typescript",
+      "body": [
+         "$for(const $1 of $2) {",
+         "\t$3",
+         "}"
+      ]
    }
 }

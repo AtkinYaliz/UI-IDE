@@ -7,33 +7,34 @@
 - Mac: ~/.vscode/extensions
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
-- USER SETTINGS: {  
-    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",  
-    "editor.detectIndentation": false,  
-    "editor.insertSpaces": true,  
-    "editor.tabSize": 3,  
-    "editor.fontFamily": "'Andale Mono', 'Lucida Console'",  
-    "editor.fontSize": 14,  
-    "editor.fontLigatures": true,  
-    "git.autofetch": true,  
-    "terminal.integrated.fontSize": 12,  
-    "terminal.integrated.fontFamily": "Monaco",  
-    "window.zoomLevel": -0.5,  
-    "workbench.colorTheme": "Default Dark+",  
-    "workbench.iconTheme": "material-icon-theme",  
-    "javascript.validate.enable": false, // if not using TS  
-    "flow.enabled": true,  
-    "flow.useNPMPackagedFlow": true,  
-    "flow.pathToFlow": "../node_modules/.bin/flow", // or install npm i flow-bin -g  
-    "gitlens.advanced.messages": {  
-      "suppressShowKeyBindingsNotice": true  
-   },  
-   "files.watcherExclude": {  
-      "**/tmp/**": true,  
-      "**/node_modules/**": true,  
-      "**/bower_components/**": true  
-   }  
-  }
+- USER SETTINGS: {
+   "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
+   "editor.detectIndentation": false,
+   "editor.insertSpaces": true,
+   "editor.tabSize": 3,
+   "editor.fontFamily": "'Dank Mono', 'Source Code Pro', 'Roboto Mono', 'Andale Mono', 'Lucida Console', Menlo, Consolas, DejaVu Sans Mono, monospace",
+   "editor.fontSize": 15,
+   "editor.fontLigatures": true,
+   "editor.fontWeight": "700",
+   "terminal.integrated.fontSize": 12,
+   "terminal.integrated.fontFamily": "Monaco",
+   "window.zoomLevel": -0.5,
+   "workbench.colorTheme": "Cobalt2",
+   "workbench.iconTheme": "material-icon-theme",
+   "workbench.startupEditor": "newUntitledFile",
+   "javascript.validate.enable": false, // if not using TS
+   "explorer.confirmDelete": false,
+   "explorer.confirmDragAndDrop": false,
+   "git.autofetch": true,
+   "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+   }, // or install npm i flow-bin -g
+   "files.watcherExclude": {
+      "**/tmp/**": true,
+      "**/node_modules/**": true,
+      "**/bower_components/**": true
+   }
+}
 - WORKSPACE SETTINGS: {  
     "javascript.validate.enable": false, // if not using TS  
     "flow.enabled": true,  

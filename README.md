@@ -415,7 +415,7 @@ $ docker container rm <containerId1> <containerId2>: Deletes containers
 $ docker container start <containerId1> <containerId2>: Starts containers  
 $ docker container stop <containerId1> <containerId2>: Stops containers  
   
-_# Delete every Docker containers  
+'# Delete every Docker containers  
 '# Must be run first because images are attached to containers  
 $ docker rm -f  
 $ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)  
@@ -445,16 +445,16 @@ $ docker images -q
   
 <details><summary># MONGO #</summary>
   
-_# FIND #
-db.Clients.find({ industry: 'Automotive' });
-db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })
+'# FIND #  
+db.Clients.find({ industry: 'Automotive' });  
+db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })  
   
-# SELECT & JOIN #
+'# SELECT & JOIN #  
 db.Projects.find({ clientId: {  
     $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
 }}, { _id: 1, name: 1, budget: 1 })  
   
-# INSERT #
+'# INSERT #
 const clients = [...];  
 clients.forEach( client => {  
     client._id = ObjectId().str;  
@@ -466,7 +466,7 @@ db.ClientsXX.find({}).forEach(x => {
     db.getCollection('Clients').insert( xNew );  
 });  
   
-# UPDATE #
+'# UPDATE #  
 // update the first one  
 db.Formats.update({ countryId: 'GB' },  
     {  

@@ -340,7 +340,6 @@ panel.addWidget("org.kde.plasma.digitalclock")
 </details>
   
 - - - -
-- - - -
 
 <details><summary># AWS #</summary>
 
@@ -364,7 +363,6 @@ $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
 
 </details>
 
-- - - -
 - - - -
 
 <details><summary># GIT #</summary>
@@ -397,6 +395,10 @@ $ git config --global credential.helper cache
 $ git push http://example.com/repo.git  
 Username: <type your username>  
 Password: <type your password>  
+  
+</details>
+
+- - - -
   
 <details><summary># DOCKER #</summary>
 

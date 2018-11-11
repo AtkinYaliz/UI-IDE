@@ -403,47 +403,41 @@ Password: <type your password>
 <details><summary># DOCKER #</summary>
 
 # Images
-$ docker images: Lists running images
-$ docker image ls -a: Lists all images
-$ docker image rm <imageId1> <imageId2>: Deletes selected images (-f will force)
-$ docker rmi <imageId1> <imageId2>: Deletes selected images (-f will force)
-
-# Containers
-$ docker container ls: Lists running containers (same as $ docker ps)
-$ docker container ls -a: Lists all containers (same as $ docker ps -a)
-$ docker container rm <containerId1> <containerId2>: Deletes containers
-$ docker container start <containerId1> <containerId2>: Starts containers
-$ docker container stop <containerId1> <containerId2>: Stops containers
+$ docker images: Lists running images  
+$ docker image ls -a: Lists all images  
+$ docker image rm <imageId1> <imageId2>: Deletes selected images (-f will force)  
+$ docker rmi <imageId1> <imageId2>: Deletes selected images (-f will force)  
   
-# Delete every Docker containers
-# Must be run first because images are attached to containers
-$ docker rm -f 
-$ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)
+# Containers  
+$ docker container ls: Lists running containers (same as $ docker ps)  
+$ docker container ls -a: Lists all containers (same as $ docker ps -a)  
+$ docker container rm <containerId1> <containerId2>: Deletes containers  
+$ docker container start <containerId1> <containerId2>: Starts containers  
+$ docker container stop <containerId1> <containerId2>: Stops containers  
   
- 
-# Build $ Run
-$ docker build .: Builds the docker file and creates the image w/ Repository and Tag as <none>
-$ docker build -t <tagName> .: Builds the docker file and creates the image w/ tag name
+# Delete every Docker containers  
+# Must be run first because images are attached to containers  
+$ docker rm -f  
+$ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)  
   
-# 9000: exposed port in the dockerfile
-# 4000: port on the localhost host machine
-# imageName should be the last parameter
-# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)
-$ docker run -d --name <containerName> -p 4000:9000 <imageName>: Creates and runs a new container from the image
-$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" <imageName>: Creates and runs a new container from the image w/ environment variable
-$ docker stop <containerId>
+# Build $ Run  
+$ docker build .: Builds the docker file and creates the image w/ Repository and Tag as <none>  
+$ docker build -t <tagName> .: Builds the docker file and creates the image w/ tag name  
   
-
-$ docker system prune: Removes images, containers, volumes, and networks — not associated with a container
-$ docker exec -it 66c015f75254 sh: interactive terminal
+# 9000: exposed port in the dockerfile  
+# 4000: port on the localhost host machine  
+# imageName should be the last parameter  
+# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)  
+$ docker run -d --name <containerName> -p 4000:9000 <imageName>: Creates and runs a new container from the image  
+$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" <imageName>: Creates and runs a new container from the image w/ environment variable  
+$ docker stop <containerId>  
   
+$ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
+$ docker exec -it 66c015f75254 sh: interactive terminal  
   
-
-
-
-# Delete every Docker image
-$ docker rmi -f 
-$ docker images -q
+# Delete every Docker image  
+$ docker rmi -f  
+$ docker images -q  
 
 </details>
   
@@ -457,47 +451,45 @@ db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } }
 
 
 # SELECT & JOIN #
-db.Projects.find({ clientId: {
-    $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)
-}}, { _id: 1, name: 1, budget: 1 })
-
-
+db.Projects.find({ clientId: {  
+    $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
+}}, { _id: 1, name: 1, budget: 1 })  
+  
 # INSERT #
-const clients = [...];
-clients.forEach( client => {    
-    client._id = ObjectId().str;
-    db.Clients.insert( client );
-});
-
-db.ClientsXX.find({}).forEach(x => {
-    const xNew = Object.assign({}, x, {_id: x._id.valueOf(), leads: [], planners: []});
-    
-    db.getCollection('Clients').insert( xNew );
-});
-
-
+const clients = [...];  
+clients.forEach( client => {  
+    client._id = ObjectId().str;  
+    db.Clients.insert( client );  
+});  
+  
+db.ClientsXX.find({}).forEach(x => {  
+    const xNew = Object.assign({}, x, {_id: x._id.valueOf(), leads: [], planners: []});  
+  
+    db.getCollection('Clients').insert( xNew );  
+});  
+  
 # UPDATE #
-// update the first one
-db.Formats.update({ countryId: 'GB' },
-    {
-      $set: {
-        parentId: null
-      }
-    }
-)
-db.Formats.updateMany({ countryId: 'GB' },
-    {
-      $set: {
-        parentId: null
-      }
-    }
-)
-
-db.Formats.updateMany({}, 
-   { 
-      $unset: { parentId:1 } 
-   }, false, true
-);
+// update the first one  
+db.Formats.update({ countryId: 'GB' },  
+    {  
+      $set: {  
+        parentId: null  
+      }  
+    }  
+)  
+db.Formats.updateMany({ countryId: 'GB' },  
+    {  
+      $set: {  
+        parentId: null  
+      }  
+    }  
+)  
+  
+db.Formats.updateMany({},  
+   {  
+      $unset: { parentId:1 }  
+   }, false, true  
+);  
   
 </details>
   

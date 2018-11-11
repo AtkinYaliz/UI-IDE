@@ -401,21 +401,21 @@ Password: <type your password>
 - - - -
   
 <details><summary># DOCKER #</summary>
-
-'# Images
+  
+# Images
 $ docker images: Lists running images  
 $ docker image ls -a: Lists all images  
 $ docker image rm <imageId1> <imageId2>: Deletes selected images (-f will force)  
 $ docker rmi <imageId1> <imageId2>: Deletes selected images (-f will force)  
   
-'# Containers  
+# Containers  
 $ docker container ls: Lists running containers (same as $ docker ps)  
 $ docker container ls -a: Lists all containers (same as $ docker ps -a)  
 $ docker container rm <containerId1> <containerId2>: Deletes containers  
 $ docker container start <containerId1> <containerId2>: Starts containers  
 $ docker container stop <containerId1> <containerId2>: Stops containers  
   
-'# Delete every Docker containers  
+_# Delete every Docker containers  
 '# Must be run first because images are attached to containers  
 $ docker rm -f  
 $ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)  
@@ -444,12 +444,11 @@ $ docker images -q
 - - - -
   
 <details><summary># MONGO #</summary>
-
-# FIND #
+  
+_# FIND #
 db.Clients.find({ industry: 'Automotive' });
 db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })
-
-
+  
 # SELECT & JOIN #
 db.Projects.find({ clientId: {  
     $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
@@ -464,7 +463,6 @@ clients.forEach( client => {
   
 db.ClientsXX.find({}).forEach(x => {  
     const xNew = Object.assign({}, x, {_id: x._id.valueOf(), leads: [], planners: []});  
-  
     db.getCollection('Clients').insert( xNew );  
 });  
   

@@ -361,8 +361,9 @@ $ sudo tar -xzvf lh-accountancy.tar.gz
 $ npm run build-dev (export NODE_ENV=dev)  
 $ npm run publish-dev > ../lh-accountancy.log 2>&1 &  
 $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &  
-  
-  
+
+</details>
+
 - - - -
 - - - -
 
@@ -438,6 +439,7 @@ $ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)
 $ docker rmi -f 
 $ docker images -q
 
-
+</details>
+  
 
 youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' https://m.twitch.tv/videos/327690336 --prefer-ffmpeg

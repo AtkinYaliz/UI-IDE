@@ -412,12 +412,19 @@ $ docker rmi <imageId1> <imageId2>: Deletes selected images (-f will force)
 $ docker container ls: Lists running containers (same as $ docker ps)
 $ docker container ls -a: Lists all containers (same as $ docker ps -a)
 $ docker container rm <containerId1> <containerId2>: Deletes containers
-
-
+$ docker container start <containerId1> <containerId2>: Starts containers
+$ docker container stop <containerId1> <containerId2>: Stops containers
+  
+# Delete every Docker containers
+# Must be run first because images are attached to containers
+$ docker rm -f 
+$ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)
+  
+ 
 # Build $ Run
 $ docker build .: Builds the docker file and creates the image w/ Repository and Tag as <none>
 $ docker build -t <tagName> .: Builds the docker file and creates the image w/ tag name
-
+  
 # 9000: exposed port in the dockerfile
 # 4000: port on the localhost host machine
 # imageName should be the last parameter
@@ -425,16 +432,13 @@ $ docker build -t <tagName> .: Builds the docker file and creates the image w/ t
 $ docker run -d --name <containerName> -p 4000:9000 <imageName>: Creates and runs a new container from the image
 $ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" <imageName>: Creates and runs a new container from the image w/ environment variable
 $ docker stop <containerId>
-
+  
 
 $ docker system prune: Removes images, containers, volumes, and networks — not associated with a container
 $ docker exec -it 66c015f75254 sh: interactive terminal
+  
+  
 
-
-# Delete every Docker containers
-# Must be run first because images are attached to containers
-$ docker rm -f 
-$ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)
 
 
 # Delete every Docker image

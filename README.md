@@ -342,7 +342,7 @@ panel.addWidget("org.kde.plasma.digitalclock")
 - - - -
 - - - -
 
-# AWS #
+<details><summary># AWS #</summary>
 
 ## Installations ##
 sudo apt-get update  
@@ -366,14 +366,78 @@ $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
 - - - -
 - - - -
 
-# COMMON #
+<details><summary># GIT #</summary>
 
-## Git ##
-$ git config credential.helper store  
-$ git config --global credential.helper cache  
+# Branch
+$ git br -a: List both remote-tracking branches and local branches.
+$ git br -d <branchname>: Delete a branch
+$ git br -D <branchname>: --delete --force
+$ git br -f <branchname>: Reset <branchname> to <startpoint>
+$ git ps -d origin <branchname>: Delete a remote branch
+
+# Fetch
+$ git fetch --all: Fetch all remotes
+$ git fetch --prune: After fetching, remove any remote tracking branches which no longer exist	on the remote
+
+# Clone
+$ git clone -b develop repository-url.git
+
+# restore a previous commit's state:
+$ git reset --hard a0e4812dbc
+$ git ps origin develop --force
+
+# ---------------------------------------------
+
+$ git remote get-url origin
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+$ git config credential.helper store
+$ git config --global credential.helper cache
 $ git push http://example.com/repo.git  
 Username: <type your username>  
 Password: <type your password>  
   
-  
+<details><summary># DOCKER #</summary>
+
+# Images
+$ docker images: Lists running images
+$ docker image ls -a: Lists all images
+$ docker image rm <imageId1> <imageId2>: Deletes selected images (-f will force)
+$ docker rmi <imageId1> <imageId2>: Deletes selected images (-f will force)
+
+# Containers
+$ docker container ls: Lists running containers (same as $ docker ps)
+$ docker container ls -a: Lists all containers (same as $ docker ps -a)
+$ docker container rm <containerId1> <containerId2>: Deletes containers
+
+
+# Build $ Run
+$ docker build .: Builds the docker file and creates the image w/ Repository and Tag as <none>
+$ docker build -t <tagName> .: Builds the docker file and creates the image w/ tag name
+
+# 9000: exposed port in the dockerfile
+# 4000: port on the localhost host machine
+# imageName should be the last parameter
+# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)
+$ docker run -d --name <containerName> -p 4000:9000 <imageName>: Creates and runs a new container from the image
+$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" <imageName>: Creates and runs a new container from the image w/ environment variable
+$ docker stop <containerId>
+
+
+$ docker system prune: Removes images, containers, volumes, and networks — not associated with a container
+$ docker exec -it 66c015f75254 sh: interactive terminal
+
+
+# Delete every Docker containers
+# Must be run first because images are attached to containers
+$ docker rm -f 
+$ docker ps -q | -a: Kills all running containers (-a: stoped ones as well)
+
+
+# Delete every Docker image
+$ docker rmi -f 
+$ docker images -q
+
+
+
 youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' https://m.twitch.tv/videos/327690336 --prefer-ffmpeg

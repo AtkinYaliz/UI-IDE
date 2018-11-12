@@ -437,8 +437,13 @@ $ docker stop <containerId>
 172.17.0.2: graphql-api-server  
 172.17.0.3: graphql-server  
   
-docker run -d --name "graphql-api-server" -p 4002:9000 -e "PORT=9000" graphql-api-server  
-docker run -d --name "graphql-server" -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:4002" graphql-server  
+'# Network is the default one (bridge)  
+docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
+docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:9000" graphql-server  
+
+'# Network is myNetwork. So we can use container name  
+docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
+docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
   
 $ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
 $ docker exec -it <containerId> sh: interactive terminal  

@@ -432,8 +432,18 @@ $ docker run -d --name <containerName> -p 4000:9000 <imageName>: Creates and run
 $ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" <imageName>: Creates and runs a new container from the image w/ environment variable  
 $ docker stop <containerId>  
   
+172.17.0.0: docker bridge  
+172.17.0.1: host  
+172.17.0.2: graphql-api-server  
+172.17.0.3: graphql-server  
+  
+docker run -d --name "graphql-api-server" -p 4002:9000 -e "PORT=9000" graphql-api-server  
+docker run -d --name "graphql-server" -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:4002" graphql-server  
+  
 $ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
-$ docker exec -it 66c015f75254 sh: interactive terminal  
+$ docker exec -it <containerId> sh: interactive terminal  
+$ docker network ls  
+$ docker network inspect bridge  
   
 '# Delete every Docker image  
 $ docker rmi -f  

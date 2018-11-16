@@ -35,12 +35,6 @@
       "**/bower_components/**": true
    }
 }
-- WORKSPACE SETTINGS: {  
-    "javascript.validate.enable": false, // if not using TS  
-    "flow.enabled": true,  
-    "flow.useNPMPackagedFlow": true,  
-    "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow" // or install npm i flow-bin -g  
-  }
 
 ### Sublime ###
 - Git  
@@ -106,6 +100,7 @@ alias ld='ls -l'
 alias cls='clear && printf "\e[3J"'  
 alias pss='ps aux | grep'  
 alias mongod='mongod --dbpath ~/...../mongodb/data/db'  
+alias d='docker'  
 eval $(/usr/libexec/path_helper -s)  
 
 ## shortcuts ##

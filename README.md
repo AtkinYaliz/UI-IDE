@@ -131,7 +131,7 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 // HomeBrew . 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 
-</details>
+</details>  
   
   
   
@@ -439,6 +439,9 @@ docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http
 '# Network is myNetwork. So we can use container name  
 docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
 docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
+
+- d build -t ylz-identity-manager .  
+- docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API  
   
 $ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
 $ docker exec -it containerId sh: interactive terminal  

@@ -35,6 +35,7 @@
       "**/bower_components/**": true
    }
 }
+- Extensions: Activitus Bar, Atom One Dark Theme, Atom One Light Theme, Auto Import, Bracket Pair Colorizer, Cobalt2 Theme Official, Darcula Theme, Docker, Dracula Official, EditorConfig for VS Code, Git History, GitLens - Git supercharged, Material Icon Theme, One Dark (Sublime Babel), One Dark Pro, One Monokai Theme, Prettier - Code formatter, Quokka.js, Rightclick Git, Simple icon theme, Sublime Material Theme, TODO Highlight   
 
 ### Sublime ###
 - Git  

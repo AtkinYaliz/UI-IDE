@@ -457,6 +457,25 @@ $ docker images -q
   
 - - - -
   
+<details><summary># KUBERNETES #</summary>
+
+kubectl get nodes
+kubectl cluster-info
+kubectl get ns
+kubectl get pods -n namaspaceName
+kubectl logs -n namaspaceName --tail=1000 -f podName
+kubectl exec -it -n namaspaceName podName sh
+kubectl get pods -n namaspaceName | grep -i 7DD863D35E
+
+kubectl describe -n namaspaceName pod podName
+kubectl delete -n namaspaceName pod podName
+kubectl scale deployment -n namaspaceName --replicas=0 serviceName
+kubect. get logs -n namaspaceName podName
+  
+</details>
+  
+- - - -
+  
 <details><summary># MONGO #</summary>
   
 '# FIND #  

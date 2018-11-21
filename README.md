@@ -469,8 +469,8 @@ $ cd ~/.ssh
 $ ssh-keygen -t rsa: Creates id_rsa and id_rsa.pub  
 $ Enter passphrase (empty for no passphrase):  
 $ Enter same passphrase again:  
-$ cat id_rsa.pub  
-  - ssh-rsa AAAAB3NzaC1yc...  
+$ cat id_rsa.pub
+  - ssh-rsa AAAAB3NzaC1yc...
 $ ssh yaliz@yaliz-identity-manager.serra.pw  
 </details>
   

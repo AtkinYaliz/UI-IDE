@@ -76,19 +76,6 @@ Stylesheet:
   
 - - - -
 
-## Boilerplates ##
-
-### Client ###
-- https://github.com/facebookincubator/create-react-app
-- https://github.com/Microsoft/TypeScript-React-Starter
-
-### Node ###
-- https://github.com/Microsoft/TypeScript-Node-Starter
-- https://github.com/developit/express-es6-rest-api
-
-
-- - - -
-
 <details><summary># MAC #</summary>
 
 # MAC #
@@ -476,6 +463,15 @@ kubectl delete -n namaspaceName pod podName
 kubectl scale deployment -n namaspaceName --replicas=0 serviceName
 kubect. get logs -n namaspaceName podName
   
+  
+# ssh #
+$ cd ~/.ssh  
+$ ssh-keygen -t rsa: Creates id_rsa and id_rsa.pub  
+$ Enter passphrase (empty for no passphrase):  
+$ Enter same passphrase again:  
+$ cat id_rsa.pub  
+  - ssh-rsa AAAAB3NzaC1yc...  
+$ ssh yaliz@yaliz-identity-manager.serra.pw  
 </details>
   
 - - - -

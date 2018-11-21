@@ -354,21 +354,21 @@ $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
 
 <details><summary># GIT #</summary>
 
-# Branch
+## Branch ##
 $ git br -a: List both remote-tracking branches and local branches.
 $ git br -d <branchname>: Delete a branch
 $ git br -D <branchname>: --delete --force
 $ git br -f <branchname>: Reset <branchname> to <startpoint>
 $ git ps -d origin <branchname>: Delete a remote branch
 
-# Fetch
+## Fetch ##
 $ git fetch --all: Fetch all remotes
 $ git fetch --prune: After fetching, remove any remote tracking branches which no longer exist	on the remote
 
-# Clone
+## Clone ##
 $ git clone -b develop repository-url.git
 
-# restore a previous commit's state:
+## restore a previous commit's state: ##
 $ git reset --hard a0e4812dbc
 $ git ps origin develop --force
 
@@ -389,13 +389,13 @@ Password: <type your password>
   
 <details><summary># DOCKER #</summary>
   
-# Images
+## Images ##
 $ docker images: Lists running images  
 $ docker image ls -a: Lists all images  
 $ docker image rm imageId1 imageId2: Deletes selected images (-f will force)  
 $ docker rmi imageId1 imageId2: Deletes selected images (-f will force)  
   
-# Containers  
+## Containers ##
 $ docker container ls: Lists running containers (same as $ docker ps)  
 $ docker container ls -a: Lists all containers (same as $ docker ps -a)  
 $ docker container rm containerId1 containerId2: Deletes containers  
@@ -449,7 +449,7 @@ $ docker images -q
 - - - -
   
 <details><summary># KUBERNETES #</summary>
-
+  
 $ kubectl get nodes  
 $ kubectl cluster-info  
 $ kubectl get ns  

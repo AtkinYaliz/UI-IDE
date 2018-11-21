@@ -9,7 +9,9 @@
 - Mac: ~/.vscode/extensions
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
-- USER SETTINGS: {
+- USER SETTINGS: 
+``` 
+{
    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
    "editor.detectIndentation": false,
    "editor.insertSpaces": true,
@@ -37,6 +39,7 @@
       "**/bower_components/**": true
    }
 }
+```
 - Extensions: Activitus Bar, Atom One Dark Theme, Atom One Light Theme, Auto Import, Bracket Pair Colorizer, Cobalt2 Theme Official, Darcula Theme, Docker, Dracula Official, EditorConfig for VS Code, Git History, GitLens - Git supercharged, Material Icon Theme, One Dark (Sublime Babel), One Dark Pro, One Monokai Theme, Prettier - Code formatter, Quokka.js, Rightclick Git, Simple icon theme, Sublime Material Theme, TODO Highlight   
 
 ### Sublime ###
@@ -479,16 +482,16 @@ $ ssh yaliz@yaliz-identity-manager.serra.pw
   
 <details><summary># MONGO #</summary>
   
-'# FIND #  
+## FIND ##
 db.Clients.find({ industry: 'Automotive' });  
 db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })  
   
-'# SELECT & JOIN #  
+## SELECT & JOIN ##
 db.Projects.find({ clientId: {  
     $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
 }}, { _id: 1, name: 1, budget: 1 })  
   
-'# INSERT #
+## INSERT ##
 const clients = [...];  
 clients.forEach( client => {  
     client._id = ObjectId().str;  
@@ -500,7 +503,7 @@ db.ClientsXX.find({}).forEach(x => {
     db.getCollection('Clients').insert( xNew );  
 });  
   
-'# UPDATE #  
+## UPDATE ##
 // update the first one  
 db.Formats.update({ countryId: 'GB' },  
     {  

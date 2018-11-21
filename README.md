@@ -1,5 +1,7 @@
 
 
+<details><summary># IDE #</summary>
+  
 ## Extensions ##
 
 ### VS Code ###
@@ -69,7 +71,9 @@ Stylesheet:
     border: 1px solid rgba(0, 255, 0, 0.7);  
     // background-color: rgba(150, 255, 150, 0.3);  
   }  
-
+  
+</details>
+  
 - - - -
 
 ## Boilerplates ##

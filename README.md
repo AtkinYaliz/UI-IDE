@@ -157,9 +157,8 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 // HomeBrew . 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 
-</details>
-  
-.  
+</details>  
+.
 <details><summary># UBUNTU #</summary>
 
 # UBUNTU #

@@ -10,7 +10,7 @@
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - USER SETTINGS: 
-```json
+```
 {
    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
    "editor.detectIndentation": false,
@@ -58,23 +58,23 @@ Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray
 Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
 Install: file-icons, atom-json-color, atom-bracket-highlight,  
 Use: UITheme='One Dark', SyntaxTheme='One Light'  
+Stylesheet:
 ```
-Stylesheet:  
-  .tree-view {  
-    font-size: 10px; 
-  }  
-  atom-text-editor {  
-    background-color: #f7f3ea;  
-    font-family: Monaco;  
-    font-size: 13px;  
-  }  
-  .bracket-matcher {  
-    position: absolute;  
-    top: -1px;  
-    border-bottom: 1px solid lime;  
-    border: 1px solid rgba(0, 255, 0, 0.7);  
-    // background-color: rgba(150, 255, 150, 0.3);  
-  }  
+.tree-view {  
+  font-size: 10px; 
+}  
+atom-text-editor {  
+  background-color: #f7f3ea;  
+  font-family: Monaco;  
+  font-size: 13px;  
+}  
+.bracket-matcher {  
+  position: absolute;  
+  top: -1px;  
+  border-bottom: 1px solid lime;  
+  border: 1px solid rgba(0, 255, 0, 0.7);  
+  // background-color: rgba(150, 255, 150, 0.3);  
+}  
 ```
 </details>
   

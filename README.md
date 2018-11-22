@@ -111,7 +111,7 @@ export PATH=~/...../mongodb/bin:$PATH
 '# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
 
 export PS1='\[$(tput setab 3)$(tput setaf 4)\] \w » \[$(tput sgr0)\]'
-'# export PS1='\[\033[01;32m\]/${PWD##*/} \[\033[00m\]λ '
+'# export PS1='\[\033[01;32m\] ${PWD##*/} \[\033[00m\]λ '
   
 alias l='ls -CF'  
 alias la='ls -a'  

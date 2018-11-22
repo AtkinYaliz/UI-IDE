@@ -10,7 +10,7 @@
   - Cmd + Shft + P -> Shell: install 'code' in Path
 - Ubuntu: Home/.vscode/extensions
 - USER SETTINGS: 
-``` 
+```json
 {
    "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
    "editor.detectIndentation": false,
@@ -58,6 +58,7 @@ Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray
 Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
 Install: file-icons, atom-json-color, atom-bracket-highlight,  
 Use: UITheme='One Dark', SyntaxTheme='One Light'  
+```
 Stylesheet:  
   .tree-view {  
     font-size: 10px; 
@@ -74,7 +75,7 @@ Stylesheet:
     border: 1px solid rgba(0, 255, 0, 0.7);  
     // background-color: rgba(150, 255, 150, 0.3);  
   }  
-  
+```
 </details>
   
 - - - -
@@ -87,15 +88,42 @@ Stylesheet:
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/...../mongodb/bin:$PATH  
-export PS1='\[\033[01;32m\]${PWD} \[\033[00m\]λ '  
+'# Change the background color by specifying \e[{code}m in the PS1 prompt  
+'# \e[ – Indicates the beginning of color prompt  
+'# x;ym – Indicates color code. Use the color code values mentioned below.  
+'# \e[m – indicates the end of color prompt  
+'# 0;30 black foreground (Replace 0 with 1 for dark color, 3 for italic)  
+'# 0;31 red  
+'# 0;32 green  
+'# 0;33 yellow  
+'# 0;34 blue  
+'# 0;35 purple  
+'# 0;36 cyan  
+'# 43 yellow background  
+'# 46 cyan  
+'# 47 lightGrey  
+  
+BOLD_GREEN="\[\033[01;32m\]"  
+BLUE="\e[0;34m"  
+YELLOW="\e[43m"  
+RESET_COLOR="\e[m"  
+  
+export PS1="${BLUE}${YELLOW}${PWD} » ${RESET_COLOR} "  
+  
 alias l='ls -CF'  
 alias la='ls -a'  
 alias ll='ls -all'  
 alias ld='ls -l'  
 alias cls='clear && printf "\e[3J"'  
 alias pss='ps aux | grep'  
-alias mongod='mongod --dbpath ~/...../mongodb/data/db'  
+alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'  
 alias d='docker'  
+alias k='kubectl'  
+
+alias cd..='cd ../'  
+alias ..='cd ../'  
+alias ...='cd ../../'  
+alias path='echo -e ${PATH//:/\\n}'  
 eval $(/usr/libexec/path_helper -s)  
 
 ## shortcuts ##

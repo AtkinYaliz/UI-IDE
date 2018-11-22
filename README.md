@@ -519,6 +519,11 @@ db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } }
 db.Projects.find({ clientId: {  
     $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
 }}, { _id: 1, name: 1, budget: 1 })  
+
+const clients = db.Clients.find({ countryId: 'IE' })
+	.map( x => x._id )
+db.Projects.find({ clientId: {$in: clients} }, {_id: 0, name:1})
+	.sort({ name: 1 })
   
 ## INSERT ##
 const clients = [...];  

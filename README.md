@@ -108,7 +108,7 @@ BLUE="\e[0;34m"
 YELLOW="\e[43m"  
 RESET_COLOR="\e[m"  
   
-export PS1="${BLUE}${YELLOW}${PWD} » ${RESET_COLOR} "  
+export PS1="${BLUE}${YELLOW}/${PWD##*/} » ${RESET_COLOR} "  
   
 alias l='ls -CF'  
 alias la='ls -a'  

@@ -88,27 +88,30 @@ atom-text-editor {
 export CLICOLOR=1  
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/...../mongodb/bin:$PATH  
-'# Change the background color by specifying \e[{code}m in the PS1 prompt  
-'# \e[ – Indicates the beginning of color prompt  
-'# x;ym – Indicates color code. Use the color code values mentioned below.  
-'# \e[m – indicates the end of color prompt  
-'# 0;30 black foreground (Replace 0 with 1 for dark color, 3 for italic)  
-'# 0;31 red  
-'# 0;32 green  
-'# 0;33 yellow  
-'# 0;34 blue  
-'# 0;35 purple  
-'# 0;36 cyan  
-'# 43 yellow background  
-'# 46 cyan  
-'# 47 lightGrey  
   
-BOLD_GREEN="\[\033[01;32m\]"  
-BLUE="\e[0;34m"  
-YELLOW="\e[43m"  
-RESET_COLOR="\e[m"  
-  
-export PS1="${BLUE}${YELLOW}/${PWD##*/} » ${RESET_COLOR} "  
+'#tput setab [1-7] – Set a background color using ANSI escape
+'# tput setb [1-7] – Set a background color
+'# tput setaf [1-7] – Set a foreground color using ANSI escape
+'# tput setf [1-7] – Set a foreground color
+'# 
+'# tput bold – Set bold mode
+'# tput dim – turn on half-bright mode
+'# tput smul – begin underline mode
+'# tput rmul – exit underline mode
+'# tput rev – Turn on reverse mode
+'# tput smso – Enter standout mode (bold on rxvt)
+'# tput rmso – Exit standout mode
+'# tput sgr0 – Turn off all attributes
+'#
+'# 0 – Black  | 4 – Blue
+'# 1 – Red    | 5 – Magenta
+'# 2 – Green  | 6 – Cyan
+'# 3 – Yellow | 7 – White
+'#
+'# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
+
+export PS1='\[$(tput setab 3)$(tput setaf 4)\] \w » \[$(tput sgr0)\]'
+'# export PS1='\[\033[01;32m\]/${PWD##*/} \[\033[00m\]λ '
   
 alias l='ls -CF'  
 alias la='ls -a'  

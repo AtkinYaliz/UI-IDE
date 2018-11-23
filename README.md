@@ -89,29 +89,33 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad  
 export PATH=~/...../mongodb/bin:$PATH  
   
-'#tput setab [1-7] – Set a background color using ANSI escape
-'# tput setb [1-7] – Set a background color
-'# tput setaf [1-7] – Set a foreground color using ANSI escape
-'# tput setf [1-7] – Set a foreground color
-'# 
-'# tput bold – Set bold mode
-'# tput dim – turn on half-bright mode
-'# tput smul – begin underline mode
-'# tput rmul – exit underline mode
-'# tput rev – Turn on reverse mode
-'# tput smso – Enter standout mode (bold on rxvt)
-'# tput rmso – Exit standout mode
-'# tput sgr0 – Turn off all attributes
-'#
-'# 0 – Black  | 4 – Blue
-'# 1 – Red    | 5 – Magenta
-'# 2 – Green  | 6 – Cyan
-'# 3 – Yellow | 7 – White
-'#
-'# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
-
-export PS1='\[$(tput setab 3)$(tput setaf 4)\] \w » \[$(tput sgr0)\]'
-'# export PS1='\[\033[01;32m\] ${PWD##*/} \[\033[00m\]λ '
+'#tput setab [1-7] – Set a background color using ANSI escape  
+'# tput setb [1-7] – Set a background color  
+'# tput setaf [1-7] – Set a foreground color using ANSI escape  
+'# tput setf [1-7] – Set a foreground color  
+'#  
+'# tput bold – Set bold mode  
+'# tput dim – turn on half-bright mode  
+'# tput smul – begin underline mode  
+'# tput rmul – exit underline mode  
+'# tput rev – Turn on reverse mode  
+'# tput smso – Enter standout mode (bold on rxvt)  
+'# tput rmso – Exit standout mode  
+'# tput sgr0 – Turn off all attributes  
+'#  
+'# 0 – Black  | 4 – Blue  
+'# 1 – Red    | 5 – Magenta  
+'# 2 – Green  | 6 – Cyan  
+'# 3 – Yellow | 7 – White  
+'#  
+'# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'  
+'# export PS1='\[\033[01;32m\] \w \[\033[00m\]λ '  
+  
+function getCurrentFolderName() {  
+   '# echo $PWD  
+   echo /${PWD##*/}  
+}  
+export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '  
   
 alias l='ls -CF'  
 alias la='ls -a'  
@@ -133,8 +137,8 @@ eval $(/usr/libexec/path_helper -s)
 AC2V2zZQ  
 F11	=> Show desktop  
 Cmd + Shift + . => show hidden files  
-Cmd + Q 	=> close the application without trace  
-Cmd + \`		=> tab between windows of same application  
+Cmd + Q         => close the application without trace  
+Cmd + \`        => tab between windows of same application  
 cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
 ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
 chown <_user> <_file> => changes the owner of <_file> to <_user>  

@@ -507,7 +507,7 @@ $ Enter same passphrase again:
 $ cat id_rsa.pub
   - ssh-rsa AAAAB3NzaC1yc...  
 
-$ ssh yaliz@yaliz-identity-manager.serra.pw  
+$ ssh _yaliz_@yaliz-identity-manager.serra.pw  
   
 </details>
   

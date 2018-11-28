@@ -425,14 +425,14 @@ Password: <type your password>
   
 <details><summary># DOCKER #</summary>
   
-``` sh
-## Images ##  
+```sh
+# Images #
 $ docker images: Lists running images  
 $ docker image ls -a: Lists all images  
 $ docker image rm imageId1 imageId2: Deletes selected images (-f will force)  
 $ docker rmi imageId1 imageId2: Deletes selected images (-f will force)  
   
-## Containers ##  
+# Containers #
 $ docker container ls: Lists running containers (same as $ docker ps)  
 $ docker container ls -a: Lists all containers (same as $ docker ps -a)  
 $ docker container rm containerId1 containerId2: Deletes containers  
@@ -462,19 +462,19 @@ $ docker stop containerId
 172.17.0.2: graphql-api-server  
 172.17.0.3: graphql-server  
 
-``` sh
-# Network is the default one (bridge)  
-docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
-docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:9000" graphql-server  
+```sh
+# Network is 'bridge' (the default one)
+$ docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
+$ docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:9000" graphql-server  
 
-# Network is myNetwork. So we can use container name  
-docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
-docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
-```
+# Network is 'myNetwork'. So we can use container name  
+$ docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
+$ docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
 
-- d build -t ylz-identity-manager .  
-- docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API  
-``` sh
+$ docker build -t ylz-identity-manager .  
+$ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API ```
+
+```sh
 $ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
 $ docker exec -it containerId sh: interactive terminal  
 $ docker network ls  
@@ -490,7 +490,8 @@ $ docker images -q
 - - - -
   
 <details><summary># KUBERNETES #</summary>
-  
+
+```sh
 $ kubectl get nodes  
 $ kubectl cluster-info  
 $ kubectl get ns  
@@ -504,7 +505,7 @@ $ kubectl delete -n namaspaceName pod podName
 $ kubectl scale deployment -n namaspaceName --replicas=0 serviceName  
 $ kubect. get logs -n namaspaceName podName  
   
-## ssh ##
+# ssh #
 $ cd ~/.ssh  
 $ ssh-keygen -t rsa: Creates id_rsa and id_rsa.pub  
 $ Enter passphrase (empty for no passphrase):  
@@ -513,7 +514,7 @@ $ cat id_rsa.pub
   - ssh-rsa AAAAB3NzaC1yc...  
 
 $ ssh _yaliz_@yaliz-identity-manager.serra.pw  
-  
+```
 </details>
   
 - - - -

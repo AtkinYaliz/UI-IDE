@@ -390,41 +390,41 @@ $ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
 
 <details><summary># GIT #</summary>
 
-## Branch ##
-$ git br -a: List both remote-tracking branches and local branches.
-$ git br -d <branchname>: Delete a branch
-$ git br -D <branchname>: --delete --force
-$ git br -f <branchname>: Reset <branchname> to <startpoint>
-$ git ps -d origin <branchname>: Delete a remote branch
+```sh
+# Branch
+$ git br -a                    # Lists both remote-tracking branches and local branches
+$ git br -d branchName         # Deletes a branch
+$ git br -D branchName         # --delete --force
+$ git br -f branchName         # Resets <branchname> to <startpoint>
+$ git ps -d origin branchName  # Deletes a remote branch
 
-## Fetch ##
-$ git fetch --all: Fetch all remotes
-$ git fetch --prune: After fetching, remove any remote tracking branches which no longer exist	on the remote
+# Fetch
+$ git fetch --all    # Fetch all remotes
+$ git fetch --prune  # After fetching, remove any remote tracking branches which no longer exist on the remote
 
-## Clone ##
+# Clone
 $ git clone -b develop repository-url.git
 
-## restore a previous commit's state: ##
+# restore a previous commit's state:
 $ git reset --hard a0e4812dbc
 $ git ps origin develop --force
-
-# ---------------------------------------------
-
+```
+```sh
 $ git remote get-url origin
 $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 $ git config credential.helper store
 $ git config --global credential.helper cache
 $ git push http://example.com/repo.git  
-Username: <type your username>  
-Password: <type your password>  
-  
+  # Username: <type your username>  
+  # Password: <type your password>  
+```
 </details>
-
+  
 - - - -
   
 <details><summary># DOCKER #</summary>
-  
+
 ```sh
 # Image
 $ docker images        # Lists running images
@@ -475,14 +475,14 @@ $ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mong
 ```
 
 ```sh
-$ docker system prune   # Removes images, containers, volumes, and networks — not associated with a container  
-$ docker exec -it containerId sh # interactive terminal  
-$ docker network ls  
-$ docker network inspect bridge  
+$ docker system prune            # Removes images, containers, volumes, and networks (not associated with a container)
+$ docker exec -it containerId sh # interactive terminal
+$ docker network ls
+$ docker network inspect bridge
   
-# Delete every Docker image  
-$ docker rmi -f  
-$ docker images -q  
+# Delete every Docker image
+$ docker rmi -f
+$ docker images -q
 ```
 
 </details>

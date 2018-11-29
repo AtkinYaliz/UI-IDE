@@ -455,12 +455,12 @@ $ docker run -d --name containerName -p 4000:9000 imageName            # Create
 $ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" imageName  # Creates and runs a new container from the image w/ environment variable
 $ docker stop containerId
 ```
-
-172.17.0.0: docker bridge  
-172.17.0.1: host  
-172.17.0.2: graphql-api-server  
-172.17.0.3: graphql-server  
-
+Let's run 2 containers under bridge network. The inspect would be like the following:
+- 172.17.0.0: docker bridge  
+- 172.17.0.1: host  
+- 172.17.0.2: container1
+- 172.17.0.3: container2
+  
 ```sh
 # Network is 'bridge' (the default one)
 $ docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
@@ -475,8 +475,8 @@ $ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mong
 ```
 
 ```sh
-$ docker system prune: Removes images, containers, volumes, and networks — not associated with a container  
-$ docker exec -it containerId sh: interactive terminal  
+$ docker system prune   # Removes images, containers, volumes, and networks — not associated with a container  
+$ docker exec -it containerId sh # interactive terminal  
 $ docker network ls  
 $ docker network inspect bridge  
   

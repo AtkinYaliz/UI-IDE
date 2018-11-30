@@ -59,7 +59,7 @@ Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages fold
 Install: file-icons, atom-json-color, atom-bracket-highlight,  
 Use: UITheme='One Dark', SyntaxTheme='One Light'  
 Stylesheet:
-```
+```css
 .tree-view {  
   font-size: 10px; 
 }  
@@ -81,57 +81,56 @@ atom-text-editor {
 - - - -
 
 <details><summary># MAC #</summary>
-
-# MAC #
   
 ## ~/.bash_profile ##
-export CLICOLOR=1  
-export LSCOLORS=ExFxBxDxCxegedabagacad  
-export PATH=~/...../mongodb/bin:$PATH  
-  
-'#tput setab [1-7] – Set a background color using ANSI escape  
-'# tput setb [1-7] – Set a background color  
-'# tput setaf [1-7] – Set a foreground color using ANSI escape  
-'# tput setf [1-7] – Set a foreground color  
-'#  
-'# tput bold – Set bold mode  
-'# tput dim – turn on half-bright mode  
-'# tput smul – begin underline mode  
-'# tput rmul – exit underline mode  
-'# tput rev – Turn on reverse mode  
-'# tput smso – Enter standout mode (bold on rxvt)  
-'# tput rmso – Exit standout mode  
-'# tput sgr0 – Turn off all attributes  
-'#  
-'# 0 – Black  | 4 – Blue  
-'# 1 – Red    | 5 – Magenta  
-'# 2 – Green  | 6 – Cyan  
-'# 3 – Yellow | 7 – White  
-'#  
-'# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'  
-'# export PS1='\[\033[01;32m\] \w \[\033[00m\]λ '  
-  
-function getCurrentFolderName() {  
-   '# echo $PWD  
-   echo /${PWD##*/}  
-}  
-export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '  
-  
-alias l='ls -CF'  
-alias la='ls -a'  
-alias ll='ls -all'  
-alias ld='ls -l'  
-alias cls='clear && printf "\e[3J"'  
-alias pss='ps aux | grep'  
-alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'  
-alias d='docker'  
-alias k='kubectl'  
+```sh
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+export PATH=~/...../mongodb/bin:$PATH
 
-alias cd..='cd ../'  
-alias ..='cd ../'  
-alias ...='cd ../../'  
-alias path='echo -e ${PATH//:/\\n}'  
-eval $(/usr/libexec/path_helper -s)  
+# tput setb [1-7] – Set a background color
+# tput setaf [1-7] – Set a foreground color using ANSI escape
+# tput setf [1-7] – Set a foreground color
+#
+# tput bold – Set bold mode
+# tput dim – turn on half-bright mode
+# tput smul – begin underline mode
+# tput rmul – exit underline mode
+# tput rev – Turn on reverse mode
+# tput smso – Enter standout mode (bold on rxvt)
+# tput rmso – Exit standout mode
+# tput sgr0 – Turn off all attributes
+#
+# 0 – Black  | 4 – Blue
+# 1 – Red    | 5 – Magenta
+# 2 – Green  | 6 – Cyan
+# 3 – Yellow | 7 – White
+#
+# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
+# export PS1='\[\033[01;32m\] \w \[\033[00m\]λ '
+
+function getCurrentFolderName() {
+   '# echo $PWD
+   echo /${PWD##*/}
+}
+export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '
+
+alias l='ls -CF'
+alias la='ls -a'
+alias ll='ls -all'
+alias ld='ls -l'
+alias cls='clear && printf "\e[3J"'
+alias pss='ps aux | grep'
+alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'
+alias d='docker'
+alias k='kubectl'
+
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias path='echo -e ${PATH//:/\\n}'
+eval $(/usr/libexec/path_helper -s)
+```
 
 ## shortcuts ##
 AC2V2zZQ  
@@ -144,19 +143,21 @@ ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
 defaults write -g com.apple.mouse.scaling -float 10  
 
-// MongoDB  
-$ ./mongod --dbpath ../data/db  
-$ mongo (another cmd)  
-$ show dbs  
-$ use <db>  
-$ db  
-$ show collections  
-$ db.<collection>.drop()  
-$ db.<collection>.insert({…})  
-$ db.<collection>.find()  
+```sh
+# MongoDB  
+$ ./mongod --dbpath ../data/db
+$ mongo (another cmd)
+$ show dbs
+$ use <db>
+$ db
+$ show collections
+$ db.<collection>.drop()
+$ db.<collection>.insert({…})
+$ db.<collection>.find()
 
-// NPM  
-$ sudo chown -R $(whoami) <path> | $(npm config get prefix)  
+# NPM
+$ sudo chown -R $(whoami) <path> | $(npm config get prefix)
+```
 
 // HomeBrew . 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
@@ -168,13 +169,14 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 # UBUNTU #
 
 ## ~/.bashrc ##
-'# alias l='ls -CF'  
-'# alias la='ls -a'  
-'# alias ll='ls -all'  
-alias ld='ls -l'  
-alias cls='clear && reset'  
+```sh
+# alias l='ls -CF'
+# alias la='ls -a'
+# alias ll='ls -all'
+alias ld='ls -l'
+alias cls='clear && reset'
 PS1='\[\033[01;32m\]${PWD} \[\033[00m\]\$ '
-
+```
 ## Programs ##
 Gnome Tweaks, Gnome Global Application Menu, Docky (No need for Unity or Dash-to-dock),  
 GIMP, VLC, K3b,  

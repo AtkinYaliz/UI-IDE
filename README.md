@@ -409,6 +409,9 @@ $ git fetch --prune  # After fetching, remove any remote tracking branches which
 # Clone
 $ git clone -b develop repository-url.git
 
+# Unstage changes
+$ git reset HEAD . | fileName1 fileName2
+
 # restore a previous commit's state:
 $ git reset --hard a0e4812dbc
 $ git ps origin develop --force

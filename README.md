@@ -510,7 +510,7 @@ $ kubectl get pods -n namaspaceName | grep -i 7DD863D35E
 $ kubectl describe -n namaspaceName pod podName  
 $ kubectl delete -n namaspaceName pod podName  
 $ kubectl scale deployment -n namaspaceName --replicas=0 serviceName  
-$ kubect. get logs -n namaspaceName podName  
+$ kubectl get logs -n namaspaceName podName  
   
 # ssh #
 $ cd ~/.ssh  

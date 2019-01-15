@@ -637,6 +637,6 @@ KS5 is for pupils aged 16-18 (sometimes 19) and most schools take Advanced Level
   
 - - - -
   
-youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' https://m.twitch.tv/videos/327690336 --prefer-ffmpeg
+youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' --prefer-ffmpeg https://m.twitch.tv/videos/327690336
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax  

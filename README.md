@@ -454,7 +454,7 @@ $ docker ps -q | -a    # Kills all running containers (-a: stoped ones as well)
 $ docker build .            # Builds the docker file and creates an image w/ Repository and Tag as <none>
 $ docker build -t tagName . # Builds the docker file and creates an image w/ tag name
   
-# 9000: exposed port in the dockerfile
+# 9000: exposed port in the dockerfile (this one will overwrite the "EXPOSE 9000" in the Dockerfile)
 # 4000: port on the localhost host machine
 # imageName should be the last parameter
 # 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)

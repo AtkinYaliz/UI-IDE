@@ -83,6 +83,7 @@ atom-text-editor {
 <details><summary># MAC #</summary>
   
 ## ~/.bash_profile ##
+$ touch .bash_profile  
 ```sh
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad

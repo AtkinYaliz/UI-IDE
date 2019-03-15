@@ -161,8 +161,10 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
 
 ### Applications ###
-- HomeBrew
+- HomeBrew  
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- Node
+- Git
 - Spectacle
 - Dash
 - iTerm2

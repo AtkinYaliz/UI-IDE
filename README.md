@@ -160,8 +160,13 @@ $ db.<collection>.find()
 $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
 
-// HomeBrew  
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+### Applications ###
+- HomeBrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- Spectacle
+- Dash
+- iTerm2
+
 
 </details>  
   

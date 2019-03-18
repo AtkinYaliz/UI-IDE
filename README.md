@@ -167,7 +167,7 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 - Git
 - Spectacle
 - Dash
-- iTerm2
+- iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
 
 
 </details>  

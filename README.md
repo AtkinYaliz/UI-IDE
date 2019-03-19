@@ -433,6 +433,8 @@ $ git config --global credential.helper cache
 $ git push http://example.com/repo.git  
   # Username: <type your username>  
   # Password: <type your password>  
+# fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'  
+# https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8  
 ```
 </details>
   

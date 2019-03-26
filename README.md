@@ -165,9 +165,14 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - Node
 - Git
+- VS Code, Sublime, Postman
 - Spectacle
-- Dash
 - iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
+- Chrome, FireFox
+- Mini Calendar
+- Tureng
+- Android File Transfer
+- Dash
 
 
 </details>  

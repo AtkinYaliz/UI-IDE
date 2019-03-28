@@ -161,16 +161,15 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
 
 ### Applications ###
+- Chrome, FireFox
 - HomeBrew  
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - Node
 - Git
-- VS Code, Sublime, Postman
+- VS Code, Sublime, Postman, Stuido 3T
 - Spectacle
 - iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
-- Chrome, FireFox
-- Mini Calendar
-- Tureng
+- Tureng, Mini Calendar (AppStore)
 - Android File Transfer
 - Dash
 

@@ -1,85 +1,5 @@
 
 
-<details><summary># IDE #</summary>
-  
-## Extensions ##
-
-### VS Code ###
-- Out of box
-- Mac: ~/.vscode/extensions
-  - Cmd + Shft + P -> Shell: install 'code' in Path
-- Ubuntu: Home/.vscode/extensions
-- USER SETTINGS: 
-```
-{
-   "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
-   "editor.detectIndentation": false,
-   "editor.insertSpaces": true,
-   "editor.tabSize": 3,
-   "editor.fontFamily": "'Dank Mono', 'Source Code Pro', 'Roboto Mono', 'Andale Mono', 'Lucida Console', Menlo, Consolas, DejaVu Sans Mono, monospace",
-   "editor.fontSize": 15,
-   "editor.fontLigatures": true,
-   "editor.fontWeight": "700",
-   "terminal.integrated.fontSize": 12,
-   "terminal.integrated.fontFamily": "Monaco",
-   "window.zoomLevel": -0.5,
-   "workbench.colorTheme": "Cobalt2",
-   "workbench.iconTheme": "material-icon-theme",
-   "workbench.startupEditor": "newUntitledFile",
-   "javascript.validate.enable": false, // if not using TS
-   "explorer.confirmDelete": false,
-   "explorer.confirmDragAndDrop": false,
-   "git.autofetch": true,
-   "gitlens.advanced.messages": {
-      "suppressShowKeyBindingsNotice": true
-   }, // or install npm i flow-bin -g
-   "files.watcherExclude": {
-      "**/tmp/**": true,
-      "**/node_modules/**": true,
-      "**/bower_components/**": true
-   }
-}
-```
-- Extensions: Activitus Bar, Atom One Dark Theme, Atom One Light Theme, Auto Import, Bracket Pair Colorizer, Cobalt2 Theme Official, Darcula Theme, Docker, Dracula Official, EditorConfig for VS Code, Git History, GitLens - Git supercharged, Material Icon Theme, One Dark (Sublime Babel), One Dark Pro, One Monokai Theme, Prettier - Code formatter, Quokka.js, Rightclick Git, Simple icon theme, Sublime Material Theme, TODO Highlight   
-
-### Sublime ###
-- Git  
-TypeScript  
-Babel ES6/ES7  
-JsFormat  
-BracketHighlighter  
-SideBarEnhancements  
-Color Highlighter  
-A File Icon  
-Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
-
-### Atom ###
-- Atom-Typescript: https://github.com/TypeStrong/atom-typescript  
-Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
-Install: file-icons, atom-json-color, atom-bracket-highlight,  
-Use: UITheme='One Dark', SyntaxTheme='One Light'  
-Stylesheet:
-```css
-.tree-view {
-  font-size: 10px;
-}
-atom-text-editor {
-  background-color: #f7f3ea;
-  font-family: Monaco;
-  font-size: 13px;
-}
-.bracket-matcher {
-  position: absolute;
-  top: -1px;
-  border-bottom: 1px solid lime;
-  border: 1px solid rgba(0, 255, 0, 0.7);
-  /* background-color: rgba(150, 255, 150, 0.3); */
-}
-```
-</details>
-  
-- - - -
-
 <details><summary># MAC #</summary>
   
 ## ~/.bash_profile ##
@@ -174,9 +94,89 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 - Android File Transfer
 - Dash for MacOS
 
-
 </details>  
+
+- - - -
+
+<details><summary># IDE #</summary>
   
+## Extensions ##
+
+### VS Code ###
+- Out of box
+- Mac: ~/.vscode/extensions
+  - Cmd + Shft + P -> Shell: install 'code' in Path
+- Ubuntu: Home/.vscode/extensions
+- USER SETTINGS: 
+```
+{
+   "typescript.tsdk": "${npm list -g | head -n1}/node_modules/typescript/lib",
+   "editor.detectIndentation": false,
+   "editor.insertSpaces": true,
+   "editor.tabSize": 3,
+   "editor.fontFamily": "'Dank Mono', 'Source Code Pro', 'Roboto Mono', 'Andale Mono', 'Lucida Console', Menlo, Consolas, DejaVu Sans Mono, monospace",
+   "editor.fontSize": 15,
+   "editor.fontLigatures": true,
+   "editor.fontWeight": "700",
+   "terminal.integrated.fontSize": 12,
+   "terminal.integrated.fontFamily": "Monaco",
+   "window.zoomLevel": -0.5,
+   "workbench.colorTheme": "Cobalt2",
+   "workbench.iconTheme": "material-icon-theme",
+   "workbench.startupEditor": "newUntitledFile",
+   "javascript.validate.enable": false, // if not using TS
+   "explorer.confirmDelete": false,
+   "explorer.confirmDragAndDrop": false,
+   "git.autofetch": true,
+   "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+   }, // or install npm i flow-bin -g
+   "files.watcherExclude": {
+      "**/tmp/**": true,
+      "**/node_modules/**": true,
+      "**/bower_components/**": true
+   }
+}
+```
+- Extensions: Activitus Bar, Atom One Dark Theme, Atom One Light Theme, Auto Import, Bracket Pair Colorizer, Cobalt2 Theme Official, Darcula Theme, Docker, Dracula Official, EditorConfig for VS Code, Git History, GitLens - Git supercharged, Material Icon Theme, One Dark (Sublime Babel), One Dark Pro, One Monokai Theme, Prettier - Code formatter, Quokka.js, Rightclick Git, Simple icon theme, Sublime Material Theme, TODO Highlight   
+
+### Sublime ###
+- Git  
+TypeScript  
+Babel ES6/ES7  
+JsFormat  
+BracketHighlighter  
+SideBarEnhancements  
+Color Highlighter  
+A File Icon  
+Seti_UI, Materialize, Tomorrow Color Schemes, Predawn, Monokai - Spacegray  
+
+### Atom ###
+- Atom-Typescript: https://github.com/TypeStrong/atom-typescript  
+Atom-React: https://github.com/orktes/atom-react (clone into .atom\packages folder)  
+Install: file-icons, atom-json-color, atom-bracket-highlight,  
+Use: UITheme='One Dark', SyntaxTheme='One Light'  
+Stylesheet:
+```css
+.tree-view {
+  font-size: 10px;
+}
+atom-text-editor {
+  background-color: #f7f3ea;
+  font-family: Monaco;
+  font-size: 13px;
+}
+.bracket-matcher {
+  position: absolute;
+  top: -1px;
+  border-bottom: 1px solid lime;
+  border: 1px solid rgba(0, 255, 0, 0.7);
+  /* background-color: rgba(150, 255, 150, 0.3); */
+}
+```
+</details>
+  
+- - - -
 <details><summary># UBUNTU #</summary>
 
 # UBUNTU #

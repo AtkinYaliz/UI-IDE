@@ -171,7 +171,7 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 - iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
 - Tureng, Mini Calendar (AppStore)
 - Android File Transfer
-- Dash
+- Dash for MacOS
 
 
 </details>  

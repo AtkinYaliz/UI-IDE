@@ -108,13 +108,14 @@ export PATH=~/...../mongodb/bin:$PATH
 # 3 – Yellow | 7 – White
 #
 # $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
-# export PS1='\[\033[01;32m\]\w \[\033[00m\]λ '
+export PS1='\[\033[01;32m\]\w \[\033[00m\]λ '
 
+# remove ' from the following line 
 function getCurrentFolderName() {
    '# echo $PWD
    echo /${PWD##*/}
 }
-export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '
+#export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '
 
 alias l='ls -CF'
 alias la='ls -a'
@@ -122,7 +123,7 @@ alias ll='ls -all'
 alias ld='ls -l'
 alias cls='clear && printf "\e[3J"'
 alias pss='ps aux | grep'
-alias mongod='mongod --dbpath ~/Documents/mongodb/data/db'
+alias mongod='mongod --dbpath /usr/local/var/mongodb'
 alias d='docker'
 alias k='kubectl'
 

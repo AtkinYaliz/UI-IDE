@@ -98,6 +98,284 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 
 - - - -
 
+<details><summary># AWS #</summary>
+
+```sh
+# Installations
+sudo apt-get update
+sudo apt-get git
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs-legacy
+sudo apt-get install build-essential
+sudo apt-get npm
+
+# Deployment
+$ ssh -i \~/.ssh/lh-accountancy-dev.pem ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com
+$ tar -cvzf lh-accountancy.tar.gz lh-accountancy
+$ scp -i \~/.ssh/lh-accountancy-dev.pem lh-accountancy.tar.gz ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com:\~
+
+$ sudo tar -xzvf lh-accountancy.tar.gz
+$ npm run build-dev (export NODE_ENV=dev)
+$ npm run publish-dev > ../lh-accountancy.log 2>&1 &
+$ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
+```
+</details>
+
+- - - -
+
+<details><summary># GIT #</summary>
+
+```sh
+# Branch
+$ git br -a                    # Lists both remote-tracking branches and local branches
+$ git br -d branchName         # Deletes a branch
+$ git br -D branchName         # --delete --force
+$ git br -f branchName         # Resets <branchname> to <startpoint>
+$ git ps -d origin branchName  # Deletes a remote branch
+
+# Fetch
+$ git fetch --all    # Fetch all remotes
+$ git fetch --prune  # After fetching, remove any remote tracking branches which no longer exist on the remote
+
+# Clone
+$ git clone -b develop repository-url.git
+
+# Unstage changes
+$ git reset HEAD . | fileName1 fileName2
+
+# restore a previous commit's state:
+$ git reset --hard a0e4812dbc
+$ git ps origin develop --force
+```
+```sh
+$ git remote get-url origin
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+$ git config credential.helper store
+$ git config --global credential.helper cache
+$ git push http://example.com/repo.git  
+  # Username: <type your username>  
+  # Password: <type your password>  
+# fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'  
+# https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8  
+```
+</details>
+  
+- - - -
+  
+<details><summary># DOCKER #</summary>
+
+```sh
+# Image
+$ docker images        # Lists running images
+$ docker image ls -a   # Lists all images, including stopped ones
+$ docker image rm imageId1 imageId2   # Deletes selected images (-f will force)
+$ docker rmi imageId1 imageId2        # Deletes selected images (-f will force)
+  
+# Container
+$ docker container ls       # Lists running containers (same as $ docker ps)
+$ docker container ls -a    # Lists all containers (same as $ docker ps -a)
+$ docker container rm containerId1 containerId2       # Deletes containers
+$ docker container start containerId1 containerId2    # Starts containers
+$ docker container stop containerId1 containerId2     # Stops containers
+  
+# Must be run first because images are attached to containers
+$ docker rm -f  # Deletes every Docker container,
+$ docker ps -q | -a    # Kills all running containers (-a: stoped ones as well)
+  
+# Build $ Run
+$ docker build .            # Builds the docker file and creates an image w/ Repository and Tag as <none>
+$ docker build -t tagName . # Builds the docker file and creates an image w/ tag name
+  
+# 9000: exposed port in the dockerfile (this one will overwrite the "EXPOSE 9000" in the Dockerfile)
+# 4000: port on the localhost host machine
+# imageName should be the last parameter
+# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)
+$ docker run -d --name containerName -p 4000:9000 imageName            # Creates and runs a new container from the image
+$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" imageName  # Creates and runs a new container from the image w/ environment variable
+$ docker stop containerId
+```
+Let's run 2 containers under bridge network. The inspect would be like the following:
+- 172.17.0.0: docker bridge  
+- 172.17.0.1: host  
+- 172.17.0.2: container1
+- 172.17.0.3: container2
+  
+```sh
+# Network is 'bridge' (the default one)
+$ docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
+$ docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:9000" graphql-server  
+
+# Network is 'myNetwork'. So we can use container name  
+$ docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
+$ docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
+
+$ docker build -t ylz-identity-manager .  
+$ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API documentation\",\"version\": \"\"}}" ylz-identity-manager
+```
+
+```sh
+$ docker system prune            # Removes images, containers, volumes, and networks (not associated with a container)
+$ docker exec -it containerId sh # interactive terminal
+$ docker network ls
+$ docker network inspect bridge
+  
+# Delete every Docker image
+$ docker rmi -f
+$ docker images -q
+```
+
+</details>
+  
+- - - -
+  
+<details><summary># KUBERNETES #</summary>
+
+```sh
+# install kubectl
+# install azure cli
+$ az login
+$ az aks get-credentials --resource-group=enablers-aks-rg --name=enablers-aks-cluster --admin
+
+$ kubectl get nodes
+$ kubectl cluster-info
+$ kubectl get ns
+$ kubectl get pods -n namaspaceName
+$ kubectl logs -n namaspaceName --tail=1000 -f podName
+$ kubectl exec -it -n namaspaceName podName sh
+$ kubectl get pods -n namaspaceName | grep -i 7DD863D35E
+$ kubectl get deploy -n namaspaceName
+
+$ kubectl describe -n namaspaceName pod podName
+$ kubectl delete -n namaspaceName pod podName
+$ kubectl scale deployment -n namaspaceName --replicas=0 serviceName
+$ kubectl get logs -n namaspaceName podName
+  
+# ssh #
+$ cd ~/.ssh
+$ ssh-keygen -t rsa: Creates id_rsa and id_rsa.pub
+$ Enter passphrase (empty for no passphrase):
+$ Enter same passphrase again:
+$ cat id_rsa.pub
+  - ssh-rsa AAAAB3NzaC1yc...
+
+$ ssh _yaliz_@yaliz-identity-manager.serra.pw
+```
+</details>
+  
+- - - -
+  
+<details><summary># MONGO #</summary>
+
+```js
+// FIND
+db.Clients.find({ industry: 'Automotive' });  
+db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })  
+  
+// SELECT & JOIN
+db.Projects.find({ clientId: {  
+   $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
+}}, { _id: 1, name: 1, budget: 1 })  
+
+const clients = db.Clients
+   .find({ countryId: 'IE' })
+   .map( x => x._id )
+db.Projects
+   .find({ clientId: {$in: clients} }, { _id: 0, name:1 })
+   .sort({ name: 1 })
+
+// INSERT
+const clients = [...];
+clients.forEach( client => {
+    client._id = ObjectId().str;
+    db.Clients.insert( client );
+});
+
+db.ClientsXX.find({}).forEach(x => {
+    const xNew = Object.assign({}, x, {_id: x._id.valueOf(), leads: [], planners: []});
+    db.getCollection('Clients').insert( xNew );
+});  
+
+// UPDATE (the first match)
+db.Formats.update({ countryId: 'GB' },
+   {
+      $set: {
+         parentId: null
+      }
+   }
+)
+db.Formats.updateMany({ countryId: 'GB' },
+   {
+      $set: {
+         parentId: null
+      }
+   }
+)
+
+db.Formats.updateMany({},
+   {
+      $unset: { parentId:1 }
+   }, false, true
+);
+```
+</details>
+  
+- - - -
+  
+<details><summary># REDIS #</summary>
+
+```ssh
+$ wget http://download.redis.io/redis-stable.tar.gz
+$ tar xvzf redis-stable.tar.gz
+$ cd redis-stable
+$ make
+
+$ sudo apt-get install make
+$ make distclean
+$ make
+
+$ nohup src/redis-server ./redis.conf &
+$ src/redis-cli
+
+
+> config set stop-writes-on-bgsave-error no
+> CONFIG GET databases
+> INFO keyspace
+> select dbNumber
+> KEYS *
+> TYPE "q:job:3"
+> get keyName
+> hkeys q:job:3
+```
+</details>
+  
+- - - -
+
+<details><summary># Education System #</summary>
+  
+  
+How does National Curriculum work?
+The National Curriculum is constructed in five Key Stages (**KS**):
+
+KS1 - Foundation year and Years [1, 2] - for pupils aged between 5 and 7 years old.  
+KS2 - Years [3, 4, 5, 6] - for pupils aged between 8 and 11 years old.  
+KS3 - Years [7, 8, 9] - for pupils aged between 12 and 14 years old.  
+KS4 - Years [10, 11] - for pupils aged between 15 and 16 years old.  
+KS5 - Years [12, 13] - for pupils aged between 17 and 18 years old.  
+  
+In state schools each year that a pupil studies is given a number.  
+*Primary education* starts in Year 1.  
+*Seconday education* starts at the age of 11 (Year 7) for most pupils, but in some HMC schools pupils join the school at 13+ (Year 9).  
+  
+At the age of 16 (the end of KS4 and Year 11), all pupils take a series of exams called the General Certificate of Secondary Education (**GCSE**), usually in about eight to ten subjects, which must include English and Mathematics.  
+  
+KS5 is for pupils aged 16-18 (sometimes 19) and most schools take Advanced Level (**A-Levels**) exams after a two-year course.
+  
+</details>
+
+- - - -
+
 <details><summary># IDE #</summary>
   
 ## Extensions ##
@@ -375,279 +653,6 @@ if (langIds.indexOf(languageId) != -1) {
 panel.addWidget("org.kde.plasma.systemtray")
 panel.addWidget("org.kde.plasma.digitalclock")
 
-</details>
-  
-- - - -
-
-<details><summary># AWS #</summary>
-
-```sh
-# Installations
-sudo apt-get update
-sudo apt-get git
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y nodejs-legacy
-sudo apt-get install build-essential
-sudo apt-get npm
-
-# Deployment
-$ ssh -i \~/.ssh/lh-accountancy-dev.pem ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com
-$ tar -cvzf lh-accountancy.tar.gz lh-accountancy
-$ scp -i \~/.ssh/lh-accountancy-dev.pem lh-accountancy.tar.gz ubuntu@ec2-35-177-20-202.eu-west-2.compute.amazonaws.com:\~
-
-$ sudo tar -xzvf lh-accountancy.tar.gz
-$ npm run build-dev (export NODE_ENV=dev)
-$ npm run publish-dev > ../lh-accountancy.log 2>&1 &
-$ nohup node ./lh-accountancy/dist/src/index.js > lh-accountancy.log 2>&1 &
-```
-</details>
-
-- - - -
-
-<details><summary># GIT #</summary>
-
-```sh
-# Branch
-$ git br -a                    # Lists both remote-tracking branches and local branches
-$ git br -d branchName         # Deletes a branch
-$ git br -D branchName         # --delete --force
-$ git br -f branchName         # Resets <branchname> to <startpoint>
-$ git ps -d origin branchName  # Deletes a remote branch
-
-# Fetch
-$ git fetch --all    # Fetch all remotes
-$ git fetch --prune  # After fetching, remove any remote tracking branches which no longer exist on the remote
-
-# Clone
-$ git clone -b develop repository-url.git
-
-# Unstage changes
-$ git reset HEAD . | fileName1 fileName2
-
-# restore a previous commit's state:
-$ git reset --hard a0e4812dbc
-$ git ps origin develop --force
-```
-```sh
-$ git remote get-url origin
-$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-
-$ git config credential.helper store
-$ git config --global credential.helper cache
-$ git push http://example.com/repo.git  
-  # Username: <type your username>  
-  # Password: <type your password>  
-# fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'  
-# https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8  
-```
-</details>
-  
-- - - -
-  
-<details><summary># DOCKER #</summary>
-
-```sh
-# Image
-$ docker images        # Lists running images
-$ docker image ls -a   # Lists all images, including stopped ones
-$ docker image rm imageId1 imageId2   # Deletes selected images (-f will force)
-$ docker rmi imageId1 imageId2        # Deletes selected images (-f will force)
-  
-# Container
-$ docker container ls       # Lists running containers (same as $ docker ps)
-$ docker container ls -a    # Lists all containers (same as $ docker ps -a)
-$ docker container rm containerId1 containerId2       # Deletes containers
-$ docker container start containerId1 containerId2    # Starts containers
-$ docker container stop containerId1 containerId2     # Stops containers
-  
-# Must be run first because images are attached to containers
-$ docker rm -f  # Deletes every Docker container,
-$ docker ps -q | -a    # Kills all running containers (-a: stoped ones as well)
-  
-# Build $ Run
-$ docker build .            # Builds the docker file and creates an image w/ Repository and Tag as <none>
-$ docker build -t tagName . # Builds the docker file and creates an image w/ tag name
-  
-# 9000: exposed port in the dockerfile (this one will overwrite the "EXPOSE 9000" in the Dockerfile)
-# 4000: port on the localhost host machine
-# imageName should be the last parameter
-# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)
-$ docker run -d --name containerName -p 4000:9000 imageName            # Creates and runs a new container from the image
-$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" imageName  # Creates and runs a new container from the image w/ environment variable
-$ docker stop containerId
-```
-Let's run 2 containers under bridge network. The inspect would be like the following:
-- 172.17.0.0: docker bridge  
-- 172.17.0.1: host  
-- 172.17.0.2: container1
-- 172.17.0.3: container2
-  
-```sh
-# Network is 'bridge' (the default one)
-$ docker run -d --name graphql-api-server -p 4002:9000 -e "PORT=9000" graphql-api-server  
-$ docker run -d --name graphql-server -p 4000:9000 -e "PORT=9000" -e "API_URL=http://172.17.0.2:9000" graphql-server  
-
-# Network is 'myNetwork'. So we can use container name  
-$ docker run -d --name graphql-api-server --network myNetwork -p 4002:9000 -e "PORT=9000" graphql-api-server  
-$ docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=9000" -e "API_URL=http://graphql-api-server:9000" graphql-server  
-
-$ docker build -t ylz-identity-manager .  
-$ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API documentation\",\"version\": \"\"}}" ylz-identity-manager
-```
-
-```sh
-$ docker system prune            # Removes images, containers, volumes, and networks (not associated with a container)
-$ docker exec -it containerId sh # interactive terminal
-$ docker network ls
-$ docker network inspect bridge
-  
-# Delete every Docker image
-$ docker rmi -f
-$ docker images -q
-```
-
-</details>
-  
-- - - -
-  
-<details><summary># KUBERNETES #</summary>
-
-```sh
-$ kubectl get nodes
-$ kubectl cluster-info
-$ kubectl get ns
-$ kubectl get pods -n namaspaceName
-$ kubectl logs -n namaspaceName --tail=1000 -f podName
-$ kubectl exec -it -n namaspaceName podName sh
-$ kubectl get pods -n namaspaceName | grep -i 7DD863D35E
-$ kubectl get deploy -n namaspaceName
-
-$ kubectl describe -n namaspaceName pod podName
-$ kubectl delete -n namaspaceName pod podName
-$ kubectl scale deployment -n namaspaceName --replicas=0 serviceName
-$ kubectl get logs -n namaspaceName podName
-  
-# ssh #
-$ cd ~/.ssh
-$ ssh-keygen -t rsa: Creates id_rsa and id_rsa.pub
-$ Enter passphrase (empty for no passphrase):
-$ Enter same passphrase again:
-$ cat id_rsa.pub
-  - ssh-rsa AAAAB3NzaC1yc...
-
-$ ssh _yaliz_@yaliz-identity-manager.serra.pw
-```
-</details>
-  
-- - - -
-  
-<details><summary># MONGO #</summary>
-
-```js
-// FIND
-db.Clients.find({ industry: 'Automotive' });  
-db.Clients.find({ $where: function() { return this.industry ==  'Automotive' } })  
-  
-// SELECT & JOIN
-db.Projects.find({ clientId: {  
-   $in: db.Clients.find({ countryId: 'AU' }).map(x => x._id)  
-}}, { _id: 1, name: 1, budget: 1 })  
-
-const clients = db.Clients
-   .find({ countryId: 'IE' })
-   .map( x => x._id )
-db.Projects
-   .find({ clientId: {$in: clients} }, { _id: 0, name:1 })
-   .sort({ name: 1 })
-
-// INSERT
-const clients = [...];
-clients.forEach( client => {
-    client._id = ObjectId().str;
-    db.Clients.insert( client );
-});
-
-db.ClientsXX.find({}).forEach(x => {
-    const xNew = Object.assign({}, x, {_id: x._id.valueOf(), leads: [], planners: []});
-    db.getCollection('Clients').insert( xNew );
-});  
-
-// UPDATE (the first match)
-db.Formats.update({ countryId: 'GB' },
-   {
-      $set: {
-         parentId: null
-      }
-   }
-)
-db.Formats.updateMany({ countryId: 'GB' },
-   {
-      $set: {
-         parentId: null
-      }
-   }
-)
-
-db.Formats.updateMany({},
-   {
-      $unset: { parentId:1 }
-   }, false, true
-);
-```
-</details>
-  
-- - - -
-  
-<details><summary># REDIS #</summary>
-
-```ssh
-$ wget http://download.redis.io/redis-stable.tar.gz
-$ tar xvzf redis-stable.tar.gz
-$ cd redis-stable
-$ make
-
-$ sudo apt-get install make
-$ make distclean
-$ make
-
-$ nohup src/redis-server ./redis.conf &
-$ src/redis-cli
-
-
-> config set stop-writes-on-bgsave-error no
-> CONFIG GET databases
-> INFO keyspace
-> select dbNumber
-> KEYS *
-> TYPE "q:job:3"
-> get keyName
-> hkeys q:job:3
-```
-</details>
-  
-- - - -
-
-<details><summary># Education System #</summary>
-  
-  
-How does National Curriculum work?
-The National Curriculum is constructed in five Key Stages (**KS**):
-
-KS1 - Foundation year and Years [1, 2] - for pupils aged between 5 and 7 years old.  
-KS2 - Years [3, 4, 5, 6] - for pupils aged between 8 and 11 years old.  
-KS3 - Years [7, 8, 9] - for pupils aged between 12 and 14 years old.  
-KS4 - Years [10, 11] - for pupils aged between 15 and 16 years old.  
-KS5 - Years [12, 13] - for pupils aged between 17 and 18 years old.  
-  
-In state schools each year that a pupil studies is given a number.  
-*Primary education* starts in Year 1.  
-*Seconday education* starts at the age of 11 (Year 7) for most pupils, but in some HMC schools pupils join the school at 13+ (Year 9).  
-  
-At the age of 16 (the end of KS4 and Year 11), all pupils take a series of exams called the General Certificate of Secondary Education (**GCSE**), usually in about eight to ten subjects, which must include English and Mathematics.  
-  
-KS5 is for pupils aged 16-18 (sometimes 19) and most schools take Advanced Level (**A-Levels**) exams after a two-year course.
-  
 </details>
   
 - - - -

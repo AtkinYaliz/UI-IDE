@@ -12,6 +12,17 @@ const blogs = await client.get(123);
 // query is type of Query. Mongoose queries are not promises.
 const Person = mongoose.model('Person', yourSchema);
 const query = Person
+  .find({
+    occupation: /host/,
+    'name.last': 'Ghost',
+    age: { $gt: 17, $lt: 66 },
+    likes: { $in: ['vaporizing', 'talking'] }
+  })
+  .limit(10)
+  .skip(20)
+  .sort({ occupation: -1 })
+  .select({ name: 1, occupation: 1 });
+const query = Person
   .find({ occupation: /host/ })
   .where('name.last').equals('Ghost')
   .where('age').gt(17).lt(66)

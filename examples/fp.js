@@ -8,7 +8,8 @@ const
     shift = arr => arr.slice(1),
     sort = arr => fn => [ ...arr ].sort(fn),
     remove = arr => i => [ ...arr.slice(0, i), ...arr.slice(i+1) ],
-    splice = arr => (s, c, ...x) => [ ...arr.slice(0, s), ...x, ...x.slice(s + c) ]
+    splice = arr => (s, c, ...x) => [ ...arr.slice(0, s), ...x, ...x.slice(s + c) ],
+    unique = [...new Set(arr)]
 ;
 
 (() => {

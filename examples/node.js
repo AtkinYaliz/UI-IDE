@@ -1,13 +1,34 @@
-// utils
+/*
+ * utils
+ */
 const { promisify } = require('util');
 client.get = promisify(client.get);
 const blogs = await client.get(123);
 
 
-// Mongo
+/*
+ * Mongo
+ */
+// query is type of Query. Mongoose queries are not promises.
+const Person = mongoose.model('Person', yourSchema);
+const query = Person
+  .find({ occupation: /host/ })
+  .where('name.last').equals('Ghost')
+  .where('age').gt(17).lt(66)
+  .where('likes').in(['vaporizing', 'talking'])
+  .limit(10)
+  .skip(20)
+  .sort('-occupation')
+  .select('name occupation');
+
+query.exec((err, result) => console.log(result));
+query.then(result => console.log(result));
+const result = await query;
 
 
-// Redis
+/*
+ * Redis
+ */
 const redis = require('redis');
 const client = redis.createClient('redis://127.0.0.1:6379');
 client.flushall();

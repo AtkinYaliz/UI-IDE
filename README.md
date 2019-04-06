@@ -164,7 +164,7 @@ $ git push http://example.com/repo.git
 # GitHub Developer Settings -> Personel access tokens -> Generate new token
 $ git push -u origin master
   # username: aytekinyaliz
-  # <generated_token>
+  # password: <generated_token>
 ```
 </details>
   

@@ -154,11 +154,17 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 $ git config credential.helper store
 $ git config --global credential.helper cache
-$ git push http://example.com/repo.git  
-  # Username: <type your username>  
-  # Password: <type your password>  
-# fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'  
-# https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8  
+$ git push http://example.com/repo.git
+  # Username: <type your username>
+  # Password: <type your password>
+#
+#
+# fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'
+# https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8
+# GitHub Developer Settings -> Personel access tokens -> Generate new token
+$ git push -u origin master
+  # username: aytekinyaliz
+  # <generated_token>
 ```
 </details>
   

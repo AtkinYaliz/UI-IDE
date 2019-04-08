@@ -152,6 +152,10 @@ $ git ps origin develop --force
 $ git remote get-url origin
 $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
+$ git remote set-url origin http://...
+$ git remote remove origin
+$ git remote add origin http://...
+
 $ git config credential.helper store
 $ git config --global credential.helper cache
 $ git push http://example.com/repo.git

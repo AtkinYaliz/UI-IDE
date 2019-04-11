@@ -53,19 +53,21 @@ client.hgetall = promisify(client.hgetall);
 async function get(key) {
   return await client.get(key);
 }
-async function set(key, value) {
-  return await client.set(key, value)
+async function set(key, value, ex) {
+  return await client.set(key, value, ...(ex ? ['EX', ex] : []))
 }
 async function hget(hash, key) {
   return await client.hget(hash, key)
 }
 async function hgetAll(hash) {
+  // returns an object
   return await client.hgetall(hash)
 }
-async function hset(hashKey, key, value) {
-  return await client.hset(hashKey, key, value);
+async function hset(hash, key, value, ex) {
+  return await client.hset(hash, key, value, ...(ex ? ['EX', ex] : []));
 }
 async function del(key) {
+  // can delete both get and hget
   await client.del(key)
 }
 async function hdel(hash, key) {

@@ -41,11 +41,33 @@ const result = await query;
  * Redis
  */
 const redis = require('redis');
-const client = redis.createClient('redis://127.0.0.1:6379');
-client.flushall();
+const {promisify} = require("util");
 
-client.set('color', 'red');
-client.get('color', console.log);    // null, 'red'
-client.hset('hash', 'field', 'value');
-client.hget('hash', 'field', console.log); // null, 'value'
-client.set('color', 'red', 'EX', 5); // stores in the cache for 5 sec
+const client = redis.createClient('redis://127.0.0.1:6379');
+client.get = promisify(client.get);
+client.set = promisify(client.set);
+client.hget = promisify(client.hget);
+client.hset = promisify(client.hset);
+client.hgetall = promisify(client.hgetall);
+
+async function get(key) {
+  return await client.get(key);
+}
+async function set(key, value) {
+  return await client.set(key, value)
+}
+async function hget(hash, key) {
+  return await client.hget(hash, key)
+}
+async function hgetAll(hash) {
+  return await client.hgetall(hash)
+}
+async function hset(hashKey, key, value) {
+  return await client.hset(hashKey, key, value);
+}
+async function del(key) {
+  await client.del(key)
+}
+async function hdel(hash, key) {
+  await client.hdel(hash, key)
+}

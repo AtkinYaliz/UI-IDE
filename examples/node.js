@@ -5,6 +5,61 @@ const { promisify } = require('util');
 client.get = promisify(client.get);
 const blogs = await client.get(123);
 
+/*
+ * singleton
+ */
+class MailTransporter {
+  public static getInstance(): MailTransporter {
+    if (!MailTransporter.instance) {
+      MailTransporter.instance = new MailTransporter();
+    }
+    return MailTransporter.instance;
+  }
+  private static instance: MailTransporter;
+
+  // private configManagerInstance = null;
+  private transporter: any = null;
+
+  private constructor() {
+    const { emailAuthPass, emailAuthUser, emailHost, emailPort } = ConfigManager.getInstance().getConfig();
+
+    this.transporter = nodemailer.createTransport(
+      smtpTransport({
+        host: emailHost,
+        port: emailPort
+      })
+    );
+  }
+
+  public async sendMail(options) {
+    return this.transporter.sendMail(options);
+  }
+}
+
+export default MailTransporter.getInstance();
+
+class NodeCache {
+  private cache: Map<CacheType | string, any>;
+
+  constructor() {
+    this.cache = new Map<CacheType | string, any>();
+  }
+
+  public get(key: CacheType | string): any {
+    return this.cache.get(key);
+  }
+  public set(key: CacheType | string, value: any): void {
+    this.cache.set(key, value);
+  }
+  // public delete(key: CacheType | string) {
+  //   this.cache.delete(key);
+  // }
+  // public clear() {
+  //   this.cache.clear();
+  // }
+}
+
+export default new NodeCache();
 
 /*
  * Mongo

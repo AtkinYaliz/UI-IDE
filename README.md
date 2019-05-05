@@ -28,13 +28,14 @@ export PATH=~/...../mongodb/bin:$PATH
 # 3 – Yellow | 7 – White
 #
 # $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
+
 export PS1='\[\033[01;32m\]\w \[\033[00m\]λ '
 
 # remove ' from the following line 
-function getCurrentFolderName() {
-   '# echo $PWD
-   echo /${PWD##*/}
-}
+#function getCurrentFolderName() {
+#   '# echo $PWD
+#   echo /${PWD##*/}
+#}
 #export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '
 
 alias l='ls -CF'
@@ -93,6 +94,8 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 - Tureng, Mini Calendar (AppStore)
 - Android File Transfer
 - Dash for MacOS
+
+
 
 </details>  
 
@@ -408,6 +411,7 @@ KS5 is for pupils aged 16-18 (sometimes 19) and most schools take Advanced Level
    "editor.fontWeight": "700",
    "terminal.integrated.fontSize": 12,
    "terminal.integrated.fontFamily": "Monaco",
+   "terminal.integrated.shell": "bin/bash",
    "window.zoomLevel": -0.5,
    "workbench.colorTheme": "Cobalt2",
    "workbench.iconTheme": "material-icon-theme",

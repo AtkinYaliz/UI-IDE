@@ -7,6 +7,45 @@ const blogs = await client.get(123);
 
 # Singleton
 ```javascript
+// ES6
+class Server { ... }
+
+let instance;
+module.exports = (options) => {
+  if (!instance) {
+    // only the first call to require will use these options to create an instance
+    instance = new Server(options);
+  }
+
+  return instance;
+}
+
+// TypeScript: out-of-box singleton
+class NodeCache {
+  private cache: Map<CacheType | string, any>;
+
+  constructor() {
+    this.cache = new Map<CacheType | string, any>();
+  }
+
+  public get(key: CacheType | string): any {
+    return this.cache.get(key);
+  }
+  public set(key: CacheType | string, value: any): void {
+    this.cache.set(key, value);
+  }
+  // public delete(key: CacheType | string) {
+  //   this.cache.delete(key);
+  // }
+  // public clear() {
+  //   this.cache.clear();
+  // }
+}
+
+export default new NodeCache();
+
+
+// TypeScript
 class MailTransporter {
   public static getInstance(): MailTransporter {
     if (!MailTransporter.instance) {
@@ -36,29 +75,6 @@ class MailTransporter {
 }
 
 export default MailTransporter.getInstance();
-
-class NodeCache {
-  private cache: Map<CacheType | string, any>;
-
-  constructor() {
-    this.cache = new Map<CacheType | string, any>();
-  }
-
-  public get(key: CacheType | string): any {
-    return this.cache.get(key);
-  }
-  public set(key: CacheType | string, value: any): void {
-    this.cache.set(key, value);
-  }
-  // public delete(key: CacheType | string) {
-  //   this.cache.delete(key);
-  // }
-  // public clear() {
-  //   this.cache.clear();
-  // }
-}
-
-export default new NodeCache();
 ```
 
 # MongoDB

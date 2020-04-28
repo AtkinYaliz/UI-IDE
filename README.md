@@ -406,9 +406,8 @@ $ src/redis-cli
 - - - -
   
 <details><summary># KAFKA #</summary>
-
+  
 Version: kafka_2.12-2.4.1
-
 ```sh
 # Kafka cluster with 2 brokers
 $ cp config/server.properties config/server-1.properties

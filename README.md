@@ -424,6 +424,9 @@ $ vim config/server-2.properties
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server-1.properties
 $ bin/kafka-server-start.sh config/server-2.properties
+
+$ bin/kafka-topics.sh --create --bootstrap-server localhost:9093 --partitions 2 --replication-factor 2 --topic myTopicName
+$ bin/kafka-topics.sh --list --bootstrap-server localhost:9093 -> myTopicName
 ```
 
 </details>

@@ -421,7 +421,7 @@ $ vim config/server-2.properties
   log.dirs = /tmp/kafka-logs-2
   listeners = PLAINTEXT://9094
 
-$ bin/zookeeper-server-start.sh config/zookeper.properties
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server-1.properties
 $ bin/kafka-server-start.sh config/server-2.properties
 ```

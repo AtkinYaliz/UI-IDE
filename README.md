@@ -181,35 +181,85 @@ $ git push -u origin master
 <details><summary># DOCKER #</summary>
 
 ```sh
-# Image
-$ docker images        # Lists running images
-$ docker image ls -a   # Lists all images, including stopped ones
-$ docker image rm imageId1 imageId2   # Deletes selected images (-f will force)
-$ docker rmi imageId1 imageId2        # Deletes selected images (-f will force)
-  
-# Container
-$ docker container ls       # Lists running containers (same as $ docker ps)
-$ docker container ls -a    # Lists all containers (same as $ docker ps -a)
-$ docker container rm containerId1 containerId2       # Deletes containers
-$ docker container start containerId1 containerId2    # Starts containers
-$ docker container stop containerId1 containerId2     # Stops containers
-  
-# Must be run first because images are attached to containers
-$ docker rm -f  # Deletes every Docker container,
-$ docker ps -q | -a    # Kills all running containers (-a: stoped ones as well)
-  
-# Build $ Run
-$ docker build .            # Builds the docker file and creates an image w/ Repository and Tag as <none>
-$ docker build -t tagName . # Builds the docker file and creates an image w/ tag name
-  
-# 9000: exposed port in the dockerfile (this one will overwrite the "EXPOSE 9000" in the Dockerfile)
-# 4000: port on the localhost host machine
-# imageName should be the last parameter
-# 172.17.0.1 is for the localhost host machine (Docker bridge gets 172.17.0.0)
-$ docker run -d --name containerName -p 4000:9000 imageName            # Creates and runs a new container from the image
-$ docker run -d -e "PORT=4001" -e "API_URL=172.17.0.1:4000" imageName  # Creates and runs a new container from the image w/ environment variable
-$ docker stop containerId
+# Images
+$ d system prune: 
+  Removes images, containers, volumes, and networks — not associated with a container
+$ d images: Lists running images
+$ d image ls -a: Lists all images
+$ d image rm -f <imageId1> <imageId2>: Deletes selected images (-f will force)
+$ d rmi -f <imageId1> <imageId2>: Deletes selected images (-f will force)
+
+
+# Private Container Registry
+$ az acr login --name <registry-name>: Login to Azure container registry
+$ d login <registry-name>.azurecr.io: Login to Azure container registry
+$ d build -t vedubox.azurecr.io/samples/hello-world-svc:v1
+  Creates an image with that repository name and v1 tag
+$ d tag hello-world-svc vedubox.azurecr.io/samples/hello-world-svc
+  Create an alias of the image with the fully qualified path to your registry
+$ d push vedubox.azurecr.io/samples/hello-world-svc:v1
+  Pushes the image with the fully qualified path to your private registry
+$ az acr repository delete --name <registry-name> --image samples/nginx:latest
+  Removes images from your Azure container registry
 ```
+
+```sh
+# Containers
+$ d ps: Lists running containers ($ docker container ls)
+$ d ps -a: Lists all containers ($ docker container ls -a)
+$ d rm -f <containerId1> <containerId2>: Deletes containers
+$ d create <imageId>: Creates a container from the image
+$ d start <containerId1> <containerId2>: Starts containers
+$ d stop <containerId1> <containerId2>: Stops containers
+$ d container prune: Remove all stopped containers
+```
+
+```sh
+# Build & Run (Run = Create + Start)
+$ d build .: Builds the docker file and creates the image w/ Repository and Tag as <none>
+$ d build -t <tagName> .: Builds the docker file and creates the image w/ tag name
+  tagName: repoName/projectName:latest (default latest)
+$ docker-compose up -d —build
+$ docker-compose down
+$ docker-compose run | stop
+$ docker-compose ps
+
+# 3000: exposed port in the dockerfile 
+#       (this one will overwrite the "EXPOSE 9000" in the Dockerfile) 
+# 8080: port on the localhost host machine
+# imageName should be the last parameter
+# -it: start container instance interactively
+# —rm: specifies that the container should be removed when you stop it
+
+$ d run -it <imageName> sh:
+  Creates and runs a new container from the image and then sh into it.
+$ d run -d --name <containerName> -p 8080:3000 <imageName>: 
+  Creates and runs a new container from the image at the background
+$ d run -d -e "PORT=4001" -e "API_URL=http://172.17.0.1:4000" <imageName>: 
+  Creates and runs a new container from the image w/ environment variable
+
+$ d exec -it <containerId> sh
+  Executes an additional command (eg. sh, redis-cli) in a container 
+  (-it = -i -t = interactive terminal)
+$ d logs <containerId> --tail=1000 -f
+$ d network ls
+$ d network inspect bridge
+```
+
+```sh
+# Mongo/Bitnami Mongo, Kong, Redis
+$ d pull mongo
+  d run --name mongoInstance -p 27017:27017 mongo
+$ d pull bitnami/mongodb
+$ d pull pantsel/konga
+$ d pull redis
+  d run --name redisInstance -p 6379:6379 redis
+
+$ brew install redis
+  if permission denied: sudo chown -R $(whoami) $(brew --prefix)/*
+```
+
+
 Let's run 2 containers under bridge network. The inspect would be like the following:
 - 172.17.0.0: docker bridge  
 - 172.17.0.1: host  
@@ -227,17 +277,6 @@ $ docker run -d --name graphql-server --network myNetwork -p 4000:9000 -e "PORT=
 
 $ docker build -t ylz-identity-manager .  
 $ docker run -d --name ylz-identity-manager --network ylz -p 10000:9000 -e "mongoUrl=mongodb://host.docker.internal:2017/IdentityManager" -e "apiPrefix=/api" -e "corsOrigin=[\"http://localhost\"]" -e "nodeEnv=dev" -e "port=9000" -e "secret=qwerty12345asdfg67890" -e "swaggerUrl=/_docs" -e "swaggerDefinition={\"basePath\":\"/api\",\"info\": {\"description\": \"Identity Manager API with Swagger\",\"title\": \"Identity Manager API documentation\",\"version\": \"\"}}" ylz-identity-manager
-```
-
-```sh
-$ docker system prune            # Removes images, containers, volumes, and networks (not associated with a container)
-$ docker exec -it containerId sh # interactive terminal
-$ docker network ls
-$ docker network inspect bridge
-  
-# Delete every Docker image
-$ docker rmi -f
-$ docker images -q
 ```
 
 </details>
@@ -363,7 +402,33 @@ $ src/redis-cli
 > hkeys q:job:3
 ```
 </details>
+
+- - - -
   
+<details><summary># KAFKA #</summary>
+
+Version: kafka_2.12-2.4.1
+
+```sh
+# Kafka cluster with 2 brokers
+$ cp config/server.properties config/server-1.properties
+$ cp config/server.properties config/server-2.properties
+$ vim config/server-1.properties
+  broker.id: 1
+  log.dirs = /tmp/kafka-logs-1
+  listeners = PLAINTEXT://9093
+$ vim config/server-2.properties
+  broker.id: 2
+  log.dirs = /tmp/kafka-logs-2
+  listeners = PLAINTEXT://9094
+
+$ bin/zookeeper-server-start.sh config/zookeper.properties
+$ bin/kafka-server-start.sh config/server-1.properties
+$ bin/kafka-server-start.sh config/server-2.properties
+```
+
+</details>
+
 - - - -
 
 <details><summary># Education System #</summary>

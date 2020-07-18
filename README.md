@@ -19,7 +19,6 @@
   - Android File Transfer
   - Google Drive Back up
   - VLC
-  - Dash for MacOS
 
   
 ## shortcuts ##

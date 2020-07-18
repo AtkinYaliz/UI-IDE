@@ -17,6 +17,7 @@
   - Spectacle
   - Tureng, Mini Calendar (AppStore)
   - Android File Transfer
+  - Google Drive Back up
   - Dash for MacOS
 
   

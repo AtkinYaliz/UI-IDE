@@ -19,6 +19,7 @@
   - Android File Transfer
   - Google Drive Back up
   - VLC
+  - TeamViewer
 
   
 ## shortcuts ##

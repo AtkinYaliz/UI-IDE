@@ -93,14 +93,13 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - Node
 - Git
-- VS Code, Sublime, Postman, Stuido 3T
+- VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
 - Spectacle
 - iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
 - Tureng, Mini Calendar (AppStore)
 - Android File Transfer
 - Dash for MacOS
-
-
+- Docker, Kubernetes, minikube
 
 </details>  
 

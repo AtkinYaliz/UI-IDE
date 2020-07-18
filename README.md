@@ -2,6 +2,52 @@
 
 <details><summary># MAC #</summary>
   
+
+### Applications ###
+- Chrome, FireFox
+- HomeBrew  
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- Development
+  - Git
+  - Node
+  - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
+  - Docker, Kubernetes, minikube
+- Productivity
+  - Spectacle
+  - Tureng, Mini Calendar (AppStore)
+  - Android File Transfer
+  - Dash for MacOS
+
+  
+## shortcuts ##
+AC2V2zZQ  
+F11	=> Show desktop  
+Cmd + Shift + . => show hidden files  
+Cmd + Q         => close the application without trace  
+Cmd + \`        => tab between windows of same application  
+cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
+ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
+chown <_user> <_file> => changes the owner of <_file> to <_user>  
+defaults write -g com.apple.mouse.scaling -float 10  
+
+```sh
+# MongoDB  
+$ ./mongod --dbpath ../data/db
+$ mongo (another cmd)
+$ show dbs
+$ use <db>
+$ db
+$ show collections
+$ db.<collection>.drop()
+$ db.<collection>.insert({…})
+$ db.<collection>.find()
+
+# NPM
+$ sudo chown -R $(whoami) <path> | $(npm config get prefix)
+```
+  
+
 ## ~/.bash_profile ##
 $ touch .bash_profile  
 ```sh
@@ -59,47 +105,6 @@ alias ...='cd ../../'
 alias path='echo -e ${PATH//:/\\n}'
 eval $(/usr/libexec/path_helper -s)
 ```
-
-## shortcuts ##
-AC2V2zZQ  
-F11	=> Show desktop  
-Cmd + Shift + . => show hidden files  
-Cmd + Q         => close the application without trace  
-Cmd + \`        => tab between windows of same application  
-cp -a <_source>/. <_dest> => copy the content of the <_source> into <_dest> recursively(a) including hidden files/folders(.)  
-ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder  
-chown <_user> <_file> => changes the owner of <_file> to <_user>  
-defaults write -g com.apple.mouse.scaling -float 10  
-
-```sh
-# MongoDB  
-$ ./mongod --dbpath ../data/db
-$ mongo (another cmd)
-$ show dbs
-$ use <db>
-$ db
-$ show collections
-$ db.<collection>.drop()
-$ db.<collection>.insert({…})
-$ db.<collection>.find()
-
-# NPM
-$ sudo chown -R $(whoami) <path> | $(npm config get prefix)
-```
-
-### Applications ###
-- Chrome, FireFox
-- HomeBrew  
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-- Node
-- Git
-- VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
-- Spectacle
-- iTerm2: export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist
-- Tureng, Mini Calendar (AppStore)
-- Android File Transfer
-- Dash for MacOS
-- Docker, Kubernetes, minikube
 
 </details>  
 

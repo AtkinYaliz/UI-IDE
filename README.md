@@ -47,7 +47,11 @@ alias cls='clear && printf "\e[3J"'
 alias pss='ps aux | grep'
 alias mongod='mongod --dbpath /usr/local/var/mongodb'
 alias d='docker'
+alias di='docker images'
+alias dc='docker containers'
 alias k='kubectl'
+alias mk='minikube'
+
 
 alias cd..='cd ../'
 alias ..='cd ../'

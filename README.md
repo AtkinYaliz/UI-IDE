@@ -55,55 +55,45 @@ $ touch .bash_profile
 ```sh
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export PATH=~/...../mongodb/bin:$PATH
+# export PATH=~/...../mongodb/bin:$PATH
+# export PATH=~/Documents/google-cloud-sdk/bin:$PATH
 
-# tput setb [1-7] – Set a background color
-# tput setaf [1-7] – Set a foreground color using ANSI escape
-# tput setf [1-7] – Set a foreground color
-#
-# tput bold – Set bold mode
-# tput dim – turn on half-bright mode
-# tput smul – begin underline mode
-# tput rmul – exit underline mode
-# tput rev – Turn on reverse mode
-# tput smso – Enter standout mode (bold on rxvt)
-# tput rmso – Exit standout mode
-# tput sgr0 – Turn off all attributes
-#
-# 0 – Black  | 4 – Blue
-# 1 – Red    | 5 – Magenta
-# 2 – Green  | 6 – Cyan
-# 3 – Yellow | 7 – White
-#
-# $ export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
+# export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
+ 
+# \[\033[35;1m\] λ »
+# export PS1='\[\033[01;32m\]\w 🔶 \[\033[00m\]'
 
-# λ
-export PS1='\[\033[01;32m\]\w \[\033[35;1m\] » \[\033[00m\]'
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[32m\]\w\[\033[00m\]\[\033[35m\]\$(parse_git_branch)\[\033[00m\] \[\033[01;33m\]» \[\033[00m\]"
 
-# remove ' from the following line 
-#function getCurrentFolderName() {
-#   '# echo $PWD
-#   echo /${PWD##*/}
-#}
-#export PS1='\[$(tput setab 3)$(tput setaf 4)\] $(getCurrentFolderName) » \[$(tput sgr0)\] '
 
+ 
+# ALIAS'S
+alias ..='cd ../'
+alias ...='cd ../../'
+alias cd..='cd ../'
+alias cls='clear && printf "\e[3J"'
+alias pss='ps aux | grep'
 alias l='ls -CF'
 alias la='ls -a'
 alias ll='ls -all'
 alias ld='ls -l'
-alias cls='clear && printf "\e[3J"'
-alias pss='ps aux | grep'
-alias mongod='mongod --dbpath /usr/local/var/mongodb'
+ 
+alias gs='git status'
+alias gb='git branch'
+alias gc='git checkout'
+alias gl='git pull'
+alias gp='git push'
+ 
+alias mongod='mongod --dbpath /usr/local/var/mongodb'  #~/Documents/mongodb/data/db'
 alias d='docker'
 alias di='docker images'
-alias dc='docker containers'
+aliad ds='docker containers'
 alias k='kubectl'
 alias mk='minikube'
-
-
-alias cd..='cd ../'
-alias ..='cd ../'
-alias ...='cd ../../'
+ 
 alias path='echo -e ${PATH//:/\\n}'
 eval $(/usr/libexec/path_helper -s)
 ```

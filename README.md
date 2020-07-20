@@ -16,6 +16,7 @@
 - Productivity
   - Spectacle
   - Tureng, Mini Calendar (AppStore)
+  - Pinta
   - Android File Transfer
   - Google Drive Back up
   - VLC

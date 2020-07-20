@@ -50,6 +50,10 @@ $ db.<collection>.find()
 $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
   
+## ~/.zshrc
+```sh
+ZSH_THEME="af-magic"	# robbyrussell, agnoster, af-magic
+```
 
 ## ~/.bash_profile ##
 $ touch .bash_profile  
@@ -69,8 +73,6 @@ parse_git_branch() {
 }
 export PS1="\[\033[32m\]\w\[\033[00m\]\[\033[35m\]\$(parse_git_branch)\[\033[00m\] \[\033[01;33m\]» \[\033[00m\]"
 
-
- 
 # ALIAS'S
 alias ..='cd ../'
 alias ...='cd ../../'

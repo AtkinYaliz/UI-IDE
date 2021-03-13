@@ -176,7 +176,7 @@ $ git push http://example.com/repo.git
 # fatal: Authentication failed for 'https://github.com/aytekinyaliz/repo-name.git/'
 # https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8
 # GitHub Developer Settings -> Personel access tokens -> Generate new token
-$ git push -u origin master
+$ git clone https://private_repo.git
   # username: aytekinyaliz
   # password: <generated_token>
 ```

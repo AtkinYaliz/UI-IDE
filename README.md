@@ -54,6 +54,9 @@ $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
   
 ## ~/.zshrc
+
+https://ohmyz.sh/#install
+
 ```sh
 ZSH_THEME="af-magic"	# robbyrussell, agnoster, af-magic
 ```

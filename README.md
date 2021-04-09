@@ -107,7 +107,7 @@ alias gp='git push'
 alias mongod='mongod --dbpath /usr/local/var/mongodb'  #~/Documents/mongodb/data/db'
 alias d='docker'
 alias di='docker images'
-aliad ds='docker container ls'
+alias ds='docker container ls'
 alias k='kubectl'
 alias mk='minikube'
  

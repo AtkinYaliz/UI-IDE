@@ -38,6 +38,13 @@ ln -s <_source> <_dest>	=> creates a link of <_source> in the <_dest> folder
 chown <_user> <_file> => changes the owner of <_file> to <_user>  
 defaults write -g com.apple.mouse.scaling -float 10  
 
+```
+$ /usr/libexec/java_home -V
+
+// .zshrc
+$ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+```
+
 ```sh
 # MongoDB  
 $ ./mongod --dbpath ../data/db
@@ -106,6 +113,8 @@ alias mk='minikube'
  
 alias path='echo -e ${PATH//:/\\n}'
 eval $(/usr/libexec/path_helper -s)
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 ```
 
 </details>  

@@ -11,9 +11,15 @@
   - Git
   - Node
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
-  - IntelliJ. create /usr/local/bin/idea file and put the following
+  - IntelliJ
+    ```
+    create /usr/local/bin/idea file and put the following
     #!/bin/sh
     open -na "IntelliJ IDEA.app" --args "$@"
+    
+    # if no admin rights are present: copy tar.gz content to somewhere and use bin from there
+    export PATH=/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin:$PATH
+    ```
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html

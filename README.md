@@ -16,6 +16,7 @@
     open -na "IntelliJ IDEA.app" --args "$@"
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
+  - Java: https://www.oracle.com/java/technologies/javase-downloads.html
 - Productivity
   - Spectacle
   - Tureng, Mini Calendar (AppStore)

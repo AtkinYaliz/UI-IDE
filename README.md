@@ -83,15 +83,10 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # export PATH=~/...../mongodb/bin:$PATH
 # export PATH=~/Documents/google-cloud-sdk/bin:$PATH
 
-# export PS1='\[$(tput bold)$(tput setb 4)$(tput setaf 7)\] \u@\h:\w $ \[$(tput sgr0)\]'
  
 # \[\033[35;1m\] λ »
-# export PS1='\[\033[01;32m\]\w 🔶 \[\033[00m\]'
+# export PS1='\[\033[01;32m\]\w » \[\033[00m\]'
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\[\033[32m\]\w\[\033[00m\]\[\033[35m\]\$(parse_git_branch)\[\033[00m\] \[\033[01;33m\]» \[\033[00m\]"
 
 # ALIAS'S
 alias ..='cd ../'

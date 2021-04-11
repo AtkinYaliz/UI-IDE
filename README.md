@@ -115,11 +115,13 @@ alias mk='minikube'
 alias path='echo -e ${PATH//:/\\n}'
 eval $(/usr/libexec/path_helper -s)
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 
 export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
-export PATH=${PATH}:${M2_HOME}/bin
-export PATH=/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin:${M2_HOME}/bin:$PATH
+export GIT_PATH="/Users/aytyaliz/Library/git/git-2.31.1"
+export JAVA_PATH="/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin"
+
+export PATH=${M2_HOME}/bin:${JAVA_PATH}:${GIT_PATH}:$PATH
 ```
 
 </details>  

@@ -433,6 +433,30 @@ $ src/redis-cli
   
 <details><summary># KAFKA #</summary>
   
+```sh
+$ brew install kafka
+$ brew install zookeeper
+
+# uncomment /usr/local/etc/kafka/server.properties
+# listeners = PLAINTEXT://9092
+
+$ zkServer start
+$ kafka-server-start /usr/local/etc/kafka/server.properties
+$ kafka-server-stop
+$ zk
+
+# Create a topic
+$ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+# Send a message
+$ kafka-console-producer --broker-list localhost:9092 --topic test
+  >HELLO Kafka
+
+# Receive a message
+$ kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+  HELLO Kafka
+```
+  
 Version: kafka_2.12-2.4.1
 ```sh
 # Kafka cluster with 2 brokers
@@ -453,27 +477,6 @@ $ bin/kafka-server-start.sh config/server-2.properties
 
 $ bin/kafka-topics.sh --create --bootstrap-server localhost:9093 --partitions 2 --replication-factor 2 --topic myTopicName
 $ bin/kafka-topics.sh --list --bootstrap-server localhost:9093 -> myTopicName
-```
-
-```sh
-$ brew install kafka
-$ brew install zookeeper
-
-$ zkServer start
-$ kafka-server-start /usr/local/etc/kafka/server.properties
-$ kafka-server-stop
-$ zk
-
-# Create a topic
-$ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-
-# Send a message
-$ kafka-console-producer --broker-list localhost:9092 --topic test
-  >HELLO Kafka
-
-# Receive a message
-$ kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
-  HELLO Kafka
 ```
 
 </details>

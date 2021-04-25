@@ -437,13 +437,16 @@ $ src/redis-cli
 $ brew install kafka
 $ brew install zookeeper
 
-# uncomment /usr/local/etc/kafka/server.properties
+# uncomment the following line in "/usr/local/etc/kafka/server.properties"
 # listeners = PLAINTEXT://9092
+# or add the following 2 lines
+# port = 9092
+# advertised.host.name = localhost
 
 $ zkServer start
 $ kafka-server-start /usr/local/etc/kafka/server.properties
 $ kafka-server-stop
-$ zk
+$ zkServer stop
 
 # Create a topic
 $ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test

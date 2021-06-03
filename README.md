@@ -73,6 +73,40 @@ https://ohmyz.sh/#install
 
 ```sh
 ZSH_THEME="af-magic"	# robbyrussell, agnoster, af-magic
+
+# ALIAS'S
+alias ..='cd ../'
+alias ...='cd ../../'
+alias cd..='cd ../'
+alias cls='clear && printf "\e[3J"'
+alias pss='ps aux | grep'
+alias l='ls -CF'
+alias la='ls -a'
+alias ll='ls -all'
+alias ld='ls -l'
+
+alias gs='git status'
+alias gb='git branch'
+alias gc='git checkout'
+alias gl='git pull'
+alias gp='git push'
+
+#alias mongod='mongod --dbpath /usr/local/var/mongodb'  #~/Documents/mongodb/data/db'
+alias d='docker'
+alias di='docker images'
+alias ds='docker container ls'
+alias k='kubectl'
+alias mk='minikube'
+
+
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+
+
+export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
+#export GIT_PATH="/Users/aytyaliz/Library/git/git-2.31.1"
+export JAVA_PATH="/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin"
+
+export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ```
 
 ## ~/.bash_profile ##

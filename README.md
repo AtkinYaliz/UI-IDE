@@ -15,7 +15,7 @@
     ```
     create /usr/local/bin/idea file and put the following
     #!/bin/sh
-    open -na "IntelliJ IDEA.app" --args "$@"
+    open -na "IntelliJ IDEA CE.app" --args "$@"
     
     # if no admin rights are present: copy tar.gz content to somewhere and use bin from there
     export PATH=/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin:$PATH

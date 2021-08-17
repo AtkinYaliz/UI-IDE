@@ -9,7 +9,7 @@
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - Development
   - Git
-  - Node (brew install nvm, nvm install 14)
+  - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/)
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
   - IntelliJ
     ```

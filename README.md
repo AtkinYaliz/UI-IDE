@@ -832,8 +832,6 @@ panel.addWidget("org.kde.plasma.digitalclock")
 youtube-dl  --config-location .  
 youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' --prefer-ffmpeg https://m.twitch.tv/videos/327690336
   
-Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
-  
 ```
 # youtube-dl.conf
 -u mikecostea@gmail.com
@@ -850,6 +848,9 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
 https://learning.oreilly.com/videos/distributed-systems-in/9781491924914
 https://www.oreilly.com/videos/distributed-systems-in/9781491924914
 ```
+  
+Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
+  
 </details>
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax  

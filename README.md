@@ -828,9 +828,11 @@ panel.addWidget("org.kde.plasma.digitalclock")
   
 <details><summary># youtube-dl #</summary>
   
-  
+
 youtube-dl  --config-location .  
 youtube-dl  -o '~/Downloads/%(title)s.%(ext)s' --prefer-ffmpeg https://m.twitch.tv/videos/327690336
+  
+Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
   
 ```
 # youtube-dl.conf

@@ -13,16 +13,17 @@
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
   - IntelliJ
     ```
-    create /usr/local/bin/idea file and put the following
+    Open IntelliJ IDEA, go to Tools->Create Command-Line Launcher: idea .
+    
+    # if no admin rights are present:
+    create /usr/local/bin/idea file and put the following two lines
     #!/bin/sh
     open -na "IntelliJ IDEA CE.app" --args "$@"
-    
-    # if no admin rights are present: copy tar.gz content to somewhere and use bin from there
-    export PATH=/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin:$PATH
     ```
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html
+    if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
 - Productivity
   - Spectacle
   - Tureng, Mini Calendar (AppStore)
@@ -102,7 +103,6 @@ alias mk='minikube'
 
 
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-
 
 export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
 #export GIT_PATH="/Users/aytyaliz/Library/git/git-2.31.1"

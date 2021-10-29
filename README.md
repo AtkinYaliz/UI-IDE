@@ -111,55 +111,6 @@ export JAVA_PATH="/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.j
 export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ```
 
-## ~/.bash_profile ##
-$ touch .bash_profile  
-```sh
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-# export PATH=~/...../mongodb/bin:$PATH
-# export PATH=~/Documents/google-cloud-sdk/bin:$PATH
-
- 
-# \[\033[35;1m\] λ »
-# export PS1='\[\033[01;32m\]\w » \[\033[00m\]'
-
-
-# ALIAS'S
-alias ..='cd ../'
-alias ...='cd ../../'
-alias cd..='cd ../'
-alias cls='clear && printf "\e[3J"'
-alias pss='ps aux | grep'
-alias l='ls -CF'
-alias la='ls -a'
-alias ll='ls -all'
-alias ld='ls -l'
- 
-alias gs='git status'
-alias gb='git branch'
-alias gc='git checkout'
-alias gl='git pull'
-alias gp='git push'
- 
-alias mongod='mongod --dbpath /usr/local/var/mongodb'  #~/Documents/mongodb/data/db'
-alias d='docker'
-alias di='docker images'
-alias ds='docker container ls'
-alias k='kubectl'
-alias mk='minikube'
- 
-alias path='echo -e ${PATH//:/\\n}'
-eval $(/usr/libexec/path_helper -s)
-
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-
-export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
-export GIT_PATH="/Users/aytyaliz/Library/git/git-2.31.1"
-export JAVA_PATH="/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin"
-
-export PATH=${M2_HOME}/bin:${JAVA_PATH}:${GIT_PATH}:$PATH
-```
-
 </details>  
 
 - - - -

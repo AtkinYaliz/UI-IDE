@@ -178,4 +178,4 @@ https://help.github.com/articles/basic-writing-and-formatting-syntax
 [Mongo](/examples/mongo.md)  
 [Node](/examples/node.md)  
 [React](/examples/react.md)  
-[Redis](/examples/redis.d')
+[Redis](/examples/redis.md)

@@ -50,4 +50,4 @@ db.Formats.updateMany({},
 );
 ```
 
-[Node](/node.md)
+[Node](/examples/node.md)

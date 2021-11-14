@@ -81,7 +81,7 @@ export default MailTransporter.getInstance();
 
 # MongoDB
 
-[Mongo](/mongo.md)
+[Mongo](/examples/mongo.md)
 
 ```javascript
 // query is type of Query. Mongoose queries are not promises.
@@ -116,7 +116,7 @@ const result = await query;
 
 # Redis
 
-[Redis](/redis.md)
+[Redis](/examples/redis.md)
 
 ```javascript
 const redis = require("redis");

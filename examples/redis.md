@@ -22,4 +22,4 @@ $ src/redis-cli
 > hkeys q:job:3
 ```
 
-[Node](/node.md)
+[Node](/examples/node.md)

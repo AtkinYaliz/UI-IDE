@@ -1,101 +1,108 @@
-*Prototype-based Language*: There are no classes. Objects are created using a cloning process.  
-*Dynamic Language*: properties can be added or removed from an object after instantiation.  
-*Coercion* is converting a value from one type to another (ex: console.log(1 + 'london')).  
-*Decleration*: When it is executed it doesn't do anything.  
-*Expression*: A unit of code that results a value.  
+# JavaScript
 
-### FUNCTIONS ###
-- Functions are objects {name, code, call(), apply(), bind(), prototype}. Name is optional (anonymous functions). Bind returns a function. Protototype is used only by the *new* operator.  
-- *Invocation* is running a function by ().
-- A function that is the property of an object is called its *method*.
-- *First Class Function*: You can use functions like strings, numbers etc. (ie. assign as a value to a variable, passed as an argument to other function or return by another function).
-- To create a function we can use:
-    - *Function Declaration*: Can only exist as a *statement* and should start with the keyword. When it is executed it doesn't do anything. They are *hoisted*.  
-`function func() { ... }`  
-    - *Function Expression*: When it is executed it returns an object, as other expressions. They are *not hoisted* but their variables are hoisted.  
-`var func = function() { ... };`  
+_Prototype-based Language_: There are no classes. Objects are created using a cloning process.  
+_Dynamic Language_: properties can be added or removed from an object after instantiation.  
+_Coercion_ is converting a value from one type to another (ex: console.log(1 + 'london')).  
+_Decleration_: When it is executed it doesn't do anything.  
+_Expression_: A unit of code that results a value.
+
+### FUNCTIONS
+
+- Functions are objects {name, code, call(), apply(), bind(), prototype}. Name is optional (anonymous functions). Bind returns a function. Protototype is used only by the _new_ operator.
+- _Invocation_ is running a function by ().
+- A function that is the property of an object is called its _method_.
+- _First Class Function_: You can use functions like strings, numbers etc. (ie. assign as a value to a variable, passed as an argument to other function or return by another function).
+- To create a function we can use: - _Function Declaration_: Can only exist as a _statement_ and should start with the keyword. When it is executed it doesn't do anything. They are _hoisted_.  
+  `function func() { ... }`  
+   - _Function Expression_: When it is executed it returns an object, as other expressions. They are _not hoisted_ but their variables are hoisted.  
+  `var func = function() { ... };`
 - The function has full access to the outer variable. It can modify it as well.  
-If a same-named variable is declared inside the function then it *shadows* the outer one.  
-- Values passed to a function as parameters are copied to its local variables (pass-by-value). If the parameter is an object, you can update its properties.  
-    - `.bind(thisArg, p1, p2, p3 ...)`: creates a new function that, when called, has its *this* keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
-    - `.call(thisArg, p1, p2, p3 ...)`: calls a function with a given *this* value and arguments provided individually.
-    - `.apply(thisArg, [p1, p2, p3 ...])`: calls a function with a given *this* value, and arguments provided as an array (or an array-like object).
+  If a same-named variable is declared inside the function then it _shadows_ the outer one.
+- Values passed to a function as parameters are copied to its local variables (pass-by-value). If the parameter is an object, you can update its properties.
+  - `.bind(thisArg, p1, p2, p3 ...)`: creates a new function that, when called, has its _this_ keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+  - `.call(thisArg, p1, p2, p3 ...)`: calls a function with a given _this_ value and arguments provided individually.
+  - `.apply(thisArg, [p1, p2, p3 ...])`: calls a function with a given _this_ value, and arguments provided as an array (or an array-like object).
 
 ```javascript
 // function statement
 function greet() {
-   console.log( 'hi' );
+  console.log("hi");
 }
 greet();
 
 // function expression
-var greetMe = function() {
-    console.log( 'hi tony' );
+var greetMe = function () {
+  console.log("hi tony");
 };
 greetMe();
 
 // functions are first-class
 function logGreeting(fn) {
-   fn();
+  fn();
 }
-logGreeting( greet );
-logGreeting( greetMe );
+logGreeting(greet);
+logGreeting(greetMe);
 
 // use a function expression on the fly
-logGreeting(function() {
-   console.log('hello tony');
+logGreeting(function () {
+  console.log("hello tony");
 });
 ```
 
 ```javascript
-function func(p1, p2) { console.log(this.name); }
-var obj = { name: 'abc' };
+function func(p1, p2) {
+  console.log(this.name);
+}
+var obj = { name: "abc" };
 
-var funcDel = func.bind( obj );
-funcDel('aa', 123);	// "abc"
-func.call( obj, 'aa', 123 );
-func.apply( obj, ['aa', 123] );
+var funcDel = func.bind(obj);
+funcDel("aa", 123); // "abc"
+func.call(obj, "aa", 123);
+func.apply(obj, ["aa", 123]);
 ```
 
-### SCOPE ###
+### SCOPE
+
 - A compile time process. The scope of a variable are the locations where it is accessible.
 - Variables in JavaScript are lexically scoped, so the static structure of a program determines the scope of a variable.
-- There is only *functional scope*. The only block-scope is catch(e) {...}
+- There is only _functional scope_. The only block-scope is catch(e) {...}
 
 ```javascript
 function f() {
-    test1 = 111;  // creates in global
-    var test2 = '222';
+  test1 = 111; // creates in global
+  var test2 = "222";
 }
 f();
-clog(test1);	// 111
-clog(test2);	// test2 is not defined
+clog(test1); // 111
+clog(test2); // test2 is not defined
 ```
+
 ```javascript
 for (var i = 0; i < 10; i++) {
-    // ...
+  // ...
 }
-alert(i);   // 10
+alert(i); // 10
 ```
 
 IIFE:
 An IIFE enables you to attach private data to a function
+
 ```javascript
 (function f() {
-    var tmp = "...";
+  var tmp = "...";
 })();
-clog( tmp ); // tmp is not defined
+clog(tmp); // tmp is not defined
 ```
 
-### HOISTING ###
+### HOISTING
 
 JS engine sets up memory space for variable and function declerations (it moves the declerations to the beginning of their direct scopes).  
-In JS, declerations (variable and function) are hoisted but assignment are not.  
+In JS, declerations (variable and function) are hoisted but assignment are not.
 
-### CLOSURE ###
+### CLOSURE
 
-- The name comes from the fact that a closure `closes over` the *free variables* of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.  
-- A *closure* is the combination of a `function` and the `lexical environment` within that function was **created**.  
+- The name comes from the fact that a closure `closes over` the _free variables_ of a function. A variable is free if it is not declared within the function—that is, if it comes `from outside`.
+- A _closure_ is the combination of a `function` and the `lexical environment` within that function was **created**.
 
 ```javascript
 // Module pattern
@@ -106,36 +113,34 @@ var testModule = (function () {
       return counter++;
     },
     resetCounter: function () {
-      console.log( "counter value prior to reset: " + counter );
+      console.log("counter value prior to reset: " + counter);
       counter = 0;
-    }
+    },
   };
 })();
 ```
 
-### PROTOTYPE ###
+### PROTOTYPE
 
-- *Inheritance*: One object gets access to the properties and methods of another object.  
-- *Prototype chain*: This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain, *Object.prototype*.
-All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.  
-- ***.prototype***: Is an object property that is automatically created for to only *functions*. It is used to build *\_\_proto\_\_* when the function happens to be used as a function constructor with the *new* keyword. There will be only one prototype for each object that is created from same function.  
-Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.  
-- *__.\_\_proto\_\___*: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance. 
-*Why prototype*: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.   
-- There are pre-defined functions named *Function*, *Object*, *Array*, *String*, *Number* and *Date*.
-
- 
+- _Inheritance_: One object gets access to the properties and methods of another object.
+- _Prototype chain_: This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain, _Object.prototype_.
+  All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.
+- **_.prototype_**: Is an object property that is automatically created for to only _functions_. It is used to build _\_\_proto\_\__ when the function happens to be used as a function constructor with the _new_ keyword. There will be only one prototype for each object that is created from same function.  
+  Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.
+- _**.\_\_proto\_\_**_: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance.
+  _Why prototype_: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.
+- There are pre-defined functions named _Function_, _Object_, _Array_, _String_, _Number_ and _Date_.
 
 ```javascript
 function Person(fname, lname) {
-   this.fname = fname;
-   this.lname = lnamae;
+  this.fname = fname;
+  this.lname = lnamae;
 }
-Person.prototype.getFullname = function() {
-   return this.fname + ' ' + this.lname;
-}
-var john = new Person('John', 'Doe');
-console.log( john.getFullname() );
+Person.prototype.getFullname = function () {
+  return this.fname + " " + this.lname;
+};
+var john = new Person("John", "Doe");
+console.log(john.getFullname());
 ```
 
 ```javascript
@@ -187,27 +192,29 @@ There's no simple explanation for `this`; it is one of the most confusing concep
 
 For an in-depth explanation, do check out his [article on Medium](https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3).
 
-### BUILDING OBJECT ###
+### BUILDING OBJECT
 
-*Function constructor*: They are just functions. They are used to construct objects when the function is used by *new* operator.  
-*Constructor*: A normal function that is used to construct objects.  
-*new* operator: 
+_Function constructor_: They are just functions. They are used to construct objects when the function is used by _new_ operator.  
+_Constructor_: A normal function that is used to construct objects.  
+_new_ operator:
+
 - JS engine creates a new empty object.
 - It invokes the function.
-- When function is called Exec.Context creates a variable *this*.  
-It changes what the 'this' variable points to. 'this' variable points to that new empty object.
+- When function is called Exec.Context creates a variable _this_.  
+  It changes what the 'this' variable points to. 'this' variable points to that new empty object.
 - JS engine will return that object at the end of the function.
 
 ```javascript
 function Person() {
-   console.log( this );
-   this.fname = 'fname';
-   this.lname = 'lname';
+  console.log(this);
+  this.fname = "fname";
+  this.lname = "lname";
 }
 
-var glob = Person();        //-> window object
-var ali = new Person();     //-> {}
+var glob = Person(); //-> window object
+var ali = new Person(); //-> {}
 ```
+
 ```javascript
 function Shape() {
    this.name = 'Shape 1';
@@ -239,22 +246,21 @@ if(!Object.create) {
 }
 ```
 
+### JS ENGINE
 
-### JS ENGINE ###
+- Google's V8 engine is used in Chrome and Node.js. The engine consists of two main components:
+  - _Memory Heap_: this is where memory allocation happens.
+  - _Call Stack_: this is where your stack frames are, as your code executes.
 
-- Google's V8 engine is used in Chrome and Node.js.  The engine consists of two main components:
-  - *Memory Heap*: this is where memory allocation happens.
-  - *Call Stack*: this is where your stack frames are, as your code executes.  
+DOM****\_****\  
+AJAX****\_****- Web APIs which are provided by browsers, not by the Engine.  
+setTimeout\_\_/
 
-DOM_________\  
-AJAX_________- Web APIs which are provided by browsers, not by the Engine.  
-setTimeout__/  
-
-- *Call Stack* is a data structure which records basically where in the program we are. 
-- JS is a *single-threaded* programming language, which means it has a single Call Stack. Therefore it can do one thing at a time.
-- *Heap*: used for memory allocation.
-- *Stack Frame*: every entry in the Call Stack.
-- *Event Loop*: It pushes the first item in the queue into the stack if the stack is empty.
+- _Call Stack_ is a data structure which records basically where in the program we are.
+- JS is a _single-threaded_ programming language, which means it has a single Call Stack. Therefore it can do one thing at a time.
+- _Heap_: used for memory allocation.
+- _Stack Frame_: every entry in the Call Stack.
+- _Event Loop_: It pushes the first item in the queue into the stack if the stack is empty.
 
 ```javascript
  _HEAP__      _STACK_        _WebAPIs_
@@ -262,64 +268,64 @@ setTimeout__/
 |       |    |       |      |         |
 |       |    |       |      |         |
  -------      -------        ---------
- 
+
                  Task    ----------
                  Queue  |          |
                          ----------
 
-                   -> -- 
+                   -> --
       Event Loop  |     |
                    -----
 ```
 
-
-### EXECUTION STACK ###
+### EXECUTION STACK
 
 The information about a function run is stored in its Execution Context (EC).  
-One function call has exactly one EC associated with it.  
+One function call has exactly one EC associated with it.
 
 ```javascript
 function pow(x, n) {
-   if (n == 1) {
-      return x;
-   } else {
-      return x * pow(x, n - 1);
-   }
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
 }
 
-alert( pow(2, 3) );
+alert(pow(2, 3));
 ```
 
 Execution Stack will be like:
 
-| Exe. Context pow(2,1) [x=2, n=1] |  
-|----------------------------------|  
-| Exe. Context pow(2,2) [x=2, n=2] |   
-| Exe. Context pow(2,3) [x=2, n=3] | 
+| Exe. Context pow(2,1) [x=2, n=1] |
+| -------------------------------- |
+| Exe. Context pow(2,2) [x=2, n=2] |
+| Exe. Context pow(2,3) [x=2, n=3] |
 
+### PROMISES & CALLBACK FUNCTIONs
 
-### PROMISES & CALLBACK FUNCTIONs ###
+---
 
+---
 
-- - - -
-- - - -
+# NODE
 
-# NODE #
+- _Microprocessor_: A tiny machine that takes instructions (in its own language ie: IA-32, x86-64, ARM, MIPS).
+- _Machine Code (language)_: Programming languages spoken by computer processors.
+  Every program you run on your computer is converted (compiled) into a machine code.
+- _EcmaScript_: The standard that JS is based on. If you want to write your own JS engine you have to make js code to match these specifications.
+- _JS Engine_: A program that converts JS code into something the computer processor can understand.
 
-- *Microprocessor*: A tiny machine that takes instructions (in its own language ie: IA-32, x86-64, ARM, MIPS).
-- *Machine Code (language)*: Programming languages spoken by computer  processors.
-	Every program you run on your computer is converted (compiled) into a machine code.
-- *EcmaScript*: The standard that JS is based on. If you want to write your own JS engine you have to make js code to match these specifications.
-- *JS Engine*: A program that converts JS code into something the computer processor can understand.
+## V8 JavaScript Engine
 
-## V8 JavaScript Engine ##
 - Written in C++ and used in Google Chrome.
 - Converts JS into machine code.
 - Implements ES5.
-- Can run standalone or can be embedded into **any** C++ application  (ie: NodeJs).
+- Can run standalone or can be embedded into **any** C++ application (ie: NodeJs).
 - Has folders for different type of compilation languages. ie: ia32/, mips/, x64/
 - Has files like: date.cc, dateparser.cc. These files read js text and convert into machine code.
-- Write your own C++ application (like Node.Js): 
+- Write your own C++ application (like Node.Js):
+
 ```
 #include <include/v8.h>
 
@@ -337,32 +343,33 @@ void Print(const v8::FunctionCallbackInfo<v8::Value>& args) {
 }
 ```
 
+## Node.Js
 
-## Node.Js ##
 - A C++ program with V8 embedded that is added extra features that make it suitable to be a great server technology.
 
-- - - -
-- - - -
+---
 
-# FUNCTIONAL PROGRAMMING #
+---
 
-- *Imperative Paradigm* (HOW) -> *Declerative Paradigm* (WHAT)  
-- *Immutable Data*: 
-   - Data cannot be changed after it's created (return a new copy: .map(), .filter())
-- *First Class Function*:
-   - Use functions as arguments.
-   - Functions can be assigned as variables.
-- *Pure Function*:
-   - With same inputs you always get same outputs.
-   - Doesn't depend on any data other than what is passed.
-   - Doesn't modify any data other than what they return.
-- *Side Effect*:
-   - If it modifies any data outside it's scope (api call, file system, )
+# FUNCTIONAL PROGRAMMING
+
+- _Imperative Paradigm_ (HOW) -> _Declerative Paradigm_ (WHAT)
+- _Immutable Data_:
+  - Data cannot be changed after it's created (return a new copy: .map(), .filter())
+- _First Class Function_:
+  - Use functions as arguments.
+  - Functions can be assigned as variables.
+- _Pure Function_:
+  - With same inputs you always get same outputs.
+  - Doesn't depend on any data other than what is passed.
+  - Doesn't modify any data other than what they return.
+- _Side Effect_:
+  - If it modifies any data outside it's scope (api call, file system, )
 
 ```javascript
 // Imperative (HOW)                  |  // Declerative (WHAT)
-for(var i=0; i<users.length; i++) {  |  users.map(u => {  
-  users[i].city = 'london';          |    u.city = 'london';  
+for(var i=0; i<users.length; i++) {  |  users.map(u => {
+  users[i].city = 'london';          |    u.city = 'london';
 }                                    |    return u;
                                      |  });
 ```
@@ -375,33 +382,31 @@ for(var i=0; i<users.length; i++) {  |  users.map(u => {
 const numbers = [2, 4, 6, 10, 16];
 
 // Solution #1 (AML)
-var sum1=0, numbers2=JSON.parse(JSON.stringify(numbers));
-for(let i=0; i<numbers2.length; i++) {
-   numbers2[i] = numbers2[i]-1;
-   if(numbers2[i] % 3 === 0) {
-      sum1 += numbers2[i];
-   }
+var sum1 = 0,
+  numbers2 = JSON.parse(JSON.stringify(numbers));
+for (let i = 0; i < numbers2.length; i++) {
+  numbers2[i] = numbers2[i] - 1;
+  if (numbers2[i] % 3 === 0) {
+    sum1 += numbers2[i];
+  }
 }
 
 // Solution #2
-const reduced = numbers.map(n => n-1);
-const divisible = reduced.filter(n => n%3 === 0);
-const sum2 = divisible.reduce((acc, n) => acc+n, 0);
+const reduced = numbers.map((n) => n - 1);
+const divisible = reduced.filter((n) => n % 3 === 0);
+const sum2 = divisible.reduce((acc, n) => acc + n, 0);
 
 // Solution #3
 const sum3 = numbers
-   .map(n => n-1)
-   .filter(n => n%3 === 0)
-   .reduce((acc, n) => acc+n, 0);
+  .map((n) => n - 1)
+  .filter((n) => n % 3 === 0)
+  .reduce((acc, n) => acc + n, 0);
 
 // Solution #4
-const subtractOne = n => n-1;
-const isDivisibleBy3 = n => n%3 === 0;
-const add = (acc, n) => acc+n;
-const sum4 = numbers
-   .map(subtractOne)
-   .filter(isDivisibleBy3)
-   .reduce(add, 0);
+const subtractOne = (n) => n - 1;
+const isDivisibleBy3 = (n) => n % 3 === 0;
+const add = (acc, n) => acc + n;
+const sum4 = numbers.map(subtractOne).filter(isDivisibleBy3).reduce(add, 0);
 ```
 
 ```javascript
@@ -410,25 +415,25 @@ const sum4 = numbers
  * */
 
 // Solution 1
-const user1 = users.find(u => u.id === 2);
+const user1 = users.find((u) => u.id === 2);
 
 // Solution 2
-const byId2 = u => u.id ===2;
-const user2 = users( byId2 );
+const byId2 = (u) => u.id === 2;
+const user2 = users(byId2);
 
 // Solution 3
 const byId3 = (user, id) => user.id === id;
-const user3 = users.find(u => byId3(u, 2));
+const user3 = users.find((u) => byId3(u, 2));
 
 // Solution 4: HOF + Currying
-const byId4 = id => user => user.id === id;
-const user4 = users.find( byId4(2) );
+const byId4 = (id) => (user) => user.id === id;
+const user4 = users.find(byId4(2));
 ```
 
-- - - -
-- - - -
-  
-  
+---
+
+---
+
 ```javascript
 // CommonJS -------------------------------------------------------------------
 // testA.js                         |   // testB.js
@@ -439,10 +444,11 @@ exports.funcA = () => {             |   module.exports = () => {
 const testA = require('./testA');   |   const testB = require('./testB');
 testA.funcA();                      |   testB();
 ```
+
 console.clear();
 
 const arr = [23, 55, 644, 234],
-    obj = { a: 123, b: 'anka', c: ['z43', 'ant'], d: {d1: 12, d2: 'ist'} };
+obj = { a: 123, b: 'anka', c: ['z43', 'ant'], d: {d1: 12, d2: 'ist'} };
 
 let [o1, , o3] = arr;
 let { c: [, y1], d: {d2: y2} } = obj;

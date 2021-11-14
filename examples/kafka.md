@@ -1,3 +1,5 @@
+# Kafka
+
 ```sh
 $ brew install kafka
 $ brew install zookeeper

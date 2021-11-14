@@ -170,6 +170,8 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax
 
+[AWS](/examples/aws-lambda.ts)  
+[MS Code Snippets](/examples/custom.code-snippets)  
 [Docker](/examples/docker.md)  
 [Git](/examples/git.md)  
 [JS](/examples/js.md)  

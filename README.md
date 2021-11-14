@@ -169,3 +169,13 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
 </details>
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax
+
+[Docker]('./examples/docker.md')  
+[Git]('./examples/git.md')  
+[JS]('./examples/js.md')  
+[Kafka]('./examples/kafka.md')  
+[Kubernetes]('./examples/kubernetes.md')  
+[Mongo]('./examples/mongo.md')  
+[Node]('./examples/node.md')  
+[React]('./examples/react.md')  
+[Redis]('./examples/redis.md')

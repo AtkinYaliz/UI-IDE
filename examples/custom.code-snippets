@@ -1,290 +1,232 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-   // }
-   "z": {
-      "prefix": "z",
-      "description": "'Console log only'",
-      "body": [
-         "console.log($1);"
-      ]
-   },
-   "console.log": {
-      "prefix": "j-log",
-      "description": "console.log: ( $1 )",
-      "scope": "javascript,typescript",
-      "body": [
-         "console.log( $1 );",
-         "$2"
-      ]
-   },
-   "console.log1": {
-      "prefix": "j-log1",
-      "description": "console.log: ( '$1' )",
-      "scope": "javascript,typescript",
-      "body": [
-         "console.log( '$1' );",
-         "$2"
-      ]
-   },
-   "console.log2": {
-      "prefix": "j-log2",
-      "description": "console.log: ('$1')",
-      "scope": "javascript,typescript",
-      "body": [
-         "console.log('$1');",
-         "$2"
-      ]
-   },
-   "console.log3": {
-      "prefix": "j-log3",
-      "description": "console.log: ( \"$1\" )",
-      "scope": "javascript,typescript",
-      "body": [
-         "console.log( \"$1\" );",
-         "$2"
-      ]
-   },
-   "test-all-es6": {
-      "prefix": "j-test-all-es6",
-      "description": "test.all-es6",
-      "scope": "javascript,typescript",
-      "body": [
-         "const {expect} = require('chai');",
-         "const chaiHttp = require('chai-http');",
-         "const supertest = require('supertest');",
-         "",
-         "",
-         "before(() => { });",
-         "beforeEach(() => { });",
-         "",
-         "describe('Test..$1', () => {",
-            "\tit('should..', () => {",
-               "\t\texpect(1).to.equal(1);",
-            "\t})",
-         "})"
-      ]
-   },
-   "test-all-ts": {
-      "prefix": "j-test-all-ts",
-      "description": "test.all-ts",
-      "scope": "javascript,typescript",
-      "body": [
-         "import { expect } from 'chai';",
-         "",
-         "",
-         "before(() => { });",
-         "beforeEach(() => { });",
-         "",
-         "describe('Test..$1', () => {",
-            "\tit('should..', () => {",
-               "\t\texpect(1).to.equal(1);",
-            "\t})",
-         "})"
-      ]
-   },
-   "test-describe": {
-      "prefix": "j-test-desc",
-      "description": "test.describe",
-      "scope": "javascript,typescript",
-      "body": [
-         "describe('Test..$1', () => {",
-            "\tit('should..', () => {",
-               "\t\texpect(1).to.equal(1);",
-            "\t})",
-         "})"
-      ]
-   },
-   "tsconfig": {
-      "prefix": "j-tsconfig",
-      "description": "tsconfig.json",
-      "body": [
-         "{",
-            "\t\"compilerOptions\": {",
-               "\t\t\"module\": \"commonjs\",",
-               "\t\t\"target\": \"es6\",",
-               "\t\t\"noImplicitAny\": true,",
-               "\t\t\"moduleResolution\": \"node\",",
-               "\t\t\"outDir\": \"dist\",",
-               "\t\t\"sourceMap\": true,",
-               "\t\t\"baseUrl\": \".\",",
-               "\t\t\"paths\": {",
-               "\t\t\t\"*\": [",
-               "\t\t\t\t\"src/types/*\"",
-               "\t\t\t]",
-            "\t},",
-            "\t\"include\": [\"src\", \"index.ts\"]",
-         "}"
-      ]
-   },
-   "package.json.test-mocha-es6": {
-      "prefix": "j-package.json.script.test-mocha-es6",
-      "description": "package.json",
-      "body": [
-         "\"test\": \"mocha **/*.test.js\",",
-         "\"test:w\": \"npm run test -- -w\"",
-      ]
-   },
-   "package.json.test-mocha-ts": {
-      "prefix": "j-package.json.script.test-ts",
-      "description": "package.json",
-      "body": [
-         "\"test\": \"mocha -r ts-node/register **/*.test.ts\",",
-         "\"test:w\": \"npm run test -- --watch-extensions ts -w\"",
-      ]
-   },
-   "package.json.test-jest-ts": {
-      "prefix": "j-package.json.script.test-jest-ts",
-      "description": "package.json",
-      "body": [
-         "\"test\": \"jest --forceExit --coverage --verbose\",",
-         "\"test:w\": \"npm run test -- --watchAll\"",
-      ]
-   },
-   "pattern-module-es6": {
-      "prefix": "j-pattern-module-es6",
-      "description": "pattern.module (works w/ require('')",
-      "scope": "javascript,typescript",
-      "body": [
-         "module.exports = (() => {",
-            "\tconst $1 = () => {",
-               "\t\t$2",
-            "\t};",
-            "",
-            "\treturn { $1 };",
-         "})();"
-      ]
-   },
-   "pattern-singleton-ts": {
-      "prefix": "j-pattern-singleton-ts",
-      "description": "pattern.singleton",
-      "scope": "javascript,typescript",
-      "body": [
-         "class $1Controller {",
-            "\tpublic static getInstance() {",
-               "\t\tif(!$1Controller.instance) {",
-                  "\t\t\t$1Controller.instance = new $1Controller();",
-               "\t\t}",
-               "",
-               "\t\treturn $1Controller.instance;",
-            "\t}",
-            "\tprivate static instance: $1Controller;",
-            "",
-            "\tprivate constructor() { }",
-         "}",
-         "",
-         "export default $1Controller.getInstance();"
-      ]
-   },
-   "import.module": {
-      "prefix": "j-imp",
-      "description": "import x from 'y';",
-      "scope": "javascript,typescript",
-      "body": [
-         "import $1 from '$2';"
-      ]
-   },
-   "import.named-module": {
-      "prefix": "j-imp-n",
-      "description": "import { x } from 'y';",
-      "scope": "javascript,typescript",
-      "body": [
-         "import { $1 } from '$2';"
-      ]
-   },
-   "import.require": {
-      "prefix": "j-req",
-      "description": "const x = require('y');",
-      "scope": "javascript,typescript",
-      "body": [
-         "const $1 = require('$2');"
-      ]
-   },
-   "syntax.forEach": {
-      "prefix": "j-forEach",
-      // "description": "const x = require('y');",
-      "scope": "javascript,typescript",
-      "body": [
-         "$1.forEach(x => x);"
-      ]
-   },
-   "syntax.forIn": {
-      "prefix": "j-forIn",
-      "description": "in Objects as well",
-      "scope": "javascript,typescript",
-      "body": [
-         "for(const $1 in $2) {",
-         "\t$3",
-         "}"
-      ]
-   },
-   "syntax.forOf": {
-      "prefix": "j-forOf",
-      "description": "Iterable",
-      "scope": "javascript,typescript",
-      "body": [
-         "for(const $1 of $2) {",
-         "\t$3",
-         "}"
-      ]
-   },
-   "syntax.setInterval": {
-      "prefix": "j-setInt",
-      // "description": "",
-      "scope": "javascript,typescript",
-      "body": [
-         "setInterval(() => {}, 0);"
-      ]
-   },
-   "syntax.setTimeout": {
-      "prefix": "j-setInt",
-      // "description": "",
-      "scope": "javascript,typescript",
-      "body": [
-         "setTimeout(() => {}, 0);"
-      ]
-   },
-   "syntax.promise": {
-      "prefix": "j-prom",
-      // "description": "",
-      "scope": "javascript,typescript",
-      "body": [
-         "return new Promise((res, rej) => {$1});"
-      ]
-   },
-   "syntax.promiseThen": {
-      "prefix": "j-promThen",
-      // "description": "",
-      "scope": "javascript,typescript",
-      "body": [
-         "promise",
-         "\t.then(data => {$1})",
-         "\t.catch(e => {})"
-      ]
-   },
-   "syntax.tryCatch": {
-      "prefix": "j-tryCatch",
-      // "description": "",
-      "scope": "javascript,typescript",
-      "body": [
-         "try {",
-         "\t$1",
-         "} catch(e) {",
-         "\t",
-         "}"
-      ]
-   }
+  /*
+   * Code -> Preferences -> User Snippets -> New global snippet
+   */
+
+  "z": {
+    "prefix": "z",
+    "description": "'Console log only'",
+    "body": ["console.log($1);"]
+  },
+  "console.log": {
+    "prefix": "j-log",
+    "description": "console.log: ( $1 )",
+    "scope": "javascript,typescript",
+    "body": ["console.log( $1 );", "$2"]
+  },
+  "console.log1": {
+    "prefix": "j-log1",
+    "description": "console.log: ( '$1' )",
+    "scope": "javascript,typescript",
+    "body": ["console.log( '$1' );", "$2"]
+  },
+  "console.log2": {
+    "prefix": "j-log2",
+    "description": "console.log: ('$1')",
+    "scope": "javascript,typescript",
+    "body": ["console.log('$1');", "$2"]
+  },
+  "console.log3": {
+    "prefix": "j-log3",
+    "description": "console.log: ( \"$1\" )",
+    "scope": "javascript,typescript",
+    "body": ["console.log( \"$1\" );", "$2"]
+  },
+  "test-all-es6": {
+    "prefix": "j-test-all-es6",
+    "description": "test.all-es6",
+    "scope": "javascript,typescript",
+    "body": [
+      "const {expect} = require('chai');",
+      "const chaiHttp = require('chai-http');",
+      "const supertest = require('supertest');",
+      "",
+      "",
+      "before(() => { });",
+      "beforeEach(() => { });",
+      "",
+      "describe('Test..$1', () => {",
+      "\tit('should..', () => {",
+      "\t\texpect(1).to.equal(1);",
+      "\t})",
+      "})"
+    ]
+  },
+  "test-all-ts": {
+    "prefix": "j-test-all-ts",
+    "description": "test.all-ts",
+    "scope": "javascript,typescript",
+    "body": [
+      "import { expect } from 'chai';",
+      "",
+      "",
+      "before(() => { });",
+      "beforeEach(() => { });",
+      "",
+      "describe('Test..$1', () => {",
+      "\tit('should..', () => {",
+      "\t\texpect(1).to.equal(1);",
+      "\t})",
+      "})"
+    ]
+  },
+  "test-describe": {
+    "prefix": "j-test-desc",
+    "description": "test.describe",
+    "scope": "javascript,typescript",
+    "body": [
+      "describe('Test..$1', () => {",
+      "\tit('should..', () => {",
+      "\t\texpect(1).to.equal(1);",
+      "\t})",
+      "})"
+    ]
+  },
+  "tsconfig": {
+    "prefix": "j-tsconfig",
+    "description": "tsconfig.json",
+    "body": [
+      "{",
+      "\t\"compilerOptions\": {",
+      "\t\t\"module\": \"commonjs\",",
+      "\t\t\"target\": \"es6\",",
+      "\t\t\"noImplicitAny\": true,",
+      "\t\t\"moduleResolution\": \"node\",",
+      "\t\t\"outDir\": \"dist\",",
+      "\t\t\"sourceMap\": true,",
+      "\t\t\"baseUrl\": \".\",",
+      "\t\t\"paths\": {",
+      "\t\t\t\"*\": [",
+      "\t\t\t\t\"src/types/*\"",
+      "\t\t\t]",
+      "\t},",
+      "\t\"include\": [\"src\", \"index.ts\"]",
+      "}"
+    ]
+  },
+  "package.json.test-mocha-es6": {
+    "prefix": "j-package.json.script.test-mocha-es6",
+    "description": "package.json",
+    "body": [
+      "\"test\": \"mocha **/*.test.js\",",
+      "\"test:w\": \"npm run test -- -w\""
+    ]
+  },
+  "package.json.test-mocha-ts": {
+    "prefix": "j-package.json.script.test-ts",
+    "description": "package.json",
+    "body": [
+      "\"test\": \"mocha -r ts-node/register **/*.test.ts\",",
+      "\"test:w\": \"npm run test -- --watch-extensions ts -w\""
+    ]
+  },
+  "package.json.test-jest-ts": {
+    "prefix": "j-package.json.script.test-jest-ts",
+    "description": "package.json",
+    "body": [
+      "\"test\": \"jest --forceExit --coverage --verbose\",",
+      "\"test:w\": \"npm run test -- --watchAll\""
+    ]
+  },
+  "pattern-module-es6": {
+    "prefix": "j-pattern-module-es6",
+    "description": "pattern.module (works w/ require('')",
+    "scope": "javascript,typescript",
+    "body": [
+      "module.exports = (() => {",
+      "\tconst $1 = () => {",
+      "\t\t$2",
+      "\t};",
+      "",
+      "\treturn { $1 };",
+      "})();"
+    ]
+  },
+  "pattern-singleton-ts": {
+    "prefix": "j-pattern-singleton-ts",
+    "description": "pattern.singleton",
+    "scope": "javascript,typescript",
+    "body": [
+      "class $1Controller {",
+      "\tpublic static getInstance() {",
+      "\t\tif(!$1Controller.instance) {",
+      "\t\t\t$1Controller.instance = new $1Controller();",
+      "\t\t}",
+      "",
+      "\t\treturn $1Controller.instance;",
+      "\t}",
+      "\tprivate static instance: $1Controller;",
+      "",
+      "\tprivate constructor() { }",
+      "}",
+      "",
+      "export default $1Controller.getInstance();"
+    ]
+  },
+  "import.module": {
+    "prefix": "j-imp",
+    "description": "import x from 'y';",
+    "scope": "javascript,typescript",
+    "body": ["import $1 from '$2';"]
+  },
+  "import.named-module": {
+    "prefix": "j-imp-n",
+    "description": "import { x } from 'y';",
+    "scope": "javascript,typescript",
+    "body": ["import { $1 } from '$2';"]
+  },
+  "import.require": {
+    "prefix": "j-req",
+    "description": "const x = require('y');",
+    "scope": "javascript,typescript",
+    "body": ["const $1 = require('$2');"]
+  },
+  "syntax.forEach": {
+    "prefix": "j-forEach",
+    // "description": "const x = require('y');",
+    "scope": "javascript,typescript",
+    "body": ["$1.forEach(x => x);"]
+  },
+  "syntax.forIn": {
+    "prefix": "j-forIn",
+    "description": "in Objects as well",
+    "scope": "javascript,typescript",
+    "body": ["for(const $1 in $2) {", "\t$3", "}"]
+  },
+  "syntax.forOf": {
+    "prefix": "j-forOf",
+    "description": "Iterable",
+    "scope": "javascript,typescript",
+    "body": ["for(const $1 of $2) {", "\t$3", "}"]
+  },
+  "syntax.setInterval": {
+    "prefix": "j-setInt",
+    // "description": "",
+    "scope": "javascript,typescript",
+    "body": ["setInterval(() => {}, 0);"]
+  },
+  "syntax.setTimeout": {
+    "prefix": "j-setInt",
+    // "description": "",
+    "scope": "javascript,typescript",
+    "body": ["setTimeout(() => {}, 0);"]
+  },
+  "syntax.promise": {
+    "prefix": "j-prom",
+    // "description": "",
+    "scope": "javascript,typescript",
+    "body": ["return new Promise((res, rej) => {$1});"]
+  },
+  "syntax.promiseThen": {
+    "prefix": "j-promThen",
+    // "description": "",
+    "scope": "javascript,typescript",
+    "body": ["promise", "\t.then(data => {$1})", "\t.catch(e => {})"]
+  },
+  "syntax.tryCatch": {
+    "prefix": "j-tryCatch",
+    // "description": "",
+    "scope": "javascript,typescript",
+    "body": ["try {", "\t$1", "} catch(e) {", "\t", "}"]
+  }
 }

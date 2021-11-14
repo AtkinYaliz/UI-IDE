@@ -1,4 +1,4 @@
-# Mac
+# MAC
 
 ### Applications
 
@@ -36,7 +36,7 @@
   - VLC
   - TeamViewer
 
-## shortcuts
+### shortcuts
 
 AC2V2zZQ  
 F11 => Show desktop  
@@ -73,7 +73,7 @@ $ db.<collection>.find()
 $ sudo chown -R $(whoami) <path> | $(npm config get prefix)
 ```
 
-## ~/.zshrc
+### ~/.zshrc
 
 https://ohmyz.sh/#install
 

@@ -1,4 +1,4 @@
-# Education System
+# Education System
 
 How does National Curriculum work?
 The National Curriculum is constructed in five Key Stages (**KS**):

@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript
 
 _Prototype-based Language_: There are no classes. Objects are created using a cloning process.  
 _Dynamic Language_: properties can be added or removed from an object after instantiation.  
@@ -13,9 +13,9 @@ _Expression_: A unit of code that results a value.
 - A function that is the property of an object is called its _method_.
 - _First Class Function_: You can use functions like strings, numbers etc. (ie. assign as a value to a variable, passed as an argument to other function or return by another function).
 - To create a function we can use: - _Function Declaration_: Can only exist as a _statement_ and should start with the keyword. When it is executed it doesn't do anything. They are _hoisted_.  
-  `function func() { ... }`  
-   - _Function Expression_: When it is executed it returns an object, as other expressions. They are _not hoisted_ but their variables are hoisted.  
-  `var func = function() { ... };`
+  `function func() { ... }`
+  - _Function Expression_: When it is executed it returns an object, as other expressions. They are _not hoisted_ but their variables are hoisted.  
+    `var func = function() { ... };`
 - The function has full access to the outer variable. It can modify it as well.  
   If a same-named variable is declared inside the function then it _shadows_ the outer one.
 - Values passed to a function as parameters are copied to its local variables (pass-by-value). If the parameter is an object, you can update its properties.
@@ -125,7 +125,7 @@ var testModule = (function () {
 - _Inheritance_: One object gets access to the properties and methods of another object.
 - _Prototype chain_: This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain, _Object.prototype_.
   All JS objects (Date, Array, Function, RegExp, ...) inherit from the Object.prototype.
-- **_.prototype_**: Is an object property that is automatically created for to only _functions_. It is used to build _\_\_proto\_\__ when the function happens to be used as a function constructor with the _new_ keyword. There will be only one prototype for each object that is created from same function.  
+- **_.prototype_**: Is an object property that is automatically created for to only _functions_. It is used to build \_\_\_proto\_\__ when the function happens to be used as a function constructor with the \_new_ keyword. There will be only one prototype for each object that is created from same function.  
   Prototype property of the function is not the prototype of the function. It is the prototype of the objects created by function contructor.
 - _**.\_\_proto\_\_**_: Is the actual object that is used in the lookup chain to resolve methods. It is a property that all objects have. This is the property which is used by the JS engine for inheritance.
   _Why prototype_: Because functions are objects if we define getFullname() in Person every object will have it and this means more memory space. We don't need this for methods. But if we use it in prototype there will be only one definition.
@@ -252,8 +252,8 @@ if(!Object.create) {
   - _Memory Heap_: this is where memory allocation happens.
   - _Call Stack_: this is where your stack frames are, as your code executes.
 
-DOM****\_****\  
-AJAX****\_****- Web APIs which are provided by browsers, not by the Engine.  
+DOM\***\*\_\*\***\  
+AJAX\***\*\_\*\***- Web APIs which are provided by browsers, not by the Engine.  
 setTimeout\_\_/
 
 - _Call Stack_ is a data structure which records basically where in the program we are.

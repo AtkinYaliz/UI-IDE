@@ -1,4 +1,4 @@
-# Kafka
+# Kafka
 
 ```sh
 $ brew install kafka

@@ -1,4 +1,4 @@
-- [MS Code Snippets](/examples/custom.code-snippets.json)
+- [AWS Lambda](/examples/aws-lambda.md)
 - [Docker](/examples/docker.md)
 - [Education System](/examples/education-system.md)
 - [Git](/examples/git.md)
@@ -7,6 +7,7 @@
 - [Kubernetes](/examples/kubernetes.md)
 - [Mac](/examples/mac.md)
 - [Mongo](/examples/mongo.md)
+- [MS Code Snippets](/examples/custom.code-snippets.json)
 - [Node](/examples/node.md)
 - [React](/examples/react.md)
 - [Redis](/examples/redis.md)

@@ -1,12 +1,13 @@
-// https://syncfiddle.net/fiddle/-MWUAsYsharYFWiXVqFW
+# AWS Lambda
 
+[Fiddle link](https://syncfiddle.net/fiddle/-MWUAsYsharYFWiXVqFW)
+
+```typescript
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import * as AWS from 'aws-sdk';
 import { DynamoDB, Kinesis } from 'aws-sdk';
 import { createHmac, randomBytes } from "crypto";
 import { Agent } from 'https'
-
-
 import { v4 as uuid } from 'uuid';
 
 AWS.config.region = process.env.REGION ?? 'eu-west-1';
@@ -38,7 +39,7 @@ const generateHash = (data: User, salt: string): Hash => {
 
 const agent = new Agent({keepAlive: true});
 const dynamodb = new DynamoDB({httpOptions: {agent}});
-  
+
 const promiseWrapper = (prom) => {
    return new Promise((res, rej) => {
   	 try {
@@ -50,9 +51,9 @@ const promiseWrapper = (prom) => {
      }
   }
 }
-  
+
 export const createUserHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-    
+
     const kinesis = new Kinesis({ apiVersion: '2013-12-02' });
     const timestamp = new Date().getTime();
     const user = JSON.parse(event.body) as User;
@@ -80,19 +81,20 @@ export const createUserHandler = async (event: APIGatewayProxyEvent): Promise<AP
     try {
         await dynamodb.putItem(dynamoParams).promise();
         await kinesis.putRecord(kinesisParams).promise();
-      
+
       	Promise.all[
           	promiseWrapper(dynamodb.putItem(dynamoParams)),
             promiseWrapper(kinesis.putRecord(kinesisParams))
         ].then(values => {
 					// check valsues
-        }) 
-      
+        })
+
     } catch (err) {
         console.error(err);
         return {statusCode: 500, body: "Something went wrong"};
     }
     console.info('Successfully Created User', user);
-    
+
     return {statusCode: 201, body: {id}}
 }
+```

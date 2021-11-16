@@ -1,4 +1,4 @@
-# MAC
+# Mac
 
 ### Applications
 

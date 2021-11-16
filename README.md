@@ -7,10 +7,10 @@
 - [Kubernetes](/examples/kubernetes.md)
 - [Mac](/examples/mac.md)
 - [Mongo](/examples/mongo.md)
-- [MS Code Snippets](/examples/custom.code-snippets.json)
 - [Node](/examples/node.md)
 - [React](/examples/react.md)
 - [Redis](/examples/redis.md)
+- [VS Code Snippets](/examples/custom.code-snippets.json)
 
 ---
 

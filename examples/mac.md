@@ -5,6 +5,7 @@
 - Chrome, FireFox
 - HomeBrew  
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  
 - Development
 
   - Git
@@ -20,6 +21,8 @@
     open -na "IntelliJ IDEA CE.app" --args "$@"
 
     Code Style > Java > Code Generation > Comment Code
+    
+    brew install maven
     ```
 
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
@@ -108,8 +111,8 @@ alias mk='minikube'
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 
 export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
-#export GIT_PATH="/Users/aytyaliz/Library/git/git-2.31.1"
-export JAVA_PATH="/Users/aytyaliz/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/bin"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home"
+export JAVA_PATH=${JAVA_HOME}/bin
 
 export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ```

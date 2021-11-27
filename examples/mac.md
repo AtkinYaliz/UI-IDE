@@ -5,7 +5,6 @@
 - Chrome, FireFox
 - HomeBrew  
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  
 - Development
 
   - Git
@@ -21,7 +20,7 @@
     open -na "IntelliJ IDEA CE.app" --args "$@"
 
     Code Style > Java > Code Generation > Comment Code
-    
+
     brew install maven
     ```
 
@@ -41,7 +40,6 @@
 
 ### shortcuts
 
-AC2V2zZQ  
 F11 => Show desktop  
 Cmd + Shift + . => show hidden files  
 Cmd + Q => close the application without trace  
@@ -51,30 +49,7 @@ ln -s <\_source> <\_dest> => creates a link of <\_source> in the <\_dest> folder
 chown <\_user> <\_file> => changes the owner of <\_file> to <\_user>  
 chmod -R 777 <\_directory>  
 defaults write -g com.apple.mouse.scaling -float 10  
-lsof -i tcp:3000
-
-```
-$ /usr/libexec/java_home -V
-
-// .zshrc
-$ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-```
-
-```sh
-# MongoDB
-$ ./mongod --dbpath ../data/db
-$ mongo (another cmd)
-$ show dbs
-$ use <db>
-$ db
-$ show collections
-$ db.<collection>.drop()
-$ db.<collection>.insert({…})
-$ db.<collection>.find()
-
-# NPM
-$ sudo chown -R $(whoami) <path> | $(npm config get prefix)
-```
+lsof -i tcp:3000 -> kill -9 12345
 
 ### ~/.zshrc
 
@@ -106,9 +81,6 @@ alias di='docker images'
 alias ds='docker container ls'
 alias k='kubectl'
 alias mk='minikube'
-
-
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 
 export M2_HOME="/Users/aytyaliz/Library/apache-maven-3.8.1"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home"

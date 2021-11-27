@@ -1,18 +1,25 @@
-- [AWS Lambda](/examples/aws-lambda.md)
-- [Docker](/examples/docker.md)
-- [Education System](/examples/education-system.md)
-- [Git](/examples/git.md)
-- [Jest](/examples/jest.md)
-- [JS](/examples/js.md)
-- [Kafka](/examples/kafka.md)
-- [Kubernetes](/examples/kubernetes.md)
-- [Mac](/examples/mac.md)
-- [Mongo](/examples/mongo.md)
-- [Node](/examples/node.md)
-- [React](/examples/react.md)
-- [Redis](/examples/redis.md)
-- [VS Code Snippets](/examples/custom.code-snippets.json)
-
+<table style="width:100%">
+  <tr>
+    <td style="width:50%">
+      <li><a href="/examples/aws-lambda.md">[AWS Lambda]</a></li>
+      <li><a href="/examples/docker.md">[Docker]</a></li>
+      <li><a href="/examples/education-system.md">[Education System]</a></li>
+      <li><a href="/examples/git.md">[Git]</a></li>
+      <li><a href="/examples/jest.md">[Jest]</a></li>
+      <li><a href="/examples/js.md">[JS]</a></li>
+      <li><a href="/examples/kafka.md">[Kafka]</a></li>
+    </td>
+    <td>
+      <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>
+      <li><a href="/examples/mac.md">[Mac]</a></li>
+      <li><a href="/examples/mongo.md">[Mongo]</a></li>
+      <li><a href="/examples/node.md">[Node]</a></li>
+      <li><a href="/examples/react.md">[React]</a></li>
+      <li><a href="/examples/redis.md">[Redis]</a></li>
+      <li><a href="/examples/custom.code-snippets.json">[VS Code Snippets]</a></li>
+    </td>
+  </tr>
+</table>
 ---
 
 <details><summary># youtube-dl #</summary>
@@ -42,3 +49,18 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
 </details>
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax
+
+- [AWS Lambda](/examples/aws-lambda.md)
+- [Docker](/examples/docker.md)
+- [Education System](/examples/education-system.md)
+- [Git](/examples/git.md)
+- [Jest](/examples/jest.md)
+- [JS](/examples/js.md)
+- [Kafka](/examples/kafka.md)
+- [Kubernetes](/examples/kubernetes.md)
+- [Mac](/examples/mac.md)
+- [Mongo](/examples/mongo.md)
+- [Node](/examples/node.md)
+- [React](/examples/react.md)
+- [Redis](/examples/redis.md)
+- [VS Code Snippets](/examples/custom.code-snippets.json)

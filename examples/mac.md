@@ -49,7 +49,7 @@ ln -s <\_source> <\_dest> => creates a link of <\_source> in the <\_dest> folder
 chown <\_user> <\_file> => changes the owner of <\_file> to <\_user>  
 chmod -R 777 <\_directory>  
 defaults write -g com.apple.mouse.scaling -float 10  
-lsof -i tcp:3000 -> kill -9 12345
+lsof -ti:7071 | xargs kill -9
 
 ### ~/.zshrc
 

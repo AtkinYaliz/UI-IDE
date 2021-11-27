@@ -1,6 +1,6 @@
-<table style="width:100%">
+<table>
   <tr>
-    <td style="width:50%">
+    <td>
       <li><a href="/examples/aws-lambda.md">[AWS Lambda]</a></li>
       <li><a href="/examples/docker.md">[Docker]</a></li>
       <li><a href="/examples/education-system.md">[Education System]</a></li>

@@ -4,28 +4,24 @@ Mock Server: [Express Generator](https://www.npmjs.com/package/express-generator
 
 ```javascript
 
-const beneficiaries = require('../beneficiaries');
-const {
-  getEaadsBeneficiariesRequest,
-} = require('../httpRequest/getEaadsBeneficiariesHttpRequest');
-jest.mock(
-  '../httpRequest/getEaadsBeneficiariesHttpRequest'
-);
+const customers = require('../customers');
+const {getPhonesHttpRequest} = require('../httpRequests/getPhonesHttpRequest');
+jest.mock('../httpRequests/getPhonesHttpRequest');
 
-describe('beneficiaries handler', () => {
+describe('phones handler', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.resetModules();
   });
 
-  it('beneficiaries call getEaadsBeneficiariesRequest', (done) => {
-    getEaadsBeneficiariesRequest.mockImplementation(() => {
+  it('customers call getPhonesHttpRequest', (done) => {
+    getPhonesHttpRequest.mockImplementation(() => {
       return new Promise((res, rej) => res([]));
     });
     const params = [...];
 
-    beneficiaries(...params).then(() => {
-      expect(getEaadsBeneficiariesRequest).toHaveBeenCalledTimes(1);
+    customers(...params).then(() => {
+      expect(getPhonesHttpRequest).toHaveBeenCalledTimes(1);
       done();
     });
   });

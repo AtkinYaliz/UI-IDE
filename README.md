@@ -49,18 +49,3 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
 </details>
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax
-
-- [AWS Lambda](/examples/aws-lambda.md)
-- [Docker](/examples/docker.md)
-- [Education System](/examples/education-system.md)
-- [Git](/examples/git.md)
-- [Jest](/examples/jest.md)
-- [JS](/examples/js.md)
-- [Kafka](/examples/kafka.md)
-- [Kubernetes](/examples/kubernetes.md)
-- [Mac](/examples/mac.md)
-- [Mongo](/examples/mongo.md)
-- [Node](/examples/node.md)
-- [React](/examples/react.md)
-- [Redis](/examples/redis.md)
-- [VS Code Snippets](/examples/custom.code-snippets.json)

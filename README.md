@@ -2,6 +2,7 @@
 - [Docker](/examples/docker.md)
 - [Education System](/examples/education-system.md)
 - [Git](/examples/git.md)
+- [Jest](/examples/jest.md)
 - [JS](/examples/js.md)
 - [Kafka](/examples/kafka.md)
 - [Kubernetes](/examples/kubernetes.md)

@@ -43,13 +43,16 @@
 F11 => Show desktop  
 Cmd + Shift + . => show hidden files  
 Cmd + Q => close the application without trace  
-Cmd + \` => tab between windows of same application  
-cp -a <\_source>/. <\_dest> => copy the content of the <\_source> into <\_dest> recursively(a) including hidden files/folders(.)  
-ln -s <\_source> <\_dest> => creates a link of <\_source> in the <\_dest> folder  
-chown <\_user> <\_file> => changes the owner of <\_file> to <\_user>  
-chmod -R 777 <\_directory>  
-defaults write -g com.apple.mouse.scaling -float 10  
-lsof -ti:7071 | xargs kill -9
+Cmd + \` => tab between windows of same application
+
+```
+> cp -a source dest => copy the content of the source into dest recursively(a) including hidden files/folders(.)
+> ln -s source dest => creates a link of source in the dest folder
+> chown user file => changes the owner of file to user
+> chmod -R 777 folder
+> defaults write -g com.apple.mouse.scaling -float 10
+> lsof -ti:7071 | xargs kill -9
+```
 
 ### ~/.zshrc
 

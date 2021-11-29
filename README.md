@@ -8,10 +8,10 @@
       <li><a href="/examples/jest.md">[Jest]</a></li>
       <li><a href="/examples/js.md">[JS]</a></li>
       <li><a href="/examples/kafka.md">[Kafka]</a></li>
+      <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>
     </td>
     <td>
-      <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>
-      <li><a href="/examples/mac.md">[Mac]</a></li>
+      <li><a href="/examples/mac.md">[MAC]</a></li>
       <li><a href="/examples/mongo.md">[Mongo]</a></li>
       <li><a href="/examples/node.md">[Node]</a></li>
       <li><a href="/examples/react.md">[React]</a></li>

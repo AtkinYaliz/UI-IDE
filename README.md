@@ -10,7 +10,7 @@
       <li><a href="/examples/kafka.md">[Kafka]</a></li>
       <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>
     </td>
-    <td>
+    <td style="vertical-align:top">
       <li><a href="/examples/mac.md">[MAC]</a></li>
       <li><a href="/examples/mongo.md">[Mongo]</a></li>
       <li><a href="/examples/node.md">[Node]</a></li>

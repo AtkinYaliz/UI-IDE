@@ -18,7 +18,7 @@
     #!/bin/sh
     open -na "IntelliJ IDEA CE.app" --args "$@"
 
-    Code Style > Java > Code Generation > Comment Code
+    Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
 
     brew install maven
     ```

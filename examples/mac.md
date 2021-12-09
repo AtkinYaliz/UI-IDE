@@ -50,8 +50,8 @@ Cmd + \` => tab between windows of same application
 > ln -s source dest => creates a link of source in the dest folder
 > chown user file => changes the owner of file to user
 > chmod -R 777 folder
-> defaults write -g com.apple.mouse.scaling -float 10
 > lsof -ti:7071 | xargs kill -9
+> ps aux | grep /usr/local/dgagent/dgdaemon | awk '{print $2}'
 ```
 
 ### ~/.zshrc

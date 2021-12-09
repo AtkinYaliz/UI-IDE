@@ -11,7 +11,6 @@
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
   - IntelliJ
-
     ```
     Open IntelliJ IDEA, go to Tools->Create Command-Line Launcher: idea .
     # if no admin rights are present:
@@ -23,7 +22,6 @@
 
     brew install maven
     ```
-
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html

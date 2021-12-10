@@ -12,15 +12,14 @@
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
   - IntelliJ
     ```
-    Open IntelliJ IDEA, go to Tools->Create Command-Line Launcher: idea .
-    # if no admin rights are present:
-    create /usr/local/bin/idea file and put the following two lines
-    #!/bin/sh
-    open -na "IntelliJ IDEA CE.app" --args "$@"
+    - Open IntelliJ IDEA, go to Tools -> Create Command-Line Launcher (idea .)
+      # if no admin rights are present:
+      create /usr/local/bin/idea file and put the following two lines
+      #!/bin/sh
+      open -na "IntelliJ IDEA CE.app" --args "$@"
 
-    Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
-
-    brew install maven
+    - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
+    - brew install maven
     ```
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube

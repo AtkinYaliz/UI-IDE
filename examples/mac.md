@@ -7,10 +7,12 @@
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
   May require xCode to be installed: xcode-select --install
 - Development
+
   - Git
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
   - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
   - IntelliJ
+
     ```
     - Open IntelliJ IDEA, go to Tools -> Create Command-Line Launcher (idea .)
       # if no admin rights are present:
@@ -21,6 +23,7 @@
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
     - brew install maven
     ```
+
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html
@@ -34,6 +37,7 @@
   - Google Drive Back up
   - VLC
   - TeamViewer
+  - Flowchart Designer 3
 
 ### shortcuts
 

@@ -10,8 +10,18 @@ jest.mock('../httpRequests/getPhonesHttpRequest');
 
 describe('phones handler', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    // jest.clearAllMocks();
     jest.resetModules();
+  });
+
+  it('customers call getPhonesHttpRequest', (done) => {
+    const obj = {a:1, b:2, f: () => {}};
+
+    expect(1).toBe(1);
+    expect(obj).toEqual({b:2, a:1});
+    expect(obj.a).toBeDefined();
+    expect(typeof obj).toBe('object');
+    expect(typeof obj.f).toBe('function');
   });
 
   it('customers call getPhonesHttpRequest', (done) => {
@@ -30,8 +40,8 @@ describe('phones handler', () => {
     let req = {};
     let res = {json: jest.fn()};
     let next = jest.fn();
-    const requestSpy = jest.spyOn(request, 'error');
-    const resSpy = jest.spyOn(res, 'json');
+    const reqErrorSpy = jest.spyOn(req, 'error');
+    const resJsonSpy = jest.spyOn(res, 'json');
 
     let err = new Error();
     err.status = 400;
@@ -40,9 +50,9 @@ describe('phones handler', () => {
 
     getCustomErrorResponse(err, req, res, next);
 
-    expect(requestSpy).toHaveBeenCalled();
-    expect(resSpy).toHaveBeenCalled();
-    expect(resSpy).toHaveBeenCalledWith(err);
+    expect(reqErrorSpy).toHaveBeenCalled();
+    expect(resJsonSpy).toHaveBeenCalled();
+    expect(resJsonSpy).toHaveBeenCalledWith(err);
   });
 });
 ```

@@ -8,6 +8,10 @@ const customers = require('../customers');
 const {getPhonesHttpRequest} = require('../httpRequests/getPhonesHttpRequest');
 jest.mock('../httpRequests/getPhonesHttpRequest');
 
+jest.mock('../../../../server/datasources/cassandra', () =>
+  require('../../mocks/startupCassandra')
+);
+
 describe('phones handler', () => {
   afterEach(() => {
     // jest.clearAllMocks();

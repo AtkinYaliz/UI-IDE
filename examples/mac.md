@@ -21,6 +21,7 @@
       open -na "IntelliJ IDEA CE.app" --args "$@"
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
+    - Preferences -> Editor -> Color Scheme -> Console Font: 11
     - brew install maven
     ```
 

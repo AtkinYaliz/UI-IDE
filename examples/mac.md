@@ -44,9 +44,10 @@
 
 F11 => Show desktop  
 Cmd + Shift + . => show hidden files  
+Cmd + Option + Shift + V => paste without formatting  
 Cmd + Q => close the application without trace  
 Cmd + \` => tab between windows of same application  
-TextEdit default blank: System Prefrences > iCloud > iCloud Drive ( Options ) > uncheck textEdit
+TextEdit default blank: System Preferences -> iCloud -> iCloud Drive (Options): uncheck textEdit
 
 ```
 > cp -a source dest => copy the content of the source into dest recursively(a) including hidden files/folders(.)

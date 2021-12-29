@@ -21,13 +21,13 @@
       open -na "IntelliJ IDEA CE.app" --args "$@"
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
-    - Preferences -> Editor -> Color Scheme -> Console Font: 11
+                  -> Editor -> Color Scheme -> Console Font: 11
     - brew install maven
     ```
 
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
-  - Java: https://www.oracle.com/java/technologies/javase-downloads.html
+  - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
     if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
 
 - Productivity
@@ -45,7 +45,8 @@
 F11 => Show desktop  
 Cmd + Shift + . => show hidden files  
 Cmd + Q => close the application without trace  
-Cmd + \` => tab between windows of same application
+Cmd + \` => tab between windows of same application  
+TextEdit default blank: System Prefrences > iCloud > iCloud Drive ( Options ) > uncheck textEdit
 
 ```
 > cp -a source dest => copy the content of the source into dest recursively(a) including hidden files/folders(.)

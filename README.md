@@ -11,7 +11,7 @@
     </td>
     <td>
       <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>
-      <li><a href="/examples/mac.md">[MAC]</a></li>
+      <li><a href="/examples/mac.md">[MacOS]</a></li>
       <li><a href="/examples/mongo.md">[Mongo]</a></li>
       <li><a href="/examples/node.md">[Node]</a></li>
       <li><a href="/examples/react.md">[React]</a></li>

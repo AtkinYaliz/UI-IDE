@@ -5,6 +5,7 @@
       <li><a href="/examples/docker.md">[Docker]</a></li>
       <li><a href="/examples/education-system.md">[Education System]</a></li>
       <li><a href="/examples/git.md">[Git]</a></li>
+      <li><a href="/examples/java.md">[Java]</a></li>
       <li><a href="/examples/jest.md">[Jest]</a></li>
       <li><a href="/examples/js.md">[JS]</a></li>
       <li><a href="/examples/kafka.md">[Kafka]</a></li>

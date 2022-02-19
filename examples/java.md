@@ -1,14 +1,14 @@
-# OAuth 2.0: 
+### OAuth 2.0: 
 - Stands for "Open Authorization", is a standard designed to allow an application to access resources hosted by another application on behalf of a user.
 - It is an authorization protocol not an authentication protocol.
 - Designed for granting access to a set of resources, eg. remote API or user's data.
 - OAuth 2.0 uses Access Token
 
-Roles:
-- Resource Owner: The user or system that owns the protected resources and can grant access to them.
-- Client: The system that requires access to the protected resources. To access resources, the Client must hold an appropriate Access Token.
-- Resource Server: A server that protects the user's resources and receives access requests from the Client. It accepts and validates an Access Token from the Client and returns the appropriate resources to it.
-- Authorization Server: A server that receives requests from the Client for Access Tokens and issues them upon successful authentication and consent by the Resource Owner.
+__Roles:__
+- __Resource Owner:__ The user or system that owns the protected resources and can grant access to them.
+- __Client:__ The system that requires access to the protected resources. To access resources, the Client must hold an appropriate Access Token.
+- __Resource Server:__ A server that protects the user's resources and receives access requests from the Client. It accepts and validates an Access Token from the Client and returns the appropriate resources to it.
+- __Authorization Server:__ A server that receives requests from the Client for Access Tokens and issues them upon successful authentication and consent by the Resource Owner.
 
 
 

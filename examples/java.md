@@ -10,6 +10,10 @@ __Roles:__
 - __Resource Server:__ A server that protects the user's resources and receives access requests from the Client. It accepts and validates an Access Token from the Client and returns the appropriate resources to it.
 - __Authorization Server:__ A server that receives requests from the Client for Access Tokens and issues them upon successful authentication and consent by the Resource Owner.
 
+__www.oauth.com/playground ([Daily Code Buffer](http://www.youtube.com/watch?v=tWcqSIQr6Ks))__
+- __Scope:__ Used to specify exactly the reason for which access to resources may be granted.
+- __OAuth flows:__ Authorization code, PKCE, Implicit, Device code, OpenID Connect
+
 
 
 ### Java basics

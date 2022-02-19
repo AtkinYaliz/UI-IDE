@@ -29,9 +29,9 @@ List<String> values = new ArrayList<String>();
 List<String> values = List.of( "One", "Two" );
 List<String> values = Arrays.asList( "apple", "banana" );
 
-Set<String> values = Set.of( "One", "Two" );                   // Returns an unmodifiable map
-Map<Integer, String> values = Map.of( 1, "One", 2, "Two" );    // Returns an unmodifiable map
-Map<Integer, String> values = Map.ofEntries(                   // Returns an unmodifiable map
+Set<String> values = Set.of( "One", "Two" );                  \
+Map<Integer, String> values = Map.of( 1, "One", 2, "Two" );    - Returns an unmodifiable map
+Map<Integer, String> values = Map.ofEntries(                  /
     Map.entry(1, "One"),
     Map.entry(2, "Two")
 );

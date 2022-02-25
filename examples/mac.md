@@ -10,9 +10,15 @@
 
   - Git
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
-  - VS Code, IntelliJ, Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - VS Code
+    ```
+    Editor.Bracket-Pair-Colorization:true
+    Default formatter: Prettier
+    Format on Paste,
+    Format on Save
+    ```
   - IntelliJ
-
     ```
     - Open IntelliJ IDEA, go to Tools -> Create Command-Line Launcher (idea .)
       # if no admin rights are present:

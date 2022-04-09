@@ -29,6 +29,15 @@
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
     - brew install maven
+
+    
+- XCode Theme: https://plugins.jetbrains.com/plugin/15727-xcode-theme
+- Atom Material Icons: https://plugins.jetbrains.com/plugin/10044-atom-material-icons
+- Mario Progress Bar: https://plugins.jetbrains.com/plugin/14708-mario-progress-bar
+- Rainbow Brackets: https://plugins.jetbrains.com/plugin/10080-rainbow-brackets
+- Pieces: https://plugins.jetbrains.com/plugin/17328-pieces
+- Key Promoter X: https://plugins.jetbrains.com/plugin/17328-pieces
+- Fonts: Monaco with Ligatures Enabled
     ```
 
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)

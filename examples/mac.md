@@ -14,6 +14,7 @@
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
     if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
+  - Font: Monaco with Ligatures Enabled
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -32,9 +33,7 @@
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
                   -> Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
-    - Font: Monaco with Ligatures Enabled
     ```
-
 
 - Productivity
   - Spectacle
@@ -112,6 +111,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
   - Git for Windows, Git Extensions
   - Node (nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver
+  - Font: Monaco with Ligatures Enabled
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -128,8 +128,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
                -> Editor -> Color Scheme -> Console Font: 11
-               -> Plugins -> XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint 
-   - Font: Monaco with Ligatures Enabled
+               -> Plugins -> XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
     ```
     
 - Productivity

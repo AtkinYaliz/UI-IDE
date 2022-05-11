@@ -14,7 +14,7 @@
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
     if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
-  - Font: Monaco with Ligatures Enabled
+  - Font: [Monaco with Ligatures Enabled](https://github.com/GianCastle/FiraMonaco)
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -111,7 +111,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
   - Git for Windows, Git Extensions
   - Node (nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver
-  - Font: Monaco with Ligatures Enabled
+  - Font: [Monaco with Ligatures Enabled](https://github.com/GianCastle/FiraMonaco)
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true

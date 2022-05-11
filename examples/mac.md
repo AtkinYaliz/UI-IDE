@@ -27,18 +27,9 @@
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
-    - Extensions: Mario Progress Bar, Rainbow Brackets, SonarLint
+    - Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
+    - Font: Monaco with Ligatures Enabled
     ```
-    
-- XCode Theme: https://plugins.jetbrains.com/plugin/15727-xcode-theme
-- Atom Material Icons: https://plugins.jetbrains.com/plugin/10044-atom-material-icons
-- Mario Progress Bar: https://plugins.jetbrains.com/plugin/14708-mario-progress-bar
-- Rainbow Brackets: https://plugins.jetbrains.com/plugin/10080-rainbow-brackets
-- Pieces: https://plugins.jetbrains.com/plugin/17328-pieces
-- Key Promoter X: https://plugins.jetbrains.com/plugin/17328-pieces
-- Fonts: Monaco with Ligatures Enabled
-    ```
-
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
@@ -118,7 +109,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), Tureng
 - Development
   - Git for Windows, Git Extensions
-  - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
+  - Node (nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver
   - VS Code
     ```
@@ -137,4 +128,13 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
                -> Editor -> Color Scheme -> Console Font: 11
                -> Extensions -> Mario Progress Bar, Rainbow Brackets, SonarLint
+    - Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
     ```
+- Productivity
+  - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), 
+  - Tureng
+  - Android File Transfer
+  - Google Drive Back up
+  - VLC
+  - TeamViewer
+

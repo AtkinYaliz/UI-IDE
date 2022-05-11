@@ -10,6 +10,10 @@
   - Git
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
+  - Docker, Kubernetes, minikube
+  - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
+    if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -27,13 +31,10 @@
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
-    - Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
+                  -> Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
     - Font: Monaco with Ligatures Enabled
     ```
-  - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
-  - Docker, Kubernetes, minikube
-  - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
-    if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
+
 
 - Productivity
   - Spectacle
@@ -127,8 +128,8 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
                -> Editor -> Color Scheme -> Console Font: 11
-               -> Extensions -> Mario Progress Bar, Rainbow Brackets, SonarLint
-    - Extensions: XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint
+               -> Plugins -> XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint 
+   - Font: Monaco with Ligatures Enabled
     ```
 - Productivity
   - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), 

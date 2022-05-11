@@ -115,9 +115,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ### Applications
 
 - Chrome, FireFox
-- Microsoft Store -> Microsoft PowerToys (FancyZones)  
-                  -> Windows Terminal (Add Git-Bash profile)  
-                  -> Tureng
+- Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), Tureng
 - Development
   - Git for Windows, Git Extensions
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)

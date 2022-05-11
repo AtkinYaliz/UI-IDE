@@ -7,7 +7,6 @@
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
   May require xCode to be installed: xcode-select --install
 - Development
-
   - Git
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
@@ -28,8 +27,8 @@
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
-    - brew install maven
-
+    - Extensions: Mario Progress Bar, Rainbow Brackets, SonarLint
+    ```
     
 - XCode Theme: https://plugins.jetbrains.com/plugin/15727-xcode-theme
 - Atom Material Icons: https://plugins.jetbrains.com/plugin/10044-atom-material-icons
@@ -110,3 +109,26 @@ export JAVA_PATH=${JAVA_HOME}/bin
 
 export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ```
+
+# Windows
+
+- Development
+  - Git for Windows, Git Extensions
+  - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
+  - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - VS Code
+    ```
+    Editor.Bracket-Pair-Colorization:true
+    Default formatter: Prettier
+    Format on Paste,
+    Format on Save
+    ```
+  - IntelliJ
+    ```
+    - Open IntelliJ IDEA, go to Tools -> Create Command-Line Launcher (idea .)
+
+    - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
+                  -> Editor -> Color Scheme -> Console Font: 11
+                  
+    - Extensions: Mario Progress Bar, Rainbow Brackets, SonarLint
+    ```

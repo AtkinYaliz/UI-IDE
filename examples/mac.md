@@ -121,6 +121,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
   - IntelliJ
     ```
+    - Create Command-Line Launcher: $ START idea64 .
     - Environment Variables -> JAVA_HOME: C:\Program Files\Java\jdk-11.0.12
                             -> JAVA_PATH: C:\Program Files\Java\jdk-11.0.12\bin
                             -> IntelliJ_Com_Edition: C:\Program Files\aytekin\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin

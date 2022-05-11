@@ -128,7 +128,10 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
   - IntelliJ
     ```
-    - Environment Variables: C:\Program Files\aytekin\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin (idea64 .)
+    - Environment Variables -> JAVA_HOME: C:\Program Files\Java\jdk-11.0.12
+                            -> JAVA_PATH: C:\Program Files\Java\jdk-11.0.12\bin
+                            -> IntelliJ_Com_Edition: C:\Program Files\aytekin\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin
+                            -> Path: %IntelliJ_Com_Edition%
 
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
                -> Editor -> Color Scheme -> Console Font: 11

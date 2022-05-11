@@ -112,13 +112,16 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 
 # Windows
 
+### Applications
+
+- Chrome, FireFox
+- Microsoft Store -> Microsoft PowerToys (FancyZones)  
+                  -> Windows Terminal (Add Git-Bash profile)  
+                  -> Tureng
 - Development
   - Git for Windows, Git Extensions
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
-  - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
-  - Microsoft Store -> Microsoft PowerToys (FancyZones)
-                    -> Windows Terminal (Add Git-Bash profile)
-                    -> Tureng
+  - Sublime, Postman, Robo 3T, DBeaver
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true

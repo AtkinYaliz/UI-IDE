@@ -131,6 +131,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
                -> Plugins -> XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar, Rainbow Brackets, SonarLint 
    - Font: Monaco with Ligatures Enabled
     ```
+    
 - Productivity
   - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), 
   - Tureng
@@ -138,4 +139,3 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
   - Google Drive Back up
   - VLC
   - TeamViewer
-

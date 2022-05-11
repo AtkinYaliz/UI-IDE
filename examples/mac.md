@@ -116,6 +116,9 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
   - Git for Windows, Git Extensions
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - Microsoft Store -> Microsoft PowerToys (FancyZones)
+                    -> Windows Terminal (Add Git-Bash profile)
+                    -> Tureng
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -125,10 +128,9 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
   - IntelliJ
     ```
-    - Open IntelliJ IDEA, go to Tools -> Create Command-Line Launcher (idea .)
+    - Environment Variables: C:\Program Files\aytekin\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin (idea64 .)
 
-    - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
-                  -> Editor -> Color Scheme -> Console Font: 11
-                  
-    - Extensions: Mario Progress Bar, Rainbow Brackets, SonarLint
+    - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
+               -> Editor -> Color Scheme -> Console Font: 11
+               -> Extensions -> Mario Progress Bar, Rainbow Brackets, SonarLint
     ```

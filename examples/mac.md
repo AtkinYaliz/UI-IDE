@@ -36,7 +36,7 @@
     ```
 
 - Productivity
-  - Spectacle
+  - Spectacle, [Rectangle](https://github.com/rxhanson/Rectangle)
   - Tureng, Mini Calendar (AppStore)
   - Pinta
   - Android File Transfer

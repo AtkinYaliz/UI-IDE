@@ -32,7 +32,7 @@
 
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
                   -> Editor -> Color Scheme -> Console Font: 11
-                  -> Extensions: Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar
+                  -> Extensions: Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
     ```
 
 - Productivity
@@ -129,7 +129,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
                -> Editor -> Color Scheme -> Console Font: 11
-               -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Key Promoter X, Mario Progress Bar
+               -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
     ```
     
 - Productivity

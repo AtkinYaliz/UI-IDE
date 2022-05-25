@@ -30,8 +30,9 @@
       #!/bin/sh
       open -na "IntelliJ IDEA CE.app" --args "$@"
 
-    - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code
-                  -> Editor -> Color Scheme -> Console Font: 11
+    - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code -> Line comment at first column: false
+                            -> Color Scheme -> Console Font: 11
+                            -> Font -> Size: 12
                   -> Extensions: Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
     ```
 
@@ -127,8 +128,9 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
                             -> IntelliJ_Com_Edition: C:\Program Files\aytekin\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin
                             -> Path: %IntelliJ_Com_Edition%
 
-    - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code
-               -> Editor -> Color Scheme -> Console Font: 11
+    - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code -> Line comment at first column: false
+                         -> Color Scheme -> Console Font: 11
+                         -> Font -> Size: 12
                -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
     ```
     

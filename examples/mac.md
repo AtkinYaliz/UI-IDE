@@ -33,7 +33,7 @@
     - Preferences -> Editor -> Code Style > Java > Code Generation > Comment Code -> Line comment at first column: false
                             -> Color Scheme -> Console Font: 11
                             -> Font -> Size: 12
-                  -> Extensions: Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
+                  -> Extensions: Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar, Diagrams.net
     ```
 
 - Productivity
@@ -131,7 +131,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     - Settings -> Editor -> Code Style > Java > Code Generation > Comment Code -> Line comment at first column: false
                          -> Color Scheme -> Console Font: 11
                          -> Font -> Size: 12
-               -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar
+               -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar, Diagrams.net
     ```
     
 - Productivity

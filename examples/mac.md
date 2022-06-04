@@ -135,11 +135,18 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
   - Usability
     ```
-    # Save this file as "use_thumbnails_on_Alt+Tab.bat"
+    # Save this file as "use_thumbnails_on_Alt+Tab.bat" and run it.
     @echo off
     REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /V AltTabSettings /T REG_DWORD /D 1 /F
     taskkill /f /im explorer.exe
     start explorer.exe
+    ```
+    ```
+    1. CMD -> Regedit -> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+    2. Create a new DWORD (32-bit) Value by right clicking in the right window pane and selecting New->DWORD (32-bit) Value.
+    3. Name the value TaskbarSi
+    4. Set the value to one of the following to 0, 1 or 2 which give you small, medium or large
+    5. Close Regedit and reboot.
     ```
     
 - Productivity

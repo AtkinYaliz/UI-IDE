@@ -133,6 +133,14 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
                          -> Font -> Size: 12
                -> Plugins -> Rainbow Brackets, SonarLint, XCode Theme, Atom Material Icons, Mario Progress Bar, Diagrams.net
     ```
+  - Usability
+    ```
+    # Save this file as "use_thumbnails_on_Alt+Tab.bat"
+    @echo off
+    REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /V AltTabSettings /T REG_DWORD /D 1 /F
+    taskkill /f /im explorer.exe
+    start explorer.exe
+    ```
     
 - Productivity
   - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), 

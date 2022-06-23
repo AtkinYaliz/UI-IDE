@@ -9,7 +9,7 @@
 - Development
   - Git
   - Node (https://tecadmin.net/install-nvm-macos-with-homebrew/, nvm install 14, nvm use 11, nvm alias default 6)
-  - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit)
+  - Sublime, Postman, Robo 3T, DBeaver, TextWrangler(BBEdit), Draw.io
   - iTerm2 (export into ~/Library/ApplicationSupport/iTerm2/DynamicProfiles/aytekin.plist)
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
@@ -111,7 +111,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 - Development
   - Git for Windows, Git Extensions
   - Node (nvm install 14, nvm use 11, nvm alias default 6)
-  - Sublime, Postman, Robo 3T, DBeaver
+  - Sublime, Postman, Robo 3T, DBeaver, Draw.io
   - Font: [Monaco with Ligatures Enabled](https://github.com/GianCastle/FiraMonaco)
   - VS Code
     ```

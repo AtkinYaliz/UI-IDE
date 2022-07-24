@@ -5,6 +5,10 @@
 - [Pragmatic System Design - Alex Soshin](https://www.udemy.com/course/pragmatic-system-design)
 - [Grokking the System Design Interview - educative.io](https://www.educative.io/courses/grokking-the-system-design-interview)
 - [Web Application and Software Architecture 101 - educative.io](https://www.educative.io/courses/web-application-software-architecture-101)
+- :Books:
+- [Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann](https://www.amazon.co.uk/dp/1449373321)
+- [System Design Interview – An insider's guide](https://www.amazon.co.uk/dp/B08CMF2CQF)
+- [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.co.uk/dp/1736049119)
 
 
 ### Blogs
@@ -15,10 +19,11 @@
 - [Check Checkzz](https://github.com/checkcheckzz/system-design-interview)
 - [25 Best Software Architecture Blogs and Websites](https://blog.feedspot.com/software_architecture_blogs/)
 - []()
-- []()
-- []()
 
 ### Java
 - []()
 - []()
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
+- :Books:
+- []()
+- []()

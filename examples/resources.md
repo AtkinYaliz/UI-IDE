@@ -22,7 +22,7 @@
 - [Event-driven microservices: Spring boot, kafka and elastic (Ali Gelenler)](https://www.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch)
 - [Design Microservices Architecture with Patterns & Principles (Mehmet Ozkaya)](https://www.udemy.com/course/design-microservices-architecture-with-patterns-principles/)
 - :Books:
-- [Building microservices 2- Sam Newman]()
+- [Building microservices 2nd Ed. - Sam Newman]()
 
 ### Blogs
 - [Enterprise Integration Patterns - Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/patterns/messaging)
@@ -39,4 +39,6 @@
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
 - :Books:
 - [Efective java]()
-- [Spring Microservices in Action - John Carnell]()
+- [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953)
+- [Spring in Action th Ed. - Craig Walls](https://www.amazon.co.uk/dp/1617297577)
+- [Design Patterns: Elements of Reusable OO SW - Eric Gamma](https://www.amazon.co.uk/dp/0201633612)

@@ -12,6 +12,9 @@
 - [System Design Interview – An insider's guide](https://www.amazon.co.uk/dp/B08CMF2CQF)
 - [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.co.uk/dp/1736049119)
 - [Domain-Driven Design: Tackling Complexity in the heart of software - Eric Evans](https://www.amazon.co.uk)
+- [Enterprise Integration Patterns - Gregor Hohpe](https://www.amazon.co.uk/gp/product/B007MQLL4E)
+- [The Software Architect Elevator: Redefining the Architect's Role in the Digital Enterprise - Gregor Hohpe](https://www.amazon.co.uk/dp/1492077542)
+- [Systems Performance: Enterprise and the Cloud (Addison-Wesley Professional Computing Series)](https://www.amazon.co.uk/dp/0136820158)
 
 ### Microservices
 - [Building Reactive Microservices - Matthew Alexander (Dec 2019)](https://app.pluralsight.com/library/courses/62863232-f3e9-4d96-88a1-d4782a4f903d)
@@ -41,4 +44,10 @@
 - [Efective java]()
 - [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953)
 - [Spring in Action th Ed. - Craig Walls](https://www.amazon.co.uk/dp/1617297577)
+- [Spring Boot in Practice - Somnath Musib](https://www.amazon.co.uk/dp/1617298816)
+- [Cloud Native Spring in Action: With Spring Boot and Kubernetes](https://www.amazon.co.uk/dp/1617298425)
+- [Cloud Native Java: Designing Resilient Systems with Spring Boot, Spring Cloud, and Cloud Foundry](https://www.amazon.co.uk/dp/1449374646)
+- [Reactive Spring - Josh Long](https://www.amazon.co.uk/dp/1732910413)
 - [Design Patterns: Elements of Reusable OO SW - Eric Gamma](https://www.amazon.co.uk/dp/0201633612)
+- [Java Concurrency in Practice - Brian Goetz](https://www.amazon.co.uk/dp/0321349601)
+- [Java Performance: In-depth Advice for Tuning and Programming Java 8, 11, and Beyond](https://www.amazon.co.uk/dp/1492056111)

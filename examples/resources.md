@@ -1,4 +1,4 @@
-### Java
+## Java
 - []()
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs - udemy](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
 - _ _
@@ -13,7 +13,7 @@
 - [Java Concurrency in Practice - Brian Goetz](https://www.amazon.co.uk/dp/0321349601)
 - [Java Performance: In-depth Advice for Tuning and Programming Java 8, 11, and Beyond](https://www.amazon.co.uk/dp/1492056111)
 
-### Microservices
+## Microservices
 - [Building Reactive Microservices - Matthew Alexander (Dec 2019) - pluralsight](https://app.pluralsight.com/library/courses/62863232-f3e9-4d96-88a1-d4782a4f903d)
 - [Microservices Security Fundamentals - Wojciech Lesniak - (Apr 2020) - pluralsight](https://app.pluralsight.com/library/courses/6ba72fb8-2fb4-49b3-aa12-ecd5268c633a)
 - [Architecting Web Applications with Spring - Kevin jones (Jun 2020) - pluralsight](https://app.pluralsight.com/library/courses/2093fa09-efd4-476d-ac26-1714b82baa3a)
@@ -24,7 +24,7 @@
 - _ _
 - [Building microservices 2nd Ed. - Sam Newman]()
 
-### System Design
+## System Design
 - [Grokking Modern System Design for Software Engineers & Managers - educative.io](https://www.educative.io/courses/grokking-modern-system-design-software-engineers-managers)
 - [Ace Your Next System Design Interview - ByteByteGo](https://bytebytego.com)
 - [Pragmatic System Design - Alex Soshin - udemy](https://www.udemy.com/course/pragmatic-system-design)
@@ -41,11 +41,16 @@
 - [The Software Architect Elevator: Redefining the Architect's Role in the Digital Enterprise - Gregor Hohpe](https://www.amazon.co.uk/dp/1492077542)
 - [Systems Performance: Enterprise and the Cloud (Addison-Wesley Professional Computing Series)](https://www.amazon.co.uk/dp/0136820158)
 
-### Blogs
+## Blogs
 - [Enterprise Integration Patterns - Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/patterns/messaging)
 - [Microservices.io - Chris Richardson](https://microservices.io/patterns/microservices.html)
 - [System Designer Primer - Donne Martin](https://github.com/donnemartin/system-design-primer)
 - [Martin Kleppmann](https://martin.kleppmann.com)
 - [Check Checkzz](https://github.com/checkcheckzz/system-design-interview)
 - [25 Best Software Architecture Blogs and Websites](https://blog.feedspot.com/software_architecture_blogs/)
-- []()
+
+
+## Design patterns cheat sheet
+![design_patterns_cheat_sheet_1](../files/design_patterns_cheat_sheet_1.png)  
+  
+![design_patterns_cheat_sheet_1](../files/design_patterns_cheat_sheet_2.png)

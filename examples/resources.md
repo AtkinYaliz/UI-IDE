@@ -49,6 +49,9 @@
 - [Check Checkzz](https://github.com/checkcheckzz/system-design-interview)
 - [25 Best Software Architecture Blogs and Websites](https://blog.feedspot.com/software_architecture_blogs/)
 
+## AI/ML
+- [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
+
 
 ## Design patterns cheat sheet
 ![design_patterns_cheat_sheet_1](../files/design_patterns_cheat_sheet_1.png)  

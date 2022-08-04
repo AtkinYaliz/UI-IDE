@@ -3,7 +3,7 @@
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs - udemy](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
 - _ _
 - [Efective java]()
-- [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953) "toool"
+- [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953)
 - [Spring in Action th Ed. - Craig Walls](https://www.amazon.co.uk/dp/1617297577)
 - [Spring Boot in Practice - Somnath Musib](https://www.amazon.co.uk/dp/1617298816)
 - [Cloud Native Spring in Action: With Spring Boot and Kubernetes](https://www.amazon.co.uk/dp/1617298425)
@@ -52,6 +52,7 @@
 ## AI/ML
 - [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
 
+[Markdown details](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Design patterns cheat sheet
 ![design_patterns_cheat_sheet_1](../files/design_patterns_cheat_sheet_1.png)  

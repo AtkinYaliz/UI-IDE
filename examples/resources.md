@@ -32,7 +32,7 @@
 - [Web Application and Software Architecture 101 - educative.io](https://www.educative.io/courses/web-application-software-architecture-101)
 - [Distributed Systems & Cloud Computing with Java - Michael Pogrebinsky - udemy](https://www.udemy.com/course/distributed-systems-cloud-computing-with-java)
 - [Domain-Driven Design Fundamentals - Julie Lerman & Steve Smith - pluralsight](https://app.pluralsight.com/library/courses/1b748c0f-e571-4a48-bf06-cfcad603b180)
-- _ _
+- - -
 - [Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann](https://www.amazon.co.uk/dp/1449373321)
 - [System Design Interview – An insider's guide](https://www.amazon.co.uk/dp/B08CMF2CQF)
 - [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.co.uk/dp/1736049119)
@@ -43,6 +43,7 @@
 
 ## Blogs
 - [Enterprise Integration Patterns - Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/patterns/messaging)
+- [The Architect Elevator - Gregor Hohpe](https://architectelevator.com/blog)
 - [Microservices.io - Chris Richardson](https://microservices.io/patterns/microservices.html)
 - [System Designer Primer - Donne Martin](https://github.com/donnemartin/system-design-primer)
 - [Martin Kleppmann](https://martin.kleppmann.com)

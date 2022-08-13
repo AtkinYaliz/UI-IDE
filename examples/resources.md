@@ -1,7 +1,7 @@
 ## Java
 - []()
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs - udemy](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
-- _ _
+- ~ ~
 - [Efective java]()
 - [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953)
 - [Spring in Action th Ed. - Craig Walls](https://www.amazon.co.uk/dp/1617297577)
@@ -21,7 +21,7 @@
 - [Spring Framework: Securing Spring Applications against Common Security Threats - Wojciech Lesniak (Sep 2020) - pluralsight](http://app.pluralsighe.com)
 - [Event-driven microservices: Spring boot, kafka and elastic (Ali Gelenler) - udemy](https://www.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch)
 - [Design Microservices Architecture with Patterns & Principles (Mehmet Ozkaya) - udemy](https://www.udemy.com/course/design-microservices-architecture-with-patterns-principles/)
-- _ _
+- ~ ~
 - [Building microservices 2nd Ed. - Sam Newman]()
 
 ## System Design
@@ -32,7 +32,7 @@
 - [Web Application and Software Architecture 101 - educative.io](https://www.educative.io/courses/web-application-software-architecture-101)
 - [Distributed Systems & Cloud Computing with Java - Michael Pogrebinsky - udemy](https://www.udemy.com/course/distributed-systems-cloud-computing-with-java)
 - [Domain-Driven Design Fundamentals - Julie Lerman & Steve Smith - pluralsight](https://app.pluralsight.com/library/courses/1b748c0f-e571-4a48-bf06-cfcad603b180)
-- `- -
+- ~ ~
 - [Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann](https://www.amazon.co.uk/dp/1449373321)
 - [System Design Interview – An insider's guide](https://www.amazon.co.uk/dp/B08CMF2CQF)
 - [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.co.uk/dp/1736049119)

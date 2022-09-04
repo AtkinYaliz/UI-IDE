@@ -9,6 +9,7 @@
       <li><a href="/examples/jest.md">[Jest]</a></li>
       <li><a href="/examples/js.md">[JS]</a></li>
       <li><a href="/examples/kafka.md">[Kafka]</a></li>
+      <li><a href="/examples/katas.md">[Katas]</a></li>
     </td>
     <td>
       <li><a href="/examples/kubernetes.md">[Kubernetes]</a></li>

@@ -4,23 +4,29 @@ Given an unsorted integer array, find a pair with the given sum in it.
 
 For example,
 ```
-Input:
- 
-nums = [8, 7, 2, 5, 4, 1]
-target = 9
- 
+Input: 
+  nums = [8, 7, 2, 5, 4, 1]
+  target = 9
 Output:
-Pair found: [1,2]
+  Pair found: [1,2]
 
 
 Input:
-
-nums = [5, 2, 6, 8, 1, 9]
-target = 12
- 
-Output: 
-Pair not found
+  nums = [5, 2, 6, 8, 1, 9]
+  target = 12
+Output:
+  Pair not found
 ```
+
+### Questions:
+- HashMap
+- bucket: ?
+- capacity: ? (# of buckets in the HashMap)
+- initialCapacity: 16
+- loadFactor: 75%
+- rehashing:
+- Why O(n)
+- collision: LinkedList (O(n)) or Red/Black tree (n.log(n))
 
 ## Solutions
 

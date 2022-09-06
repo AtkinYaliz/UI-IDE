@@ -18,14 +18,13 @@ Output:
   Pair not found
 ```
 
-### Questions:
-- HashMap
+### Quesions:
+- HashMap: Why O(n), how the data is stored in the file system?
 - bucket: ?
 - capacity: ? (# of buckets in the HashMap)
 - initialCapacity: 16
 - loadFactor: 75%
 - rehashing:
-- Why O(n)
 - collision: LinkedList (O(n)) or Red/Black tree (n.log(n))
 
 ## Solutions

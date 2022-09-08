@@ -32,3 +32,37 @@ A number is _buzz_ if it is divisible by 5 or if it has a 5 in it
 For exemple:  
 53 should return _FizzBuzz_ (contain 5 and 3)  
 35 should return _FizzBuzzBuzz_ (contain 3 and 5 and it divided by 5)  
+
+```
+import java.util.ArrayList;
+
+public class FizzBuzz {
+
+    private ArrayList<FizzBuzzFilter> filters = new ArrayList<FizzBuzzFilter>();
+
+    public Object[] filter(int[] integers) {
+        Object[] result = new Object[integers.length];
+        for (int i = 0; i < integers.length; i++) {
+            result[i] = convert(integers[i]);
+        }
+        return result;
+    }
+
+    private Object convert(int integer) {
+        String converted = applyFilters(integer);
+        return "".equals(converted) ? integer : converted;
+    }
+
+    private String applyFilters(int integer) {
+        String converted = "";
+        for (FizzBuzzFilter filter : filters) {
+            converted += filter.filter(integer);
+        }
+        return converted;
+    }
+
+    public void addFilter(FizzBuzzFilter fizzBuzzFilter) {
+        filters.add(fizzBuzzFilter);
+    }
+}
+```

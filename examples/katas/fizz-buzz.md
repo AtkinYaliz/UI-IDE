@@ -26,8 +26,8 @@ Buzz
 ```
 
 __Stage 2 - new requirements__  
-A number is _fizz_ if it is divisible by 3 or if it has a 3 in it  
-A number is _buzz_ if it is divisible by 5 or if it has a 5 in it  
+A number is _Fizz_ if it is divisible by 3 or if it has a 3 in it  
+A number is _Buzz_ if it is divisible by 5 or if it has a 5 in it  
 
 For exemple:  
 53 should return _FizzBuzz_ (contain 5 and 3)  

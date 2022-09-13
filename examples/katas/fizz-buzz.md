@@ -26,12 +26,12 @@ Buzz
 ```
 
 __Stage 2 - new requirements__  
-A number is _Fizz_ if it is divisible by 3 or if it has a 3 in it  
-A number is _Buzz_ if it is divisible by 5 or if it has a 5 in it  
+A number is _Four_ if it has a 4 in it  
+A number is _Nine_ if it has a 9 in it  
 
 For exemple:  
-53 should return _FizzBuzz_ (contain 5 and 3)  
-35 should return _FizzBuzzBuzz_ (contain 3 and 5 and it divided by 5)  
+49 should return _FourNine_ (contains 4 and 9)  
+45 should return _FizzBuzzFour_ (divisible by both 3 and 5, and contains 4)  
 
 ```
 import java.util.ArrayList;

@@ -14,7 +14,7 @@
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
     if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
-  - Font: [Monaco with Ligatures Enabled](https://github.com/GianCastle/FiraMonaco)
+  - Font: ![Monaco with Ligatures Enabled](../files/Ligamonacop.ttf)
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true

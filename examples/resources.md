@@ -25,7 +25,7 @@
 - [Building microservices 2nd Ed. - Sam Newman]()
 
 ## System Design
-- [Grokking Modern System Design for Software Engineers & Managers - educative.io](https://www.educative.io/courses/grokking-modern-system-design-software-engineers-managers)
+- [Grokking Modern System Design Interview for Engineers & Managers - educative.io](https://www.educative.io/courses/grokking-modern-system-design-software-engineers-managers)
 - [Ace Your Next System Design Interview - ByteByteGo](https://bytebytego.com)
 - [Pragmatic System Design - Alex Soshin - udemy](https://www.udemy.com/course/pragmatic-system-design)
 - [Grokking the System Design Interview - educative.io](https://www.educative.io/courses/grokking-the-system-design-interview)

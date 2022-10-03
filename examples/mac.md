@@ -113,6 +113,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
   - Node (nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver, Draw.io
   - Font: [Monaco with Ligatures Enabled](../files/Ligamonacop.ttf)
+  - MobaXterm
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true

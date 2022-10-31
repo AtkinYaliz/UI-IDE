@@ -108,7 +108,6 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
 ### Applications
 
 - Chrome, FireFox
-- Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), Tureng
 - Development
   - Git for Windows, Git Extensions
     - To add an alias permanently, you'd need to edit the file /C/Program Files/Git/etc/profile.d/aliases.sh .
@@ -117,7 +116,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     - Open the Git Bash. Execute 'alias', and you're done. Have fun.
   - Node (nvm install 14, nvm use 11, nvm alias default 6)
   - Sublime, Postman, Robo 3T, DBeaver, Draw.io
-  - Font: [Monaco with Ligatures Enabled](../files/Ligamonacop.ttf)
+  - Font: [Monaco with Ligatures Enabled](../files/Ligamonacop.ttf), [DankMono](../files/DankMono.zip), [SF-Mono-Font](../files/SF-Mono-Font.zip)
   - MobaXterm
   - VS Code
     ```

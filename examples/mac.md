@@ -14,7 +14,7 @@
   - Docker, Kubernetes, minikube
   - Java: https://www.oracle.com/java/technologies/javase-downloads.html  
     if no admin rights are present: copy the new version into /Library/Java/JavaVirtualMachine folder.
-  - Font: [Monaco with Ligatures Enabled](../files/Ligamonacop.ttf)
+  - Font: [Monaco with Ligatures Enabled](../files/Ligamonacop.ttf), [DankMono](../files/DankMono.zip), [SF-Mono-Font](../files/SF-Mono-Font.zip)
   - VS Code
     ```
     Editor.Bracket-Pair-Colorization:true
@@ -154,7 +154,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
     
 - Productivity
-  - Microsoft Store -> Microsoft PowerToys (FancyZones), Windows Terminal (Add Git-Bash profile), 
+  - Microsoft Store -> Windows Terminal (Add Git-Bash profile), Tureng
   - Tureng
   - Android File Transfer
   - Google Drive Back up

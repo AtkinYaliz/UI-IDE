@@ -155,7 +155,6 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     
 - Productivity
   - Microsoft Store -> Windows Terminal (Add Git-Bash profile), Tureng
-  - Tureng
   - Android File Transfer
   - Google Drive Back up
   - VLC

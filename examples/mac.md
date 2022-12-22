@@ -50,6 +50,7 @@
 
 F11 => Show desktop  
 Cmd + Shift + . => show hidden files  
+Cmd + Shift + 3/4 => take screenshot  
 Cmd + Option + Shift + V => paste without formatting  
 Cmd + Q => close the application without trace  
 Cmd + \` => tab between windows of same application  

@@ -44,7 +44,7 @@
   - Google Drive Back up
   - VLC
   - TeamViewer
-  - Flowchart Designer 3
+  - Flowchart Designer 3, Draw.io, Miro
 
 ### shortcuts
 
@@ -155,7 +155,7 @@ export PATH=${M2_HOME}/bin:${JAVA_PATH}:$PATH
     ```
     
 - Productivity
-  - Microsoft Store -> Windows Terminal (Add Git-Bash profile), Tureng
+  - Microsoft Store -> Windows Terminal (Add Git-Bash profile), Tureng, Draw.io, Miro
   - Android File Transfer
   - Google Drive Back up
   - VLC

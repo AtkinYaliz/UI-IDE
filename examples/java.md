@@ -172,3 +172,51 @@ ResponseEntity<User> response = restTemplate.exchange(requestEntity, User.class)
 ```
 
 
+# Patterns
+```
+public class Cart {
+	private List<Item> items;
+
+	public void addItem(Item item) { items.add(item); }
+}
+
+public interface Item {
+	string getName();
+	double getPrice();
+	string getDepartment();
+}
+public class Banana : Item {
+	public getName() { return "Banana"; }
+	public getPrice() { return 4.50; }
+	public getDepartment() { return "Fruits"; }
+}
+public class Stapler : Item {
+	public getName() { return "Stapler"; }
+	public getPrice() { return 5.00; }
+	public getDepartment() { return "Staionary"; }
+}
+
+public interface Product {
+	string getName();
+	double getPrice();
+	Enum getStore();
+}
+public class Wheel : Product {
+	string getName() { return "Wheel"; }
+	double getPrice() { return 125.00; }
+	Enum getStore() { return Stores.London; }
+}
+
+public class ProductAdapter : Item {
+	public ProductAdapter(Product product) { _product = product; }
+
+	public getName() { return _product.getName(); }
+	public getPrice() { return_product.getPrice(); }
+	public getDepartment() { return _product.getStore().ToString(); }
+}
+
+var cart = new Cart();
+cart.addItem( new Banana() );
+cart.addItem( new Stapler() );
+cart.addItem( new ProductAdapter(new Wheel()) );
+```

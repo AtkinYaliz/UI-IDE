@@ -172,7 +172,7 @@ ResponseEntity<User> response = restTemplate.exchange(requestEntity, User.class)
 ```
 
 
-# Patterns
+## Adapter Pattern
 ```
 public class Cart {
 	private List<Item> items;

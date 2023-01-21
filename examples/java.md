@@ -176,47 +176,49 @@ ResponseEntity<User> response = restTemplate.exchange(requestEntity, User.class)
 ```
 public class Cart {
 	private List<Item> items;
-
 	public void addItem(Item item) { items.add(item); }
 }
 
-public interface Item {
+public interface IItem {
 	string getName();
 	double getPrice();
 	string getDepartment();
 }
-public class Banana : Item {
+public class Banana : IItem {
 	public getName() { return "Banana"; }
 	public getPrice() { return 4.50; }
 	public getDepartment() { return "Fruits"; }
 }
-public class Stapler : Item {
+public class Stapler : IItem {
 	public getName() { return "Stapler"; }
 	public getPrice() { return 5.00; }
 	public getDepartment() { return "Staionary"; }
 }
 
-public interface Product {
+public interface IProduct {
 	string getName();
 	double getPrice();
 	Enum getStore();
 }
-public class Wheel : Product {
+public class Wheel : IProduct {
 	string getName() { return "Wheel"; }
 	double getPrice() { return 125.00; }
 	Enum getStore() { return Stores.London; }
 }
 
-public class ProductAdapter : Item {
-	public ProductAdapter(Product product) { _product = product; }
+public class ProductAdapter : IItem {
+	public ProductAdapter(IProduct product) { _product = product; }
 
 	public getName() { return _product.getName(); }
 	public getPrice() { return_product.getPrice(); }
 	public getDepartment() { return _product.getStore().ToString(); }
 }
 
-var cart = new Cart();
-cart.addItem( new Banana() );
-cart.addItem( new Stapler() );
-cart.addItem( new ProductAdapter(new Wheel()) );
+public static main() {
+	var items = List<IItem>();
+	
+	items.add( new Banana() );
+	items.add( new Stapler() );
+	items.add( new ProductAdapter(new Wheel()) );
+}
 ```

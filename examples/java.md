@@ -192,7 +192,7 @@ public class Banana : IItem {
 public class Stapler : IItem {
 	public getName() { return "Stapler"; }
 	public getPrice() { return 5.00; }
-	public getDepartment() { return "Staionary"; }
+	public getDepartment() { return "stationery"; }
 }
 
 public interface IProduct {

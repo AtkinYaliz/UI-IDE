@@ -185,14 +185,14 @@ public interface IItem {
 	string getDepartment();
 }
 public class Banana : IItem {
-	public getName() { return "Banana"; }
-	public getPrice() { return 4.50; }
-	public getDepartment() { return "Fruits"; }
+	string getName() { return "Banana"; }
+	double getPrice() { return 4.50; }
+	string getDepartment() { return "Fruits"; }
 }
 public class Stapler : IItem {
-	public getName() { return "Stapler"; }
-	public getPrice() { return 5.00; }
-	public getDepartment() { return "stationery"; }
+	string getName() { return "Stapler"; }
+	double getPrice() { return 5.00; }
+	string getDepartment() { return "stationery"; }
 }
 
 public interface IProduct {
@@ -207,18 +207,18 @@ public class Wheel : IProduct {
 }
 
 public class ProductAdapter : IItem {
-	public ProductAdapter(IProduct product) { _product = product; }
+	ProductAdapter(IProduct product) { _product = product; }
 
-	public getName() { return _product.getName(); }
-	public getPrice() { return_product.getPrice(); }
-	public getDepartment() { return _product.getStore().ToString(); }
+	string getName() { return _product.getName(); }
+	double getPrice() { return_product.getPrice(); }
+	string getDepartment() { return _product.getStore().ToString(); }
 }
 
 public static main() {
-	var items = List<IItem>();
-	
-	items.add( new Banana() );
-	items.add( new Stapler() );
-	items.add( new ProductAdapter(new Wheel()) );
+	var items = List<IItem>() {{
+		add( new Banana() );
+		add( new Stapler() );
+		add( new ProductAdapter(new Wheel()) );
+	}};
 }
 ```

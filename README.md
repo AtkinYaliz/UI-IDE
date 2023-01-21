@@ -19,6 +19,7 @@
       <li><a href="/examples/react.md">[React]</a></li>
       <li><a href="/examples/redis.md">[Redis]</a></li>
       <li><a href="/examples/resources.md">[Resources]</a></li>
+      <li><a href="/examples/resources.design-patterns.md">[Resources - Design Patterns]</a></li>
       <li><a href="/examples/custom.code-snippets.json">[VS Code Snippets]</a></li>
     </td>
   </tr>

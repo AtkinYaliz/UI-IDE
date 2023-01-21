@@ -1,6 +1,6 @@
-## Adapter (Wrapper) Pattern - Structural
+## Adapter (Wrapper) Pattern - Structural [Wiki](https://en.wikipedia.org/wiki/Adapter_pattern)
 
-In software engineering, the adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface.[1] It is often used to make existing classes work with others without modifying their source code.
+In software engineering, the adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
 
 The adapter design pattern solves problems like:
 - How can a class be reused that does not have an interface that a client requires?

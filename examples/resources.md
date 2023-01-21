@@ -54,10 +54,3 @@
 - [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
 
 [Markdown details](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-## Design patterns cheat sheet  
-![Microservices Design Patterns](../examples/resources/microservices_design_patterns.png)  
-
-![Design Patterns Cheat Sheet 1](../examples/resources/design_patterns_cheat_sheet_1.png)  
-  
-![Design Patterns Cheat Sheet 2](../examples/resources/design_patterns_cheat_sheet_2.png)

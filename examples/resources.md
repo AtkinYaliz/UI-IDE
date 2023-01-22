@@ -32,6 +32,7 @@
 - [Web Application and Software Architecture 101 - educative.io](https://www.educative.io/courses/web-application-software-architecture-101)
 - [Distributed Systems & Cloud Computing with Java - Michael Pogrebinsky - udemy](https://www.udemy.com/course/distributed-systems-cloud-computing-with-java)
 - [Domain-Driven Design Fundamentals - Julie Lerman & Steve Smith - pluralsight](https://app.pluralsight.com/library/courses/1b748c0f-e571-4a48-bf06-cfcad603b180)
+- [System Design Goldmine - Naina Chaturvedi](https://www.linkedin.com/posts/madhavvarjuntthukral-b41564183_systemdesign-design-hld-activity-7022468592549904384-uYfQ)
 - ~ ~
 - [Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann](https://www.amazon.co.uk/dp/1449373321)
 - [System Design Interview – An insider's guide](https://www.amazon.co.uk/dp/B08CMF2CQF)

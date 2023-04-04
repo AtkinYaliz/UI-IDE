@@ -1,5 +1,4 @@
 ## Java
-- []()
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs - udemy](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
 - ~ ~
 - [Efective java]()
@@ -12,6 +11,7 @@
 - [Design Patterns: Elements of Reusable OO SW - Eric Gamma](https://www.amazon.co.uk/dp/0201633612)
 - [Java Concurrency in Practice - Brian Goetz](https://www.amazon.co.uk/dp/0321349601)
 - [Java Performance: In-depth Advice for Tuning and Programming Java 8, 11, and Beyond](https://www.amazon.co.uk/dp/1492056111)
+- [Design Patterns (Tasarim Kaliplari) - Akin Kaldiroglu - Udemy](https://www.udemy.com/course/designpatterns)
 
 ## Microservices
 - [Building Reactive Microservices - Matthew Alexander (Dec 2019) - pluralsight](https://app.pluralsight.com/library/courses/62863232-f3e9-4d96-88a1-d4782a4f903d)
@@ -42,6 +42,10 @@
 - [The Software Architect Elevator: Redefining the Architect's Role in the Digital Enterprise - Gregor Hohpe](https://www.amazon.co.uk/dp/1492077542)
 - [Systems Performance: Enterprise and the Cloud (Addison-Wesley Professional Computing Series)](https://www.amazon.co.uk/dp/0136820158)
 
+## AI/ML
+- [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
+- [Supervised Machine Learning: Regression and Classification - Coursera](https://www.coursera.org/learn/machine-learning)
+
 ## Blogs
 - [Enterprise Integration Patterns - Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/patterns/messaging)
 - [The Architect Elevator - Gregor Hohpe](https://architectelevator.com/blog)
@@ -50,8 +54,5 @@
 - [Martin Kleppmann](https://martin.kleppmann.com)
 - [Check Checkzz](https://github.com/checkcheckzz/system-design-interview)
 - [25 Best Software Architecture Blogs and Websites](https://blog.feedspot.com/software_architecture_blogs/)
-
-## AI/ML
-- [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
 
 [Markdown details](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

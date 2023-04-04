@@ -1,5 +1,6 @@
 ## Java
 - [Software Architecture (SOLID) & Design Patterns in Java - Holczer Balazs - udemy](https://www.udemy.com/course/basics-of-software-architecture-design-in-java)
+- [Design Patterns (Tasarim Kaliplari) - Akin Kaldiroglu - Udemy](https://www.udemy.com/course/designpatterns)
 - ~ ~
 - [Efective java]()
 - [Spring Microservices in Action 2nd Ed. - John Carnell](https://www.amazon.co.uk/dp/1617296953)
@@ -11,7 +12,6 @@
 - [Design Patterns: Elements of Reusable OO SW - Eric Gamma](https://www.amazon.co.uk/dp/0201633612)
 - [Java Concurrency in Practice - Brian Goetz](https://www.amazon.co.uk/dp/0321349601)
 - [Java Performance: In-depth Advice for Tuning and Programming Java 8, 11, and Beyond](https://www.amazon.co.uk/dp/1492056111)
-- [Design Patterns (Tasarim Kaliplari) - Akin Kaldiroglu - Udemy](https://www.udemy.com/course/designpatterns)
 
 ## Microservices
 - [Building Reactive Microservices - Matthew Alexander (Dec 2019) - pluralsight](https://app.pluralsight.com/library/courses/62863232-f3e9-4d96-88a1-d4782a4f903d)

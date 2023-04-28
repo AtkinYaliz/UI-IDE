@@ -45,6 +45,7 @@
 ## AI/ML
 - [AI Fundamentals - Daron Yondem - udacity](https://www.udacity.com/course/ai-fundamentals--ud099)
 - [Supervised Machine Learning: Regression and Classification - Coursera](https://www.coursera.org/learn/machine-learning)
+- [ChatGPT Prompt Engineering for Developers - Andrew Ng](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction)
 
 ## Blogs
 - [Enterprise Integration Patterns - Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/patterns/messaging)

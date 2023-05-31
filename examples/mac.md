@@ -38,7 +38,7 @@
 
 - Productivity
   - Spectacle, [Rectangle](https://github.com/rxhanson/Rectangle)
-  - Tureng, Mini Calendar (AppStore)
+  - Tureng, Quick View Calendar (AppStore)
   - Pinta
   - Android File Transfer
   - Google Drive Back up

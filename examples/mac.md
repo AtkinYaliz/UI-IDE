@@ -65,7 +65,7 @@ TextEdit default blank: System Preferences -> iCloud -> iCloud Drive (Options): 
 > ps aux | grep /usr/local/dgagent/dgdaemon | awk '{print $2}'
 ```
 
-### ~/.zshrc
+### Oh My Zsh (touch ~/.zshrc)
 
 https://ohmyz.sh/#install
 

@@ -53,3 +53,32 @@ Udeler: https://github.com/FaisalUmair/udemy-downloader-gui
 </details>
   
 https://help.github.com/articles/basic-writing-and-formatting-syntax
+
+
+```mermaid
+sequenceDiagram
+    Alice -->> Alice: Hi?
+    Alice ->> Alice: Hi2?
+    Alice ->>+ John: Open 1.
+    Alice->>+John: Open 1.1
+    John-->>-Alice: Close 1.1
+    John-->>-Alice: Close 1.
+    John --x Alice: hiii
+    John --) Tom(wer desc): Async
+```
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+```mermaid
+  graph LR;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```

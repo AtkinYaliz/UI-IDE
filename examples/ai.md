@@ -33,5 +33,5 @@ Other examples: Spam detection in email or weather forecasting or housing pricin
 Case study: Predict whether a patient is at-risk for diabetes based on clinical measurements. Characteristics are height, weight, blood pressure etc. The labels we need is yes/no, representing if the patient eventually developed diabetes or not. Our algorithm is going to learn from these past data points and provide us with predictions in the form of a probability between 0 and 1. Our data scientist who are building this model will determine a cut-off threshold value.
 Other examples: Classifying someone is high or low risk of missing a loan repayment. User login is a legitimate.  
 3. Unsupervised ML: Training data is unlabeled.
-  3.1. Clustering: Similar items are grouped together.
+  3.1. Clustering: Similar items are grouped together.  
 Case study: Vehicles with similar emissions and fuel efficiency characteristics are separated into clusters.

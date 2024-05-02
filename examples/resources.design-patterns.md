@@ -71,6 +71,76 @@ class Program
     }
 }
 ```
+## Strategy Pattern - Behavioral [Wiki](https://en.wikipedia.org/wiki/Strategy_pattern)
+
+In the strategy pattern (also known as the policy pattern) is a behavioral software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives runtime instructions as to which in a family of algorithms to use
+
+```
+/* Encapsulated family of Algorithms Interface and its implementations */
+public interface IBrake {
+    public void brake();
+}
+
+public class AbsBrake implements IBrake {
+    public void brake() {
+        System.out.println("ABS Brake applied");
+    }
+}
+
+public class SimpleBrake implements IBrake {
+    public void brake() {
+        System.out.println("Simple Brake applied");
+    }
+}
+
+/* Client that can use the algorithms above interchangeably */
+public abstract class Car {
+    private IBrake _brake;
+
+    public Car(IBrake brake) {
+      _brake = brake;
+    }
+
+    public void applyBrake() {
+        _brake.brake();
+    }
+
+    public void setBrake(IBrake brake) {
+        _brake = brake;
+    }
+}
+
+/* Client 1 uses one algorithm (SimpleBrake) in the constructor */
+public class Sedan extends Car {
+    public Sedan() {
+        super(new SimpleBrake());
+    }
+}
+
+/* Client 2 uses another algorithm (AbsBrake) in the constructor */
+public class SUV extends Car {
+    public SUV() {
+        super(new AbsBrake());
+    }
+}
+
+
+/* Using the Car example */
+public class CarExample {
+    public static void main(final String[] arguments) {
+        Car sedanCar = new Sedan();
+        sedanCar.applyBrake();  // This will invoke class "SimpleBrake"
+
+        Car suvCar = new SUV();
+        suvCar.applyBrake();    // This will invoke class "AbsBrake"
+
+        // set brake behavior dynamically
+        suvCar.setBrake( new SimpleBrake() );
+        suvCar.applyBrake();    // This will invoke class "SimpleBrake"
+    }
+}
+
+```
 
 ## Adapter (Wrapper) Pattern - Structural [Wiki](https://en.wikipedia.org/wiki/Adapter_pattern)
 
@@ -135,6 +205,7 @@ public static main() {
 	}};
 }
 ```
+---
 
 ## Blogs
 - [Flutter Design Patterns](https://kazlauskas.dev/flutter-design-patterns-0-introduction)

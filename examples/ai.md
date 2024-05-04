@@ -27,11 +27,22 @@ We use data to train a ML model to power an AI-based software, to carry out the 
 
 1. Supervised ML: Training data includes known labels.  
   1.1. Regression: Label is a numeric value  
-Case study: Mr Siegel sells biles. He wants to predict the number of bike rentals based on day, season and weather. Temperature is a _feature_. Number of bikes rented is a _label_. The goal is to create a ML model to predict how many bikes will be rented given that day's average temperature. As we feed the data of past rentals and the corresponding average temperature to our ML model, a _relationship_ starts to emerge. That is the ML model that we want to provide to Mr. Siegel.
+Use case: Mr Siegel sells biles. He wants to predict the number of bike rentals based on day, season and weather. Temperature is a _feature_. Number of bikes rented is a _label_. The goal is to create a ML model to predict how many bikes will be rented given that day's average temperature. As we feed the data of past rentals and the corresponding average temperature to our ML model, a _relationship_ starts to emerge. That is the ML model that we want to provide to Mr. Siegel.
 Other examples: Spam detection in email or weather forecasting or housing pricing predictions based on location, number of rooms etc.  
   1.2. Classification: Label is a categorization (or class). The aim is to obtain a category.  
-Case study: Predict whether a patient is at-risk for diabetes based on clinical measurements. Characteristics are height, weight, blood pressure etc. The labels we need is yes/no, representing if the patient eventually developed diabetes or not. Our algorithm is going to learn from these past data points and provide us with predictions in the form of a probability between 0 and 1. Our data scientist who are building this model will determine a cut-off threshold value.
+Use case: Predict whether a patient is at-risk for diabetes based on clinical measurements. Characteristics are height, weight, blood pressure etc. The labels we need is yes/no, representing if the patient eventually developed diabetes or not. Our algorithm is going to learn from these past data points and provide us with predictions in the form of a probability between 0 and 1. Our data scientist who are building this model will determine a cut-off threshold value.
 Other examples: Classifying someone is high or low risk of missing a loan repayment. User login is a legitimate.  
 3. Unsupervised ML: Training data is unlabeled.
   3.1. Clustering: Similar items are grouped together.  
-Case study: Vehicles with similar emissions and fuel efficiency characteristics are separated into clusters.
+Use case: Vehicles with similar emissions and fuel efficiency characteristics are separated into clusters.
+
+
+---
+
+# What is RAG? (Retrieval Augmented Generation) | [PART 1](https://www.youtube.com/watch?v=u47GtXwePms)
+
+RAG is used for systems that leverage LLM experience on your own content. 
+Use case: Patient chat bot and the content source is going to be the contect from your website, or pdf documents. You wan this to be the contect to answer the patient's questions. The patient asks, "how do P prepare for my knee surgery?", instead of just going to chatGPT and getting a generic answer, you'd like to provide an answer that's from your health system. Or, they are "do you have a parking?". 
+The solution is like prompt before prompt. The full prompt that we will send to LLM will be our instructions plus something like "please use this content in order to answer the patient question" at the end. You create a big prompt and send that whole packate to the LLM, and LLM will give a response based on your content.
+The last teick here is your website or your content is huge and it talks about all kinds of topics beyond parking and beyond knee surgery so you really want to somehow pull out only the parts of your content that are relevant to the patient's question so you take all your content and you break it into chunks or these systems will break it into chunks so chunk might be a paragraph of content or a p or a couple paragraphs a page something like that and then those um chunks are sent to a LLM, could be the same one or a different one and they are turned into a vector and so each each paragraph or each chunk will have a vector which is just is just a series of numbers and that series of numbers you can think of it as the numeric representation of the essence of that paragraph and what's uh different about these numbers just they're not random numbers but paragraphs that talk about a similar topic have close by numbers they almost have the same vectors
+

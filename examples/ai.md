@@ -48,7 +48,7 @@ The last teick here is your website or your content is huge and it talks about a
 ---
 
 ## __Fine-tuning:
-It's a process of re-training a base, foundational model, eg. Llama, ChatGPT, on <ins>new data</ins>. You're not teaching your LLM new information instead you're guiding it to restructure its existing knowledge in a way you're teaching the model how to behave or how to comminicate in a specific manner. Fine-tune models offer several benefits including improved user experience higher quality results with fewer hallucications and cost savings through shorter prompts excellent accuracy.  
+It's the process of taking a pre-trained model (eg. Llama, ChatGPT) and training at least one model parameter (with <ins>new data</ins> data). You're not teaching your LLM new information instead you're guiding it to restructure its existing knowledge in a way you're teaching the model how to behave or how to comminicate in a specific manner. Fine-tune models offer several benefits including improved user experience higher quality results with fewer hallucications and cost savings through shorter prompts excellent accuracy.  
 
 Use case: Finance & Investment
 __Sentiment Analysis:__ in language models is the is the process of determining whether someone's opinion expressed in a piece of text is negative positive or a neutral one.

@@ -1,6 +1,6 @@
 # Concepts
 
-[Linear Repression](http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm)
+[Linear Regression](http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm)
 
 ---
 

@@ -1,6 +1,7 @@
 <table>
   <tr>
     <td>
+      <li><a href="/examples/ai-ml.md">[AI/ML Concepts]</a></li>
       <li><a href="/examples/aws-lambda.md">[AWS Lambda]</a></li>
       <li><a href="/examples/docker.md">[Docker]</a></li>
       <li><a href="/examples/education-system.md">[Education System]</a></li>

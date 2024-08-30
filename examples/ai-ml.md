@@ -1,3 +1,9 @@
+# Concepts
+
+[Linear Repression](http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm)
+
+---
+
 # AI-900: Microsoft Azure AI Fundamentals Virtual Training day | [PART 1](https://www.youtube.com/watch?v=u1TdqIZKuTU)
 
 ## What is AI?

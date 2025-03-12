@@ -63,6 +63,14 @@ TextEdit default blank: System Preferences -> iCloud -> iCloud Drive (Options): 
 > chmod -R 777 folder
 > lsof -ti:7071 | xargs kill -9
 > ps aux | grep /usr/local/dgagent/dgdaemon | awk '{print $2}'
+>
+> defaults read -g com.apple.mouse.scaling
+> defaults write -g com.apple.mouse.scaling  3.0
+> sysctl hw.physicalcpu hw.logicalcpu  # To check your CPU core information in the macOS terminal
+> top
+> brew install htop (then run htop)
+> yes > /dev/null &   (repeat for the number of cores)
+> killall yes
 ```
 
 ### Oh My Zsh (touch ~/.zshrc)
